@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Default ECM member-month demographics · Vayu Health Git Data Hub</title>
+  <meta name="theme-color" content="#464C4F">
+  
+  <link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+  <a class="skip" href="#content">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap header-bar">
+      <a class="brand" href="../index.html"><img class="brand-logo" src="../assets/vayu-logo-horizontal.webp" alt="Vayu Health"></a>
+      
+      <nav class="site-nav" aria-label="Site">
+        <a href="../dictionary.html">Data Dictionary</a>
+        <a href="../dashboards.html">Dashboards</a>
+        <a href="../methods.html">Methods &amp; Updates</a>
+      </nav>
+    
+      
+      <p class="last-updated">Last Updated: <time datetime="2026-10-22T21:11:42Z" title="When this website was generated. This is not the effective date of a definition.">October 22, 2026</time></p>
+    
+    </div>
+  </header>
+  <main id="content" class="wrap">
+    
+    <section class="intro">
+      <p class="crumbs"><a href="../dictionary.html">Data Dictionary</a> / Mart / Prod (VayuHealth_Program_MART, VayuHealth_Program_PROD)</p>
+      <h1>Default ECM member-month demographics</h1>
+      <p class="meta-line">
+        <span class="type-pill">Object</span>
+        <span class="topic">Default ECM member-month demographics</span>
+      </p>
+    </section>
+    <p class="provenance">Documented business meaning. This page does not recompute the rule.</p>
+    <p class="source-line"><code>docs/data_dictionary.md</code> line 246.
+      Owner: Not documented.</p>
+    <div class="detail-row"><h2>Stable entry ID</h2><p><code>data-dictionary.mart-prod-vayuhealth-program-mart-vayuhealth-program-prod.default-ecm-member-month-demographics</code></p></div><div class="detail-row"><h2>Business definition</h2><p>Canonical columns for ECM / ECM+ member-month reporting (<code>MART_Monthly_Members_Serviced</code> → <code>VW_Member_Month</code>). Primary source is <code>MART_Cumulative_Members</code> (pipeline snake_case or historical Tableau MIG collapsed names). Blanks fill from ECM+ encounter demos, then ECM Tracker.</p>
+<p><code>MART_Monthly_ECM_ECMPlus_Events</code> is the event-grain replacement for <code>VayuHealth_Program_Data.ECM_and_ECMplus</code>.</p>
+<p><code>VW_Member_Month</code> exposes category, counts, Yes/No flags (<code>ecm_billed_touches_flag</code>, <code>bh_encounter_flag</code>, <code>rd_encounter_flag</code>, <code>ecmplus_encounter_flag</code>, <code>both_bh_and_rd_flag</code>, <code>no_service_in_the_month</code>), active membership Yes/No flags, and the default demographics list above; drops Outreach Team only. Tableau <code>health_plan</code> is demographics <code>organization</code>. <code>reporting_month</code> stays <code>YYYY-MM</code> text. <code>reporting_month_date</code> is that month&#x27;s first day (<code>DATE</code>) for discrete month charts. <code>HUMBOLDT</code> and <code>SHASTA</code> are published as Humboldt and Shasta; other county values are unchanged. Active membership trend charts should filter <code>active_during_month = Yes</code> or <code>active_at_month_end = Yes</code> by <code>reporting_month_date</code>.</p>
+<p><code>VW_ECM_ECMPlus_Events</code> exposes event facts plus the same default demographics (joined from <code>MART_Monthly_Members_Serviced</code> on <code>member_cin</code> + <code>reporting_month</code>). Tableau <code>health_plan</code>: ECM+ encounters use encounter <code>mcp_name</code> (fallback to demographics <code>organization</code>); ECM activity rows use demographics <code>organization</code>.</p></div><div class="detail-row"><h2>Owner</h2><p class="missing">Not documented in the source.</p></div><div class="detail-row"><h2>Documented approval status</h2><p class="missing">Not documented in the source.</p></div><div class="detail-row"><h2>Effective date</h2><p class="missing">Not documented in the source.</p></div><div class="detail-row"><h2>Same heading</h2><ul><li><a href="data-dictionary.mart-prod-vayuhealth-program-mart-vayuhealth-program-prod.default-ecm-member-month-demographics.age.html">age</a> <span class="type-pill">Field</span></li><li><a href="data-dictionary.mart-prod-vayuhealth-program-mart-vayuhealth-program-prod.default-ecm-member-month-demographics.age-group.html">age_group</a> <span class="type-pill">Field</span></li><li><a href="data-dictionary.mart-prod-vayuhealth-program-mart-vayuhealth-program-prod.default-ecm-member-month-demographics.care-coordinator-name.html">care_coordinator_name</a> <span class="type-pill">Field</span></li><li><a href="data-dictionary.mart-prod-vayuhealth-program-mart-vayuhealth-program-prod.default-ecm-member-month-demographics.care-coordinator-team.html">care_coordinator_team</a> <span class="type-pill">Field</span></li><li><a href="data-dictionary.mart-prod-vayuhealth-program-mart-vayuhealth-program-prod.default-ecm-member-month-demographics.caregiver-name.html">caregiver_name</a> <span class="type-pill">Field</span></li><li><a href="data-dictionary.mart-prod-vayuhealth-program-mart-vayuhealth-program-prod.default-ecm-member-month-demographics.city.html">city</a> <span class="type-pill">Field</span></li><li><a href="data-dictionary.mart-prod-vayuhealth-program-mart-vayuhealth-program-prod.default-ecm-member-month-demographics.county.html">county</a> <span class="type-pill">Field</span></li><li><a href="data-dictionary.mart-prod-vayuhealth-program-mart-vayuhealth-program-prod.default-ecm-member-month-demographics.discontinuation-date.html">discontinuation_date</a> <span class="type-pill">Field</span></li><li><a href="data-dictionary.mart-prod-vayuhealth-program-mart-vayuhealth-program-prod.default-ecm-member-month-demographics.dm-type.html">dm_type</a> <span class="type-pill">Field</span></li><li><a href="data-dictionary.mart-prod-vayuhealth-program-mart-vayuhealth-program-prod.default-ecm-member-month-demographics.dob.html">dob</a> <span class="type-pill">Field</span></li><li><a href="data-dictionary.mart-prod-vayuhealth-program-mart-vayuhealth-program-prod.default-ecm-member-month-demographics.ecm-benefit-end-date.html">ecm_benefit_end_date</a> <span class="type-pill">Field</span></li><li><a href="data-dictionary.mart-prod-vayuhealth-program-mart-vayuhealth-program-prod.default-ecm-member-month-demographics.ecm-benefit-start-date.html">ecm_benefit_start_date</a> <span class="type-pill">Field</span></li><li><a href="data-dictionary.mart-prod-vayuhealth-program-mart-vayuhealth-program-prod.default-ecm-member-month-demographics.gender.html">gender</a> <span class="type-pill">Field</span></li><li><a href="data-dictionary.mart-prod-vayuhealth-program-mart-vayuhealth-program-prod.default-ecm-member-month-demographics.is-homeless.html">is_homeless</a> <span class="type-pill">Field</span></li><li><a href="data-dictionary.mart-prod-vayuhealth-program-mart-vayuhealth-program-prod.default-ecm-member-month-demographics.language.html">language</a> <span class="type-pill">Field</span></li><li><a href="data-dictionary.mart-prod-vayuhealth-program-mart-vayuhealth-program-prod.default-ecm-member-month-demographics.mobile-phone.html">mobile_phone</a> <span class="type-pill">Field</span></li><li><a href="data-dictionary.mart-prod-vayuhealth-program-mart-vayuhealth-program-prod.default-ecm-member-month-demographics.organization.html">organization</a> <span class="type-pill">Field</span></li><li><a href="data-dictionary.mart-prod-vayuhealth-program-mart-vayuhealth-program-prod.default-ecm-member-month-demographics.partner.html">partner</a> <span class="type-pill">Field</span></li><li><a href="data-dictionary.mart-prod-vayuhealth-program-mart-vayuhealth-program-prod.default-ecm-member-month-demographics.pathway.html">pathway</a> <span class="type-pill">Field</span></li><li><a href="data-dictionary.mart-prod-vayuhealth-program-mart-vayuhealth-program-prod.default-ecm-member-month-demographics.pof.html">pof</a> <span class="type-pill">Field</span></li><li><a href="data-dictionary.mart-prod-vayuhealth-program-mart-vayuhealth-program-prod.default-ecm-member-month-demographics.race.html">race</a> <span class="type-pill">Field</span></li><li><a href="data-dictionary.mart-prod-vayuhealth-program-mart-vayuhealth-program-prod.default-ecm-member-month-demographics.region.html">region</a> <span class="type-pill">Field</span></li><li><a href="data-dictionary.mart-prod-vayuhealth-program-mart-vayuhealth-program-prod.default-ecm-member-month-demographics.sexual-orientation.html">sexual_orientation</a> <span class="type-pill">Field</span></li><li><a href="data-dictionary.mart-prod-vayuhealth-program-mart-vayuhealth-program-prod.default-ecm-member-month-demographics.state.html">state</a> <span class="type-pill">Field</span></li><li><a href="data-dictionary.mart-prod-vayuhealth-program-mart-vayuhealth-program-prod.default-ecm-member-month-demographics.tags.html">tags</a> <span class="type-pill">Field</span></li><li><a href="data-dictionary.mart-prod-vayuhealth-program-mart-vayuhealth-program-prod.default-ecm-member-month-demographics.workflow-phase.html">workflow_phase</a> <span class="type-pill">Field</span></li><li><a href="data-dictionary.mart-prod-vayuhealth-program-mart-vayuhealth-program-prod.default-ecm-member-month-demographics.workflow-status.html">workflow_status</a> <span class="type-pill">Field</span></li><li><a href="data-dictionary.mart-prod-vayuhealth-program-mart-vayuhealth-program-prod.default-ecm-member-month-demographics.zcta5.html">zcta5</a> <span class="type-pill">Field</span></li><li><a href="data-dictionary.mart-prod-vayuhealth-program-mart-vayuhealth-program-prod.default-ecm-member-month-demographics.zip-code.html">zip_code</a> <span class="type-pill">Field</span></li></ul></div>
+    
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <p class="footer-brand">Vayu Health Git Data Hub</p>
+      
+    <p class="banner">
+      Website built <time datetime="2026-10-22T21:11:42Z">22 Oct 2026, 21:11 UTC</time>.
+      This is when the site was generated. It is not the effective date of a definition.
+      An effective date is shown on an entry only when the source document states one.
+    </p>
+    
+      <p>Definitions only. Pipeline folders and workflows stay off this site.</p>
+      <nav aria-label="Footer">
+        <a href="../index.html">Home</a>
+        <a href="../dictionary.html">Data Dictionary</a>
+        <a href="../dashboards.html">Dashboards</a>
+        <a href="../methods.html">Methods &amp; Updates</a>
+      </nav>
+    </div>
+  </footer>
+  
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Grain · Vayu Health Git Data Hub</title>
+  <meta name="theme-color" content="#464C4F">
+  
+  <link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+  <a class="skip" href="#content">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap header-bar">
+      <a class="brand" href="../index.html"><img class="brand-logo" src="../assets/vayu-logo-horizontal.webp" alt="Vayu Health"></a>
+      
+      <nav class="site-nav" aria-label="Site">
+        <a href="../dictionary.html">Data Dictionary</a>
+        <a href="../dashboards.html">Dashboards</a>
+        <a href="../methods.html">Methods &amp; Updates</a>
+      </nav>
+    
+      
+      <p class="last-updated">Last Updated: <time datetime="2026-10-22T21:11:42Z" title="When this website was generated. This is not the effective date of a definition.">October 22, 2026</time></p>
+    
+    </div>
+  </header>
+  <main id="content" class="wrap">
+    
+    <section class="intro">
+      <p class="crumbs"><a href="../dictionary.html">Data Dictionary</a> / H. Sourcing-list file dashboard (canonical)</p>
+      <h1>Grain</h1>
+      <p class="meta-line">
+        <span class="type-pill">Rule</span>
+        <span class="topic">Grain</span>
+      </p>
+    </section>
+    <p class="provenance">Documented business meaning. This page does not recompute the rule.</p>
+    <p class="source-line"><code>docs/sourcing_history.md</code> line 173.
+      Owner: Not documented.</p>
+    <div class="detail-row"><h2>Stable entry ID</h2><p><code>sourcing-history.h-sourcing-list-file-dashboard-canonical.grain</code></p></div><div class="detail-row"><h2>Business definition</h2><p>One row per logical batch, not per physical input file.</p>
+<p>The Stanislaus load pairs the Cozeva Demographics file and the HbA1c file in one pass and snapshots them with the same <code>pipeline_run_id</code>. That run id plus county is the pair. Receipt month is not the pair key, so two batches in one month are not merged, and a blank run id is not treated as a match. If more than one HbA1c filename shares the run id, the batch stays unpaired (<code>enrichment_pair_ambiguous</code>).</p>
+<p>Shasta and Humboldt were checked. Each loader reads one A1c file and does not attach a second file, so this pairing rule is not applied to them.</p>
+<p><code>membership_file_name</code> is the physical file whose distinct CIN count is <code>total_members_received</code> for that month. For Stanislaus that is the Cozeva Demographics file, before age and A1c filters. Members on that file with no HbA1c row stay in the count. HbA1c-only CINs are <code>hba1c_only_member_count</code> and are not in the denominator. Duplicate HbA1c rows for one CIN are collapsed before the join.</p>
+<p><code>enrichment_file_name</code> keeps the paired HbA1c filename. <code>receipt_month</code> is the membership file&#x27;s sourcing month.</p>
+<p>Sheet sync has no file id. Verified eligible and program exclusions attach to the Cozeva Demographics CIN on that batch, using that file&#x27;s receipt month.</p></div><div class="detail-row"><h2>Owner</h2><p class="missing">Not documented in the source.</p></div><div class="detail-row"><h2>Documented approval status</h2><p class="missing">Not documented in the source.</p></div><div class="detail-row"><h2>Effective date</h2><p class="missing">Not documented in the source.</p></div><div class="detail-row"><h2>Same heading</h2><ul><li><a href="sourcing-history.h-sourcing-list-file-dashboard-canonical.grain.enrichment-file.html">Enrichment file</a> <span class="type-pill">Rule</span></li><li><a href="sourcing-history.h-sourcing-list-file-dashboard-canonical.grain.logical-source.html">Logical source</a> <span class="type-pill">Rule</span></li><li><a href="sourcing-history.h-sourcing-list-file-dashboard-canonical.grain.membership-file-denominator.html">Membership file (denominator)</a> <span class="type-pill">Rule</span></li></ul></div>
+    
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <p class="footer-brand">Vayu Health Git Data Hub</p>
+      
+    <p class="banner">
+      Website built <time datetime="2026-10-22T21:11:42Z">22 Oct 2026, 21:11 UTC</time>.
+      This is when the site was generated. It is not the effective date of a definition.
+      An effective date is shown on an entry only when the source document states one.
+    </p>
+    
+      <p>Definitions only. Pipeline folders and workflows stay off this site.</p>
+      <nav aria-label="Footer">
+        <a href="../index.html">Home</a>
+        <a href="../dictionary.html">Data Dictionary</a>
+        <a href="../dashboards.html">Dashboards</a>
+        <a href="../methods.html">Methods &amp; Updates</a>
+      </nav>
+    </div>
+  </footer>
+  
+</body>
+</html>

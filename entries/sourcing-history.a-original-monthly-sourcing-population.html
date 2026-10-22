@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>A. Original monthly sourcing population · Vayu Health Git Data Hub</title>
+  <meta name="theme-color" content="#464C4F">
+  
+  <link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+  <a class="skip" href="#content">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap header-bar">
+      <a class="brand" href="../index.html"><img class="brand-logo" src="../assets/vayu-logo-horizontal.webp" alt="Vayu Health"></a>
+      
+      <nav class="site-nav" aria-label="Site">
+        <a href="../dictionary.html">Data Dictionary</a>
+        <a href="../dashboards.html">Dashboards</a>
+        <a href="../methods.html">Methods &amp; Updates</a>
+      </nav>
+    
+      
+      <p class="last-updated">Last Updated: <time datetime="2026-10-22T21:11:42Z" title="When this website was generated. This is not the effective date of a definition.">October 22, 2026</time></p>
+    
+    </div>
+  </header>
+  <main id="content" class="wrap">
+    
+    <section class="intro">
+      <p class="crumbs"><a href="../dictionary.html">Data Dictionary</a> / A. Original monthly sourcing population</p>
+      <h1>A. Original monthly sourcing population</h1>
+      <p class="meta-line">
+        <span class="type-pill">Rule</span>
+        <span class="topic">A. Original monthly sourcing population</span>
+      </p>
+    </section>
+    <p class="provenance">Documented business meaning. This page does not recompute the rule.</p>
+    <p class="source-line"><code>docs/sourcing_history.md</code> line 23.
+      Owner: Not documented.</p>
+    <div class="detail-row"><h2>Stable entry ID</h2><p><code>sourcing-history.a-original-monthly-sourcing-population</code></p></div><div class="detail-row"><h2>Business definition</h2><p>Python writes <code>MART_Sourcing_Received</code> from each source file <strong>before</strong> age or clinical filters:</p>
+<ul><li>Stanislaus Cozeva HbA1c → <code>source_name = stanislaus_cozeva_hba1c</code></li><li>Stanislaus Cozeva Demographics → <code>source_name = stanislaus_cozeva_demographics</code></li><li>Shasta A1C_GT8 → <code>source_name = shasta_a1c_gt8</code></li><li>Humboldt PHC DM A1C9+ → <code>source_name = humboldt_phc_dm_a1c</code></li></ul>
+<p>Each row keeps county, sourcing month (first of month), source file name, source row number, CIN, DOB, age as of that month, A1c value/date, last admission date, pipeline run id, and ingested_at.</p>
+<p>A member who appears again next month is a new received row for that month. Rerunning the same month + county + source <strong>replaces</strong> that slice. It does not append.</p>
+<p><strong>Replacement files:</strong> drop the corrected file in the same Drive folder and rerun that month. The slice replace overwrites the previous received rows for that source. Do not load two versions of the same month side by side.</p>
+<p>Count labels:</p>
+<p>Do not label the sum of monthly distinct counts as unique members ever received. That number is the <code>all_months</code> grain on <code>VW_Sourcing_Funnel</code>.</p></div><div class="detail-row"><h2>Owner</h2><p class="missing">Not documented in the source.</p></div><div class="detail-row"><h2>Documented approval status</h2><p class="missing">Not documented in the source.</p></div><div class="detail-row"><h2>Effective date</h2><p class="missing">Not documented in the source.</p></div><div class="detail-row"><h2>Same heading</h2><ul><li><a href="sourcing-history.a-original-monthly-sourcing-population.cumulative-unique-members-ever-received.html">Cumulative unique members ever received</a> <span class="type-pill">Metric</span></li><li><a href="sourcing-history.a-original-monthly-sourcing-population.distinct-members-received-across-sources-per-month.html">Distinct members received across sources per month</a> <span class="type-pill">Metric</span></li><li><a href="sourcing-history.a-original-monthly-sourcing-population.distinct-members-received-per-source-month.html">Distinct members received per source/month</a> <span class="type-pill">Metric</span></li><li><a href="sourcing-history.a-original-monthly-sourcing-population.raw-source-rows-received.html">Raw source rows received</a> <span class="type-pill">Metric</span></li><li><a href="sourcing-history.a-original-monthly-sourcing-population.total-monthly-member-appearances.html">Total monthly member appearances</a> <span class="type-pill">Metric</span></li></ul></div>
+    
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <p class="footer-brand">Vayu Health Git Data Hub</p>
+      
+    <p class="banner">
+      Website built <time datetime="2026-10-22T21:11:42Z">22 Oct 2026, 21:11 UTC</time>.
+      This is when the site was generated. It is not the effective date of a definition.
+      An effective date is shown on an entry only when the source document states one.
+    </p>
+    
+      <p>Definitions only. Pipeline folders and workflows stay off this site.</p>
+      <nav aria-label="Footer">
+        <a href="../index.html">Home</a>
+        <a href="../dictionary.html">Data Dictionary</a>
+        <a href="../dashboards.html">Dashboards</a>
+        <a href="../methods.html">Methods &amp; Updates</a>
+      </nav>
+    </div>
+  </footer>
+  
+</body>
+</html>

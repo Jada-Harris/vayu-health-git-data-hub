@@ -17,33 +17,39 @@
       <nav class="site-nav" aria-label="Site">
         <a href="../dictionary.html">Data Dictionary</a>
         <a href="../dashboards.html">Dashboards</a>
+        <a href="../glossary.html">Glossary</a>
         <a href="../methods.html">Methods &amp; Updates</a>
       </nav>
     
       
-      <p class="last-updated">Last Updated: <time datetime="2026-10-22T21:11:42Z" title="When this website was generated. This is not the effective date of a definition.">October 22, 2026</time></p>
+      <p class="last-updated">Last Updated: <time datetime="2026-11-20T04:21:12Z" title="When this website was generated. This is not the effective date of a definition.">November 20, 2026</time></p>
     
     </div>
   </header>
   <main id="content" class="wrap">
     
     <section class="intro">
-      <p class="crumbs"><a href="../dictionary.html">Data Dictionary</a> / Calculations added from the snapshot</p>
+      <p class="crumbs"><a href="../dictionary.html">Data Dictionary</a> / Clinical outcomes</p>
       <h1>053. % of Members with Improved A1C at Most Recent</h1>
       <p class="meta-line">
         <span class="type-pill">Metric</span>
-        <span class="topic">053. % of Members with Improved A1C at Most Recent</span>
+        <span class="topic">Calculations added from the snapshot · 053. % of Members with Improved A1C at Most Recent</span>
       </p>
     </section>
-    <p class="provenance">Documented business meaning. This page does not recompute the rule.</p>
-    <p class="source-line"><code>docs/tableau/cloud_snapshot/cumulative_members_outcomes_db.md</code> line 923.
-      Owner: Not documented.</p>
-    <div class="detail-row"><h2>Stable entry ID</h2><p><code>cumulative-members-outcomes-db.calculations-added-from-the-snapshot.053-of-members-with-improved-a1c-at-most-recent</code></p></div><div class="detail-row"><h2>Business definition</h2><p>Tableau name: <code>% of Members with Improved A1C at Most Recent</code>.</p>
+    <div class="summary-box"><h2>In plain terms</h2><p>Meant to show the share of members whose A1c went down from baseline to most recent.</p></div>
+    <div class="detail-row"><h2>Business definition</h2><p>Tableau name: <code>% of Members with Improved A1C at Most Recent</code>.</p>
 <p>Snapshot position 393 of 600 on this page. Workbook association: <code>Vayu Health Cumulative Members &amp; Outcomes DB</code>.</p>
-<p>No business definition is documented for this field. pending review.</p>
+<p><strong>Approval status:</strong> Draft written from the Tableau formula on 2026-11-20, pending review by the data lead.</p>
+<p><strong>Check before approving:</strong> The bottom number uses COUNT on a 1/0 flag, and COUNT counts the zeros too, so it includes every enrollment, not just those with both A1c readings. That makes the rate too low. It likely should use SUM of the flag.</p>
 <pre><code>COUNT([Members with Reduced A1C at Most Recent])
 / 
-COUNT([# of Members with Most Recent A1C])</code></pre></div><div class="detail-row"><h2>Owner</h2><p class="missing">Not documented in the source.</p></div><div class="detail-row"><h2>Documented approval status</h2><p class="missing">Not documented in the source.</p></div><div class="detail-row"><h2>Effective date</h2><p class="missing">Not documented in the source.</p></div><div class="detail-row review"><h2>Review</h2><ul><li>A formula in this section has no name, so it stays on the section.</li><li>The source text asks for a review.</li><li>Source text includes “pending review”.</li></ul></div>
+COUNT([# of Members with Most Recent A1C])</code></pre></div><div class="detail-row"><h2>Documented approval status</h2><p>Draft written from the Tableau formula on 2026-11-20, pending review by the data lead.</p></div>
+    <div class="detail-row review"><h2>Review</h2><ul><li>A formula in this section has no name, so it stays on the section.</li><li>The source text asks for a review.</li><li>Source text includes “pending review”.</li></ul></div><div class="detail-row terms"><h2>Terms used on this page</h2><ul><li><strong>A1c</strong>: A blood test that shows a person&#x27;s average blood sugar over about the last three months. Also written HbA1c. Higher numbers mean less controlled diabetes.</li><li><strong>Cumulative Members</strong>: The permanent list of every Vayu enrollment episode, kept in MART_Cumulative_Members.</li><li><strong>Tableau</strong>: The dashboard tool Vayu uses for program reporting.</li></ul><p><a href="../glossary.html">Full glossary</a></p></div>
+    <details class="technical-details">
+      <summary>Technical details (for analysts)</summary>
+      <p class="provenance">Documented business meaning. This page does not recompute the rule.</p>
+      <div class="detail-row"><h2>Where this definition is written</h2><p><code>docs/tableau/cloud_snapshot/cumulative_members_outcomes_db.md</code> line 1083</p></div><div class="detail-row"><h2>Stable entry ID</h2><p><code>cumulative-members-outcomes-db.calculations-added-from-the-snapshot.053-of-members-with-improved-a1c-at-most-recent</code></p></div>
+    </details>
     
   </main>
   <footer class="site-footer">
@@ -51,7 +57,7 @@ COUNT([# of Members with Most Recent A1C])</code></pre></div><div class="detail-
       <p class="footer-brand">Vayu Health Git Data Hub</p>
       
     <p class="banner">
-      Website built <time datetime="2026-10-22T21:11:42Z">22 Oct 2026, 21:11 UTC</time>.
+      Website built <time datetime="2026-11-20T04:21:12Z">20 Nov 2026, 04:21 UTC</time>.
       This is when the site was generated. It is not the effective date of a definition.
       An effective date is shown on an entry only when the source document states one.
     </p>
@@ -61,6 +67,7 @@ COUNT([# of Members with Most Recent A1C])</code></pre></div><div class="detail-
         <a href="../index.html">Home</a>
         <a href="../dictionary.html">Data Dictionary</a>
         <a href="../dashboards.html">Dashboards</a>
+        <a href="../glossary.html">Glossary</a>
         <a href="../methods.html">Methods &amp; Updates</a>
       </nav>
     </div>

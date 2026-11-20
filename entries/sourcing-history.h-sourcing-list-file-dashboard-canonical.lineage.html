@@ -17,28 +17,27 @@
       <nav class="site-nav" aria-label="Site">
         <a href="../dictionary.html">Data Dictionary</a>
         <a href="../dashboards.html">Dashboards</a>
+        <a href="../glossary.html">Glossary</a>
         <a href="../methods.html">Methods &amp; Updates</a>
       </nav>
     
       
-      <p class="last-updated">Last Updated: <time datetime="2026-10-22T21:11:42Z" title="When this website was generated. This is not the effective date of a definition.">October 22, 2026</time></p>
+      <p class="last-updated">Last Updated: <time datetime="2026-11-20T04:21:12Z" title="When this website was generated. This is not the effective date of a definition.">November 20, 2026</time></p>
     
     </div>
   </header>
   <main id="content" class="wrap">
     
     <section class="intro">
-      <p class="crumbs"><a href="../dictionary.html">Data Dictionary</a> / H. Sourcing-list file dashboard (canonical)</p>
+      <p class="crumbs"><a href="../dictionary.html">Data Dictionary</a> / Sourcing and eligibility</p>
       <h1>Lineage</h1>
       <p class="meta-line">
         <span class="type-pill">Rule</span>
-        <span class="topic">Lineage</span>
+        <span class="topic">H. Sourcing-list file dashboard (canonical) · Lineage</span>
       </p>
     </section>
-    <p class="provenance">Documented business meaning. This page does not recompute the rule.</p>
-    <p class="source-line"><code>docs/sourcing_history.md</code> line 155.
-      Owner: Not documented.</p>
-    <div class="detail-row"><h2>Stable entry ID</h2><p><code>sourcing-history.h-sourcing-list-file-dashboard-canonical.lineage</code></p></div><div class="detail-row"><h2>Business definition</h2><p>Original CIN rows stay in <code>MART_Sourcing_Received</code> after filtering. <code>STG_Sourcing</code> does not. Months loaded before that received table existed are absent here. Do not rebuild them from current Tracker or Enrolled status.</p>
+    
+    <div class="detail-row"><h2>Business definition</h2><p>Original CIN rows stay in <code>MART_Sourcing_Received</code> after filtering. <code>STG_Sourcing</code> does not. Months loaded before that received table existed are absent here. Do not rebuild them from current Tracker or Enrolled status.</p>
 <pre><code>county file
   → MART_Sourcing_Received   (CIN rows before age / A1c filters; slice replace)
   → STG_Sourcing             (current month only; overwritten next month)
@@ -47,7 +46,13 @@
   → PROD_Sourcing            (current outreach list; city filter)
   → three county Google Sheets (Connected Sheets on PROD_Sourcing)
   → Outreach_Sourcing_List_Updates
-  → PROD_Sourcing_File_Dashboard (this view; does not write those objects)</code></pre></div><div class="detail-row"><h2>Owner</h2><p class="missing">Not documented in the source.</p></div><div class="detail-row"><h2>Documented approval status</h2><p class="missing">Not documented in the source.</p></div><div class="detail-row"><h2>Effective date</h2><p class="missing">Not documented in the source.</p></div>
+  → PROD_Sourcing_File_Dashboard (this view; does not write those objects)</code></pre></div>
+    <div class="detail-row terms"><h2>Terms used on this page</h2><ul><li><strong>A1c</strong>: A blood test that shows a person&#x27;s average blood sugar over about the last three months. Also written HbA1c. Higher numbers mean less controlled diabetes.</li><li><strong>CIN</strong>: Client Index Number: the Medi-Cal member ID. It is PHI. Never type a real one into GitHub.</li></ul><p><a href="../glossary.html">Full glossary</a></p></div>
+    <details class="technical-details">
+      <summary>Technical details (for analysts)</summary>
+      <p class="provenance">Documented business meaning. This page does not recompute the rule.</p>
+      <div class="detail-row"><h2>Where this definition is written</h2><p><code>docs/sourcing_history.md</code> line 175</p></div><div class="detail-row"><h2>Stable entry ID</h2><p><code>sourcing-history.h-sourcing-list-file-dashboard-canonical.lineage</code></p></div>
+    </details>
     
   </main>
   <footer class="site-footer">
@@ -55,7 +60,7 @@
       <p class="footer-brand">Vayu Health Git Data Hub</p>
       
     <p class="banner">
-      Website built <time datetime="2026-10-22T21:11:42Z">22 Oct 2026, 21:11 UTC</time>.
+      Website built <time datetime="2026-11-20T04:21:12Z">20 Nov 2026, 04:21 UTC</time>.
       This is when the site was generated. It is not the effective date of a definition.
       An effective date is shown on an entry only when the source document states one.
     </p>
@@ -65,6 +70,7 @@
         <a href="../index.html">Home</a>
         <a href="../dictionary.html">Data Dictionary</a>
         <a href="../dashboards.html">Dashboards</a>
+        <a href="../glossary.html">Glossary</a>
         <a href="../methods.html">Methods &amp; Updates</a>
       </nav>
     </div>

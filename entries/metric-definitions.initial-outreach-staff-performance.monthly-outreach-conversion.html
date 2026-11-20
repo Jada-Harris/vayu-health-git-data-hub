@@ -17,34 +17,39 @@
       <nav class="site-nav" aria-label="Site">
         <a href="../dictionary.html">Data Dictionary</a>
         <a href="../dashboards.html">Dashboards</a>
+        <a href="../glossary.html">Glossary</a>
         <a href="../methods.html">Methods &amp; Updates</a>
       </nav>
     
       
-      <p class="last-updated">Last Updated: <time datetime="2026-10-22T21:11:42Z" title="When this website was generated. This is not the effective date of a definition.">October 22, 2026</time></p>
+      <p class="last-updated">Last Updated: <time datetime="2026-11-20T04:21:12Z" title="When this website was generated. This is not the effective date of a definition.">November 20, 2026</time></p>
     
     </div>
   </header>
   <main id="content" class="wrap">
     
     <section class="intro">
-      <p class="crumbs"><a href="../dictionary.html">Data Dictionary</a> / Initial outreach (Staff Performance)</p>
+      <p class="crumbs"><a href="../dictionary.html">Data Dictionary</a> / Outreach and enrollment conversion</p>
       <h1>Monthly outreach conversion</h1>
       <p class="meta-line">
         <span class="type-pill">Metric</span>
-        <span class="topic">Monthly outreach conversion</span>
+        <span class="topic">Initial outreach (Staff Performance) · Monthly outreach conversion</span>
       </p>
     </section>
-    <p class="provenance">Documented business meaning. This page does not recompute the rule.</p>
-    <p class="source-line"><code>docs/metric_definitions.md</code> line 391.
-      Owner: Not documented.</p>
-    <div class="detail-row"><h2>Stable entry ID</h2><p><code>metric-definitions.initial-outreach-staff-performance.monthly-outreach-conversion</code></p></div><div class="detail-row"><h2>Business definition</h2><p>Tableau source: <code>VayuHealth_Program_PROD.VW_Phase1_Monthly_Outreach_Conversion</code>.</p>
+    <div class="summary-box"><h2>In plain terms</h2><p>A month-by-month view of members outreached, added to outreach, and enrolled, by channel. It feeds the overall monthly outreach conversion rate.</p></div>
+    <div class="detail-row"><h2>Business definition</h2><p>Tableau source: <code>VayuHealth_Program_PROD.VW_Phase1_Monthly_Outreach_Conversion</code>.</p>
 <p>Grain: one row per <code>member_cin</code> + <code>reporting_month</code> + <code>outreach_channel</code>. <code>reporting_month</code> is a Log Initial Outreach month, an ECM enrollment-start month, or the Tracker month the member was added to outreach. A member outreached in August and enrolled in September has both months. A member with both channels in one outreach month has two rows. Use <code>COUNTD(member_cin)</code>.</p>
 <p><code>enrolled_in_reporting_month</code> requires a Log Initial Outreach in the month and an ECM enrollment start in that same month. <code>enrolled_in_month</code> is any ECM enrollment start in the month. Outreach can be in an earlier month, including the end of the prior month, or absent. Do not use <code>COUNTD(member_cin)</code> as the denominator, because enrollment-only rows are in the view.</p>
 <p><code>added_to_outreach_in_reporting_month</code> is the Tracker <code>member_created_date</code> month. It includes members who were added and never outreached. Use <code>reporting_month</code> as the month axis so region, organization, health plan, care team, and channel filters match the conversion graphs.</p>
 <p>On an outreach row, <code>region</code>, <code>organization</code>, <code>health_plan</code>, <code>care_coordinator_team</code>, and <code>outreach_channel</code> come from that month&#x27;s outreach. On an enrollment-only row, those attributes come from the enrollment episode, and <code>outreach_channel</code> is the latest Log Initial Outreach on or before the enrollment start. On an added-only row, those attributes come from the member&#x27;s outcome record, and <code>outreach_channel</code> is the member&#x27;s earliest Log Initial Outreach. That channel is blank when the member was never outreached, so an <code>outreach_channel</code> filter leaves those members out.</p>
 <p>Do not calculate the first-outreach cohort rate on this view. That rate stays on <code>VW_Phase1_Enrollment_Conversion</code>.</p>
-<p>The monthly unique-outreached card on the events view counts members with <strong>any</strong> Log Initial Outreach in that activity month. Conversion uses <strong>first</strong> outreach month. Those two month counts will not always match.</p></div><div class="detail-row"><h2>Owner</h2><p class="missing">Not documented in the source.</p></div><div class="detail-row"><h2>Documented approval status</h2><p class="missing">Not documented in the source.</p></div><div class="detail-row"><h2>Effective date</h2><p class="missing">Not documented in the source.</p></div><div class="detail-row"><h2>Same heading</h2><ul><li><a href="metric-definitions.initial-outreach-staff-performance.monthly-outreach-conversion.enrolled-in-that-same-month.html">Enrolled in that same month</a> <span class="type-pill">Metric</span></li><li><a href="metric-definitions.initial-outreach-staff-performance.monthly-outreach-conversion.members-added-to-outreach.html">Members added to outreach</a> <span class="type-pill">Metric</span></li><li><a href="metric-definitions.initial-outreach-staff-performance.monthly-outreach-conversion.members-enrolled-in-the-month.html">Members enrolled in the month</a> <span class="type-pill">Metric</span></li><li><a href="metric-definitions.initial-outreach-staff-performance.monthly-outreach-conversion.members-outreached-in-the-month.html">Members outreached in the month</a> <span class="type-pill">Metric</span></li><li><a href="metric-definitions.initial-outreach-staff-performance.monthly-outreach-conversion.month.html">Month</a> <span class="type-pill">Metric</span></li><li><a href="metric-definitions.initial-outreach-staff-performance.monthly-outreach-conversion.overall-conversion-rate.html">Overall conversion rate</a> <span class="type-pill">Metric</span></li><li><a href="metric-definitions.initial-outreach-staff-performance.monthly-outreach-conversion.same-month-conversion-rate.html">Same-month conversion rate</a> <span class="type-pill">Metric</span></li></ul></div>
+<p>The monthly unique-outreached card on the events view counts members with <strong>any</strong> Log Initial Outreach in that activity month. Conversion uses <strong>first</strong> outreach month. Those two month counts will not always match.</p></div>
+    <div class="detail-row terms"><h2>Terms used on this page</h2><ul><li><strong>ECM</strong>: Enhanced Care Management: the Medi-Cal (CalAIM) benefit that pays Vayu to coordinate care for members with complex needs.</li><li><strong>Grain</strong>: What one row in a table stands for, for example one member per month.</li><li><strong>Tableau</strong>: The dashboard tool Vayu uses for program reporting.</li></ul><p><a href="../glossary.html">Full glossary</a></p></div><div class="detail-row"><h2>Same heading</h2><ul><li><a href="metric-definitions.initial-outreach-staff-performance.monthly-outreach-conversion.enrolled-in-that-same-month.html">Enrolled in that same month</a> <span class="type-pill">Metric</span></li><li><a href="metric-definitions.initial-outreach-staff-performance.monthly-outreach-conversion.members-added-to-outreach.html">Members added to outreach</a> <span class="type-pill">Metric</span></li><li><a href="metric-definitions.initial-outreach-staff-performance.monthly-outreach-conversion.members-enrolled-in-the-month.html">Members enrolled in the month</a> <span class="type-pill">Metric</span></li><li><a href="metric-definitions.initial-outreach-staff-performance.monthly-outreach-conversion.members-outreached-in-the-month.html">Members outreached in the month</a> <span class="type-pill">Metric</span></li><li><a href="metric-definitions.initial-outreach-staff-performance.monthly-outreach-conversion.month.html">Month</a> <span class="type-pill">Metric</span></li><li><a href="metric-definitions.initial-outreach-staff-performance.monthly-outreach-conversion.overall-conversion-rate.html">Overall conversion rate</a> <span class="type-pill">Metric</span></li><li><a href="metric-definitions.initial-outreach-staff-performance.monthly-outreach-conversion.same-month-conversion-rate.html">Same-month conversion rate</a> <span class="type-pill">Metric</span></li></ul></div>
+    <details class="technical-details">
+      <summary>Technical details (for analysts)</summary>
+      <p class="provenance">Documented business meaning. This page does not recompute the rule.</p>
+      <div class="detail-row"><h2>Where this definition is written</h2><p><code>docs/metric_definitions.md</code> line 483</p></div><div class="detail-row"><h2>Stable entry ID</h2><p><code>metric-definitions.initial-outreach-staff-performance.monthly-outreach-conversion</code></p></div>
+    </details>
     
   </main>
   <footer class="site-footer">
@@ -52,7 +57,7 @@
       <p class="footer-brand">Vayu Health Git Data Hub</p>
       
     <p class="banner">
-      Website built <time datetime="2026-10-22T21:11:42Z">22 Oct 2026, 21:11 UTC</time>.
+      Website built <time datetime="2026-11-20T04:21:12Z">20 Nov 2026, 04:21 UTC</time>.
       This is when the site was generated. It is not the effective date of a definition.
       An effective date is shown on an entry only when the source document states one.
     </p>
@@ -62,6 +67,7 @@
         <a href="../index.html">Home</a>
         <a href="../dictionary.html">Data Dictionary</a>
         <a href="../dashboards.html">Dashboards</a>
+        <a href="../glossary.html">Glossary</a>
         <a href="../methods.html">Methods &amp; Updates</a>
       </nav>
     </div>

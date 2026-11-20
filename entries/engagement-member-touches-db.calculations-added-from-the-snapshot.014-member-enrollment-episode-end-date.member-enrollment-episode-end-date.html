@@ -17,36 +17,33 @@
       <nav class="site-nav" aria-label="Site">
         <a href="../dictionary.html">Data Dictionary</a>
         <a href="../dashboards.html">Dashboards</a>
+        <a href="../glossary.html">Glossary</a>
         <a href="../methods.html">Methods &amp; Updates</a>
       </nav>
     
       
-      <p class="last-updated">Last Updated: <time datetime="2026-10-22T21:11:42Z" title="When this website was generated. This is not the effective date of a definition.">October 22, 2026</time></p>
+      <p class="last-updated">Last Updated: <time datetime="2026-11-20T04:21:12Z" title="When this website was generated. This is not the effective date of a definition.">November 20, 2026</time></p>
     
     </div>
   </header>
   <main id="content" class="wrap">
     
     <section class="intro">
-      <p class="crumbs"><a href="../dictionary.html">Data Dictionary</a> / Calculations added from the snapshot</p>
+      <p class="crumbs"><a href="../dictionary.html">Data Dictionary</a> / Enrollment and membership</p>
       <h1>Member Enrollment Episode End Date</h1>
       <p class="meta-line">
         <span class="type-pill">Tableau calculation</span>
-        <span class="topic">014. Member Enrollment Episode End Date</span>
+        <span class="topic">Calculations added from the snapshot · 014. Member Enrollment Episode End Date</span>
       </p>
     </section>
-    <p class="provenance">Documented business meaning. This page does not recompute the rule.</p>
-    <p class="source-line"><code>docs/tableau/cloud_snapshot/engagement_member_touches_db.md</code> line 209.
-      Owner: Not documented.</p>
-    <div class="detail-row"><h2>Stable entry ID</h2><p><code>engagement-member-touches-db.calculations-added-from-the-snapshot.014-member-enrollment-episode-end-date.member-enrollment-episode-end-date</code></p></div><div class="detail-row"><h2>Business definition</h2><p>// Member Enrollment Episode End Date
-IF ISNULL([Ecm Enrollment End Date])
-THEN [Discontinuation Date]
-ELSEIF ISNULL([Discontinuation Date])
-THEN [Ecm Enrollment End Date]
-ELSEIF [Ecm Enrollment End Date] &lt; [Discontinuation Date]
-THEN [Ecm Enrollment End Date]
-ELSE [Discontinuation Date]
-END</p></div><div class="detail-row"><h2>Calculation/formula</h2><p>Same text as the business definition. The source records that wording as the calculation.</p></div><div class="detail-row"><h2>Owner</h2><p class="missing">Not documented in the source.</p></div><div class="detail-row"><h2>Documented approval status</h2><p class="missing">Not documented in the source.</p></div><div class="detail-row"><h2>Effective date</h2><p class="missing">Not documented in the source.</p></div><div class="detail-row"><h2>Also documented in</h2><ul><li><a href="cumulative-members-outcomes-db.calculations-added-from-the-snapshot.007-member-enrollment-episode-end-date.member-enrollment-episode-end-date.html">Member Enrollment Episode End Date</a> <span class="topic">docs/tableau/cloud_snapshot/cumulative_members_outcomes_db.md</span></li><li><a href="strategic-cumulative-members-outcomes-db.calculations-added-from-the-snapshot.005-member-enrollment-episode-end-date.member-enrollment-episode-end-date.html">Member Enrollment Episode End Date</a> <span class="topic">docs/tableau/cloud_snapshot/strategic_cumulative_members_outcomes_db.md</span></li></ul></div><div class="detail-row"><h2>Same heading</h2><ul><li><a href="engagement-member-touches-db.calculations-added-from-the-snapshot.014-member-enrollment-episode-end-date.html">014. Member Enrollment Episode End Date</a> <span class="type-pill">Metric</span></li></ul></div>
+    
+    <div class="detail-row"><h2>Business definition</h2><p>// Member Enrollment Episode End Date IF ISNULL([Ecm Enrollment End Date]) THEN [Discontinuation Date] ELSEIF ISNULL([Discontinuation Date]) THEN [Ecm Enrollment End Date] ELSEIF [Ecm Enrollment End Date] &lt; [Discontinuation Date] THEN [Ecm Enrollment End Date] ELSE [Discontinuation Date] END</p></div><div class="detail-row"><h2>Documented approval status</h2><p>Draft written from the Tableau formula on 2026-11-20, pending review by the data lead.</p></div>
+    <div class="detail-row"><h2>Same name is also defined in</h2><p>These entries share this name. Check which one matches the dashboard you are reading.</p><ul><li><a href="cumulative-members-outcomes-db.calculations-added-from-the-snapshot.007-member-enrollment-episode-end-date.member-enrollment-episode-end-date.html">Member Enrollment Episode End Date</a> <span class="topic">docs/tableau/cloud_snapshot/cumulative_members_outcomes_db.md</span></li><li><a href="strategic-cumulative-members-outcomes-db.calculations-added-from-the-snapshot.005-member-enrollment-episode-end-date.member-enrollment-episode-end-date.html">Member Enrollment Episode End Date</a> <span class="topic">docs/tableau/cloud_snapshot/strategic_cumulative_members_outcomes_db.md</span></li></ul></div><div class="detail-row terms"><h2>Terms used on this page</h2><ul><li><strong>Discontinuation</strong>: When a member leaves the program. The reason comes from the MIF.</li></ul><p><a href="../glossary.html">Full glossary</a></p></div><div class="detail-row"><h2>Same heading</h2><ul><li><a href="engagement-member-touches-db.calculations-added-from-the-snapshot.014-member-enrollment-episode-end-date.html">014. Member Enrollment Episode End Date</a> <span class="type-pill">Metric</span></li></ul></div>
+    <details class="technical-details">
+      <summary>Technical details (for analysts)</summary>
+      <p class="provenance">Documented business meaning. This page does not recompute the rule.</p>
+      <div class="detail-row"><h2>Calculation/formula</h2><p>Same text as the business definition. The source records that wording as the calculation.</p></div><div class="detail-row"><h2>Where this definition is written</h2><p><code>docs/tableau/cloud_snapshot/engagement_member_touches_db.md</code> line 251</p></div><div class="detail-row"><h2>Stable entry ID</h2><p><code>engagement-member-touches-db.calculations-added-from-the-snapshot.014-member-enrollment-episode-end-date.member-enrollment-episode-end-date</code></p></div>
+    </details>
     
   </main>
   <footer class="site-footer">
@@ -54,7 +51,7 @@ END</p></div><div class="detail-row"><h2>Calculation/formula</h2><p>Same text as
       <p class="footer-brand">Vayu Health Git Data Hub</p>
       
     <p class="banner">
-      Website built <time datetime="2026-10-22T21:11:42Z">22 Oct 2026, 21:11 UTC</time>.
+      Website built <time datetime="2026-11-20T04:21:12Z">20 Nov 2026, 04:21 UTC</time>.
       This is when the site was generated. It is not the effective date of a definition.
       An effective date is shown on an entry only when the source document states one.
     </p>
@@ -64,6 +61,7 @@ END</p></div><div class="detail-row"><h2>Calculation/formula</h2><p>Same text as
         <a href="../index.html">Home</a>
         <a href="../dictionary.html">Data Dictionary</a>
         <a href="../dashboards.html">Dashboards</a>
+        <a href="../glossary.html">Glossary</a>
         <a href="../methods.html">Methods &amp; Updates</a>
       </nav>
     </div>

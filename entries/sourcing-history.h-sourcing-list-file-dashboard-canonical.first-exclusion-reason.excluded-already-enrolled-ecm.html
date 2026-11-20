@@ -17,28 +17,35 @@
       <nav class="site-nav" aria-label="Site">
         <a href="../dictionary.html">Data Dictionary</a>
         <a href="../dashboards.html">Dashboards</a>
+        <a href="../glossary.html">Glossary</a>
         <a href="../methods.html">Methods &amp; Updates</a>
       </nav>
     
       
-      <p class="last-updated">Last Updated: <time datetime="2026-10-22T21:11:42Z" title="When this website was generated. This is not the effective date of a definition.">October 22, 2026</time></p>
+      <p class="last-updated">Last Updated: <time datetime="2026-11-20T04:21:12Z" title="When this website was generated. This is not the effective date of a definition.">November 20, 2026</time></p>
     
     </div>
   </header>
   <main id="content" class="wrap">
     
     <section class="intro">
-      <p class="crumbs"><a href="../dictionary.html">Data Dictionary</a> / H. Sourcing-list file dashboard (canonical)</p>
+      <p class="crumbs"><a href="../dictionary.html">Data Dictionary</a> / Sourcing and eligibility</p>
       <h1>excluded_already_enrolled_ecm</h1>
       <p class="meta-line">
         <span class="type-pill">Rule</span>
-        <span class="topic">First exclusion reason</span>
+        <span class="topic">H. Sourcing-list file dashboard (canonical) · First exclusion reason</span>
       </p>
     </section>
-    <p class="provenance">Documented business meaning. This page does not recompute the rule.</p>
-    <p class="source-line"><code>docs/sourcing_history.md</code> line 225.
-      Owner: Not documented.</p>
-    <div class="detail-row"><h2>Stable entry ID</h2><p><code>sourcing-history.h-sourcing-list-file-dashboard-canonical.first-exclusion-reason.excluded-already-enrolled-ecm</code></p></div><div class="detail-row"><h2>Business definition</h2><p><code>excluded_already_enrolled_ecm</code>, then <code>excluded_already_in_outreach</code>, then <code>excluded_previously_declined</code>, then <code>excluded_primary_location_outside_service_area</code> — only from <code>MART_Sourcing_Outcome</code> for that county and receipt month. If that month was never applied, all four are NULL (not zero). The outcome row is whatever Program STG contained at the last apply of that month. Re-applying the month replaces it. Live Tracker status is not read.</p></div><div class="detail-row"><h2>Owner</h2><p class="missing">Not documented in the source.</p></div><div class="detail-row"><h2>Documented approval status</h2><p class="missing">Not documented in the source.</p></div><div class="detail-row"><h2>Effective date</h2><p class="missing">Not documented in the source.</p></div><div class="detail-row"><h2>Same heading</h2><ul><li><a href="sourcing-history.h-sourcing-list-file-dashboard-canonical.first-exclusion-reason.excluded-a1c-below-9.html">excluded_a1c_below_9</a> <span class="type-pill">Rule</span></li><li><a href="sourcing-history.h-sourcing-list-file-dashboard-canonical.first-exclusion-reason.excluded-a1c-outside-12-months.html">excluded_a1c_outside_12_months</a> <span class="type-pill">Rule</span></li><li><a href="sourcing-history.h-sourcing-list-file-dashboard-canonical.first-exclusion-reason.excluded-age-under-18.html">excluded_age_under_18</a> <span class="type-pill">Rule</span></li><li><a href="sourcing-history.h-sourcing-list-file-dashboard-canonical.first-exclusion-reason.excluded-missing-dob.html">excluded_missing_dob</a> <span class="type-pill">Rule</span></li><li><a href="sourcing-history.h-sourcing-list-file-dashboard-canonical.first-exclusion-reason.excluded-missing-or-non-numeric-a1c.html">excluded_missing_or_non_numeric_a1c</a> <span class="type-pill">Rule</span></li><li><a href="sourcing-history.h-sourcing-list-file-dashboard-canonical.first-exclusion-reason.html">First exclusion reason</a> <span class="type-pill">Rule</span></li></ul></div>
+    <div class="summary-box"><h2>In plain terms</h2><p>Already enrolled with ECM, already in outreach, previously declined, or living outside the service area (checked in that order).</p></div>
+    <div class="detail-row"><h2>Business definition</h2><p>Checked in this order: <code>excluded_already_enrolled_ecm</code>, then <code>excluded_already_in_outreach</code>, then <code>excluded_previously_declined</code>, then <code>excluded_primary_location_outside_service_area</code>. only from <code>MART_Sourcing_Outcome</code> for that county and receipt month. If that month was never applied, all four are NULL (not zero). The outcome row is whatever Program STG contained at the last apply of that month. Re-applying the month replaces it. Live Tracker status is not read.
+
+Order: 6</p></div>
+    <div class="detail-row terms"><h2>Terms used on this page</h2><ul><li><strong>ECM</strong>: Enhanced Care Management: the Medi-Cal (CalAIM) benefit that pays Vayu to coordinate care for members with complex needs.</li><li><strong>STG</strong>: Staging: the BigQuery layer that holds source files as they arrived, with light cleanup only.</li></ul><p><a href="../glossary.html">Full glossary</a></p></div><div class="detail-row"><h2>Same heading</h2><ul><li><a href="sourcing-history.h-sourcing-list-file-dashboard-canonical.first-exclusion-reason.excluded-a1c-below-9.html">excluded_a1c_below_9</a> <span class="type-pill">Rule</span></li><li><a href="sourcing-history.h-sourcing-list-file-dashboard-canonical.first-exclusion-reason.excluded-a1c-outside-12-months.html">excluded_a1c_outside_12_months</a> <span class="type-pill">Rule</span></li><li><a href="sourcing-history.h-sourcing-list-file-dashboard-canonical.first-exclusion-reason.excluded-age-under-18.html">excluded_age_under_18</a> <span class="type-pill">Rule</span></li><li><a href="sourcing-history.h-sourcing-list-file-dashboard-canonical.first-exclusion-reason.excluded-missing-dob.html">excluded_missing_dob</a> <span class="type-pill">Rule</span></li><li><a href="sourcing-history.h-sourcing-list-file-dashboard-canonical.first-exclusion-reason.excluded-missing-or-non-numeric-a1c.html">excluded_missing_or_non_numeric_a1c</a> <span class="type-pill">Rule</span></li><li><a href="sourcing-history.h-sourcing-list-file-dashboard-canonical.first-exclusion-reason.excluded-previously-received.html">excluded_previously_received</a> <span class="type-pill">Rule</span></li><li><a href="sourcing-history.h-sourcing-list-file-dashboard-canonical.first-exclusion-reason.html">First exclusion reason</a> <span class="type-pill">Rule</span></li></ul></div>
+    <details class="technical-details">
+      <summary>Technical details (for analysts)</summary>
+      <p class="provenance">Documented business meaning. This page does not recompute the rule.</p>
+      <div class="detail-row"><h2>Where this definition is written</h2><p><code>docs/sourcing_history.md</code> line 251</p></div><div class="detail-row"><h2>Stable entry ID</h2><p><code>sourcing-history.h-sourcing-list-file-dashboard-canonical.first-exclusion-reason.excluded-already-enrolled-ecm</code></p></div>
+    </details>
     
   </main>
   <footer class="site-footer">
@@ -46,7 +53,7 @@
       <p class="footer-brand">Vayu Health Git Data Hub</p>
       
     <p class="banner">
-      Website built <time datetime="2026-10-22T21:11:42Z">22 Oct 2026, 21:11 UTC</time>.
+      Website built <time datetime="2026-11-20T04:21:12Z">20 Nov 2026, 04:21 UTC</time>.
       This is when the site was generated. It is not the effective date of a definition.
       An effective date is shown on an entry only when the source document states one.
     </p>
@@ -56,6 +63,7 @@
         <a href="../index.html">Home</a>
         <a href="../dictionary.html">Data Dictionary</a>
         <a href="../dashboards.html">Dashboards</a>
+        <a href="../glossary.html">Glossary</a>
         <a href="../methods.html">Methods &amp; Updates</a>
       </nav>
     </div>

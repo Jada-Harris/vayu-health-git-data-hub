@@ -17,30 +17,36 @@
       <nav class="site-nav" aria-label="Site">
         <a href="../dictionary.html">Data Dictionary</a>
         <a href="../dashboards.html">Dashboards</a>
+        <a href="../glossary.html">Glossary</a>
         <a href="../methods.html">Methods &amp; Updates</a>
       </nav>
     
       
-      <p class="last-updated">Last Updated: <time datetime="2026-10-22T21:11:42Z" title="When this website was generated. This is not the effective date of a definition.">October 22, 2026</time></p>
+      <p class="last-updated">Last Updated: <time datetime="2026-11-20T04:21:12Z" title="When this website was generated. This is not the effective date of a definition.">November 20, 2026</time></p>
     
     </div>
   </header>
   <main id="content" class="wrap">
     
     <section class="intro">
-      <p class="crumbs"><a href="../dictionary.html">Data Dictionary</a> / C. Actual additions to outreach</p>
+      <p class="crumbs"><a href="../dictionary.html">Data Dictionary</a> / Sourcing and eligibility</p>
       <h1>C. Actual additions to outreach</h1>
       <p class="meta-line">
         <span class="type-pill">Rule</span>
         <span class="topic">C. Actual additions to outreach</span>
       </p>
     </section>
-    <p class="provenance">Documented business meaning. This page does not recompute the rule.</p>
-    <p class="source-line"><code>docs/sourcing_history.md</code> line 72.
-      Owner: Not documented.</p>
-    <div class="detail-row"><h2>Stable entry ID</h2><p><code>sourcing-history.c-actual-additions-to-outreach</code></p></div><div class="detail-row"><h2>Business definition</h2><p>Documented event: <code>VayuHealth_Sourcing_Data.Outreach_Sourcing_List_Updates.date_moved_to_outreach</code>.</p>
-<p>That date is entered on the county Outreach View and synced by Apps Script. <code>sync_timestamp</code>, <code>ingested_at</code>, and current ECM Tracker status are <strong>not</strong> used as the month outreach began.</p>
-<p>A member who remains on <code>PROD_Sourcing</code> is outreach-ready, not an outreach addition, until <code>date_moved_to_outreach</code> is present.</p></div><div class="detail-row"><h2>Owner</h2><p class="missing">Not documented in the source.</p></div><div class="detail-row"><h2>Documented approval status</h2><p class="missing">Not documented in the source.</p></div><div class="detail-row"><h2>Effective date</h2><p class="missing">Not documented in the source.</p></div>
+    <div class="summary-box"><h2>In plain terms</h2><p>Members actually moved onto the outreach list, based on the date the team entered on the county Outreach View.</p></div>
+    <div class="detail-row"><h2>Business definition</h2><p>Documented outreach handoff: the latest Sheet row where Verified Eligible? is yes and <code>date_moved_to_outreach</code> is populated. On <code>VW_Sourcing_Members</code> that is <code>effective_date_moved_to_outreach</code>.</p>
+<p><code>date_moved_to_outreach</code> on the sync table is the raw Sheet value. Historical rows with Verified Eligible? = no used that column as the date the member was found ineligible. <code>effective_date_verified_ineligible</code> uses <code>date_verified_ineligible</code> when it is populated, and otherwise uses that old date only for a not-eligible token.</p>
+<p>That date is entered on the county Eligibility Verification tab and synced by Apps Script. <code>sync_timestamp</code>, <code>ingested_at</code>, and current ECM Tracker status are <strong>not</strong> used as the month outreach began.</p>
+<p>A member who remains on <code>PROD_Sourcing</code> is outreach-ready, not an outreach addition, until <code>date_moved_to_outreach</code> is present.</p></div>
+    <div class="detail-row terms"><h2>Terms used on this page</h2><ul><li><strong>Apps Script</strong>: Google&#x27;s built-in scripting tool for Sheets, Drive, and Gmail. Our automations in the automation/ folder run there.</li><li><strong>ECM</strong>: Enhanced Care Management: the Medi-Cal (CalAIM) benefit that pays Vayu to coordinate care for members with complex needs.</li><li><strong>ECM Tracker</strong>: The Sprite report that lists members in outreach and enrollment, with their status and dates.</li><li><strong>View</strong>: A saved database query that always shows current data. Unlike a table, it stores no rows of its own.</li></ul><p><a href="../glossary.html">Full glossary</a></p></div>
+    <details class="technical-details">
+      <summary>Technical details (for analysts)</summary>
+      <p class="provenance">Documented business meaning. This page does not recompute the rule.</p>
+      <div class="detail-row"><h2>Where this definition is written</h2><p><code>docs/sourcing_history.md</code> line 78</p></div><div class="detail-row"><h2>Stable entry ID</h2><p><code>sourcing-history.c-actual-additions-to-outreach</code></p></div>
+    </details>
     
   </main>
   <footer class="site-footer">
@@ -48,7 +54,7 @@
       <p class="footer-brand">Vayu Health Git Data Hub</p>
       
     <p class="banner">
-      Website built <time datetime="2026-10-22T21:11:42Z">22 Oct 2026, 21:11 UTC</time>.
+      Website built <time datetime="2026-11-20T04:21:12Z">20 Nov 2026, 04:21 UTC</time>.
       This is when the site was generated. It is not the effective date of a definition.
       An effective date is shown on an entry only when the source document states one.
     </p>
@@ -58,6 +64,7 @@
         <a href="../index.html">Home</a>
         <a href="../dictionary.html">Data Dictionary</a>
         <a href="../dashboards.html">Dashboards</a>
+        <a href="../glossary.html">Glossary</a>
         <a href="../methods.html">Methods &amp; Updates</a>
       </nav>
     </div>

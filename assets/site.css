@@ -634,3 +634,67 @@ button.dt-button:hover {
     transition: none !important;
   }
 }
+
+/* Plain-language help: "How to use this page", summaries, glossary. */
+.how-to {
+  background: var(--beige);
+  border-radius: var(--radius);
+  padding: 1rem 1.25rem;
+  margin: 0 0 1.25rem;
+}
+.how-to h2 { font-size: 1.05rem; margin: 0 0 0.5rem; }
+.how-to ol { margin: 0 0 0.75rem; padding-left: 1.25rem; }
+.how-to li { margin-bottom: 0.35rem; }
+.how-to .examples { margin: 0 0 0.5rem; }
+.how-to .fine { margin: 0; font-size: 0.85rem; color: var(--grey); }
+
+.summary-box {
+  background: var(--beige);
+  border-left: 4px solid var(--orange);
+  border-radius: var(--radius);
+  padding: 0.85rem 1.1rem;
+  margin: 0 0 1rem;
+}
+.summary-box h2 { font-size: 0.95rem; margin: 0 0 0.35rem; }
+.summary-box p { margin: 0; font-size: 1.05rem; }
+
+.detail-row.terms { border-left: 4px solid var(--blue); }
+
+.technical-details {
+  margin: 1.25rem 0;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 0.5rem 1rem;
+  background: var(--white);
+}
+.technical-details > summary {
+  cursor: pointer;
+  font-weight: 600;
+  padding: 0.35rem 0;
+}
+.technical-details[open] > summary { margin-bottom: 0.75rem; }
+
+.also {
+  display: block;
+  font-size: 0.78rem;
+  color: var(--mid-brown);
+}
+
+abbr[title] {
+  text-decoration: underline dotted;
+  text-underline-offset: 2px;
+  cursor: help;
+}
+
+table.glossary { width: 100%; border-collapse: collapse; }
+table.glossary th,
+table.glossary td {
+  text-align: left;
+  vertical-align: top;
+  padding: 0.55rem 0.75rem;
+  border-bottom: 1px solid var(--line);
+}
+table.glossary tbody th { white-space: nowrap; font-weight: 600; }
+@media (max-width: 560px) {
+  table.glossary tbody th { white-space: normal; }
+}

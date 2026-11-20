@@ -17,34 +17,39 @@
       <nav class="site-nav" aria-label="Site">
         <a href="../dictionary.html">Data Dictionary</a>
         <a href="../dashboards.html">Dashboards</a>
+        <a href="../glossary.html">Glossary</a>
         <a href="../methods.html">Methods &amp; Updates</a>
       </nav>
     
       
-      <p class="last-updated">Last Updated: <time datetime="2026-10-22T21:11:42Z" title="When this website was generated. This is not the effective date of a definition.">October 22, 2026</time></p>
+      <p class="last-updated">Last Updated: <time datetime="2026-11-20T04:21:12Z" title="When this website was generated. This is not the effective date of a definition.">November 20, 2026</time></p>
     
     </div>
   </header>
   <main id="content" class="wrap">
     
     <section class="intro">
-      <p class="crumbs"><a href="../dictionary.html">Data Dictionary</a> / Initial outreach (Staff Performance)</p>
+      <p class="crumbs"><a href="../dictionary.html">Data Dictionary</a> / Outreach and enrollment conversion</p>
       <h1>Phase 1 outreach and enrollment outcomes</h1>
       <p class="meta-line">
         <span class="type-pill">Metric</span>
-        <span class="topic">Phase 1 outreach and enrollment outcomes</span>
+        <span class="topic">Initial outreach (Staff Performance) · Phase 1 outreach and enrollment outcomes</span>
       </p>
     </section>
-    <p class="provenance">Documented business meaning. This page does not recompute the rule.</p>
-    <p class="source-line"><code>docs/metric_definitions.md</code> line 321.
-      Owner: Not documented.</p>
-    <div class="detail-row"><h2>Stable entry ID</h2><p><code>metric-definitions.initial-outreach-staff-performance.phase-1-outreach-and-enrollment-outcomes</code></p></div><div class="detail-row"><h2>Business definition</h2><p>Tableau member-outcome source: <code>VayuHealth_Program_PROD.VW_Phase1_Member_Outcomes</code>.</p>
+    <div class="summary-box"><h2>In plain terms</h2><p>For each enrollment, how many outreach attempts it took and how many days passed from first outreach to enrollment, plus how members later left the program.</p></div>
+    <div class="detail-row"><h2>Business definition</h2><p>Tableau member-outcome source: <code>VayuHealth_Program_PROD.VW_Phase1_Member_Outcomes</code>.</p>
 <p><code>is_program_discharge</code> does <strong>not</strong> include graduates. Use <code>is_program_exit</code> or <code>exit_group = Program exit</code> for the combined program-exit chart, then <code>is_graduated</code> or <code>member_outcome_category = Graduated</code> for the graduation slice.</p>
 <p><code>member_outcome_category</code> is mutually exclusive and uses this order: <code>Graduated</code>, <code>Discharged from Program</code>, <code>Discontinued from Outreach</code>. It is null when none of those outcomes applies.</p>
 <p>Outreach after an episode starts is not assigned backward to that episode. Rows without qualifying pre-enrollment outreach have a null <code>days_from_first_outreach_to_enrollment</code>.</p>
 <p><code>VW_Phase1_Member_Outcomes.discontinuation_reason</code> contains text only. Approved ECM Tracker mappings:</p>
 <ul><li>1: The Member has met all care plan goals</li><li>2: The Member is ready to transition to a lower level of care</li><li>3: The Member no longer wishes to receive ECM</li><li>4: The ECM Provider has not been able to connect with the Member after multiple attempts</li><li>5: Incarcerated</li><li>6: Declined to participate</li><li>7: Duplicative program</li><li>8: Lost Medi-Cal coverage</li><li>9: Switched health plans</li><li>10: Moved out of the county</li><li>12: Unsafe behavior or environment</li><li>14: Deceased</li><li>15: Other</li></ul>
-<p>Raw code fields remain CORE-only.</p></div><div class="detail-row"><h2>Owner</h2><p class="missing">Not documented in the source.</p></div><div class="detail-row"><h2>Documented approval status</h2><p class="missing">Not documented in the source.</p></div><div class="detail-row"><h2>Effective date</h2><p class="missing">Not documented in the source.</p></div><div class="detail-row"><h2>Same heading</h2><ul><li><a href="metric-definitions.initial-outreach-staff-performance.phase-1-outreach-and-enrollment-outcomes.average-initial-outreaches-per-member.html">Average initial outreaches per member</a> <span class="type-pill">Metric</span></li><li><a href="metric-definitions.initial-outreach-staff-performance.phase-1-outreach-and-enrollment-outcomes.average-outreach-attempts-per-enrollment-episode.html">Average outreach attempts per enrollment episode</a> <span class="type-pill">Metric</span></li><li><a href="metric-definitions.initial-outreach-staff-performance.phase-1-outreach-and-enrollment-outcomes.days-to-enroll.html">Days to enroll</a> <span class="type-pill">Metric</span></li><li><a href="metric-definitions.initial-outreach-staff-performance.phase-1-outreach-and-enrollment-outcomes.enrolled-workflow.html">Enrolled workflow</a> <span class="type-pill">Metric</span></li><li><a href="metric-definitions.initial-outreach-staff-performance.phase-1-outreach-and-enrollment-outcomes.enrollment-episode.html">Enrollment episode</a> <span class="type-pill">Metric</span></li><li><a href="metric-definitions.initial-outreach-staff-performance.phase-1-outreach-and-enrollment-outcomes.episode-outreach-window.html">Episode outreach window</a> <span class="type-pill">Metric</span></li><li><a href="metric-definitions.initial-outreach-staff-performance.phase-1-outreach-and-enrollment-outcomes.exclude-workflow.html">Exclude workflow</a> <span class="type-pill">Metric</span></li><li><a href="metric-definitions.initial-outreach-staff-performance.phase-1-outreach-and-enrollment-outcomes.first-outreach-date.html">First outreach date</a> <span class="type-pill">Metric</span></li><li><a href="metric-definitions.initial-outreach-staff-performance.phase-1-outreach-and-enrollment-outcomes.graduation.html">Graduation</a> <span class="type-pill">Metric</span></li><li><a href="metric-definitions.initial-outreach-staff-performance.phase-1-outreach-and-enrollment-outcomes.outreach-discontinuation.html">Outreach discontinuation</a> <span class="type-pill">Metric</span></li><li><a href="metric-definitions.initial-outreach-staff-performance.phase-1-outreach-and-enrollment-outcomes.program-discharge.html">Program discharge</a> <span class="type-pill">Metric</span></li><li><a href="metric-definitions.initial-outreach-staff-performance.phase-1-outreach-and-enrollment-outcomes.program-exit.html">Program exit</a> <span class="type-pill">Metric</span></li><li><a href="metric-definitions.initial-outreach-staff-performance.phase-1-outreach-and-enrollment-outcomes.timing-cohort.html">Timing cohort</a> <span class="type-pill">Metric</span></li></ul></div>
+<p>Raw code fields remain CORE-only.</p></div>
+    <div class="detail-row terms"><h2>Terms used on this page</h2><ul><li><strong>CORE</strong>: The BigQuery layer where SQL turns raw source data into business meaning (for example enrollment episodes). CORE objects are views.</li><li><strong>ECM</strong>: Enhanced Care Management: the Medi-Cal (CalAIM) benefit that pays Vayu to coordinate care for members with complex needs.</li><li><strong>ECM Tracker</strong>: The Sprite report that lists members in outreach and enrollment, with their status and dates.</li><li><strong>Tableau</strong>: The dashboard tool Vayu uses for program reporting.</li></ul><p><a href="../glossary.html">Full glossary</a></p></div><div class="detail-row"><h2>Same heading</h2><ul><li><a href="metric-definitions.initial-outreach-staff-performance.phase-1-outreach-and-enrollment-outcomes.average-initial-outreaches-per-member.html">Average initial outreaches per member</a> <span class="type-pill">Metric</span></li><li><a href="metric-definitions.initial-outreach-staff-performance.phase-1-outreach-and-enrollment-outcomes.average-outreach-attempts-per-enrollment-episode.html">Average outreach attempts per enrollment episode</a> <span class="type-pill">Metric</span></li><li><a href="metric-definitions.initial-outreach-staff-performance.phase-1-outreach-and-enrollment-outcomes.days-to-enroll.html">Days to enroll</a> <span class="type-pill">Metric</span></li><li><a href="metric-definitions.initial-outreach-staff-performance.phase-1-outreach-and-enrollment-outcomes.enrolled-workflow.html">Enrolled workflow</a> <span class="type-pill">Metric</span></li><li><a href="metric-definitions.initial-outreach-staff-performance.phase-1-outreach-and-enrollment-outcomes.enrollment-episode.html">Enrollment episode</a> <span class="type-pill">Metric</span></li><li><a href="metric-definitions.initial-outreach-staff-performance.phase-1-outreach-and-enrollment-outcomes.episode-outreach-window.html">Episode outreach window</a> <span class="type-pill">Metric</span></li><li><a href="metric-definitions.initial-outreach-staff-performance.phase-1-outreach-and-enrollment-outcomes.exclude-workflow.html">Exclude workflow</a> <span class="type-pill">Metric</span></li><li><a href="metric-definitions.initial-outreach-staff-performance.phase-1-outreach-and-enrollment-outcomes.first-outreach-date.html">First outreach date</a> <span class="type-pill">Metric</span></li><li><a href="metric-definitions.initial-outreach-staff-performance.phase-1-outreach-and-enrollment-outcomes.graduation.html">Graduation</a> <span class="type-pill">Metric</span></li><li><a href="metric-definitions.initial-outreach-staff-performance.phase-1-outreach-and-enrollment-outcomes.outreach-discontinuation.html">Outreach discontinuation</a> <span class="type-pill">Metric</span></li><li><a href="metric-definitions.initial-outreach-staff-performance.phase-1-outreach-and-enrollment-outcomes.program-discharge.html">Program discharge</a> <span class="type-pill">Metric</span></li><li><a href="metric-definitions.initial-outreach-staff-performance.phase-1-outreach-and-enrollment-outcomes.program-exit.html">Program exit</a> <span class="type-pill">Metric</span></li><li><a href="metric-definitions.initial-outreach-staff-performance.phase-1-outreach-and-enrollment-outcomes.timing-cohort.html">Timing cohort</a> <span class="type-pill">Metric</span></li></ul></div>
+    <details class="technical-details">
+      <summary>Technical details (for analysts)</summary>
+      <p class="provenance">Documented business meaning. This page does not recompute the rule.</p>
+      <div class="detail-row"><h2>Where this definition is written</h2><p><code>docs/metric_definitions.md</code> line 409</p></div><div class="detail-row"><h2>Stable entry ID</h2><p><code>metric-definitions.initial-outreach-staff-performance.phase-1-outreach-and-enrollment-outcomes</code></p></div>
+    </details>
     
   </main>
   <footer class="site-footer">
@@ -52,7 +57,7 @@
       <p class="footer-brand">Vayu Health Git Data Hub</p>
       
     <p class="banner">
-      Website built <time datetime="2026-10-22T21:11:42Z">22 Oct 2026, 21:11 UTC</time>.
+      Website built <time datetime="2026-11-20T04:21:12Z">20 Nov 2026, 04:21 UTC</time>.
       This is when the site was generated. It is not the effective date of a definition.
       An effective date is shown on an entry only when the source document states one.
     </p>
@@ -62,6 +67,7 @@
         <a href="../index.html">Home</a>
         <a href="../dictionary.html">Data Dictionary</a>
         <a href="../dashboards.html">Dashboards</a>
+        <a href="../glossary.html">Glossary</a>
         <a href="../methods.html">Methods &amp; Updates</a>
       </nav>
     </div>

@@ -17,33 +17,38 @@
       <nav class="site-nav" aria-label="Site">
         <a href="../dictionary.html">Data Dictionary</a>
         <a href="../dashboards.html">Dashboards</a>
+        <a href="../glossary.html">Glossary</a>
         <a href="../methods.html">Methods &amp; Updates</a>
       </nav>
     
       
-      <p class="last-updated">Last Updated: <time datetime="2026-10-22T21:11:42Z" title="When this website was generated. This is not the effective date of a definition.">October 22, 2026</time></p>
+      <p class="last-updated">Last Updated: <time datetime="2026-11-20T04:21:12Z" title="When this website was generated. This is not the effective date of a definition.">November 20, 2026</time></p>
     
     </div>
   </header>
   <main id="content" class="wrap">
     
     <section class="intro">
-      <p class="crumbs"><a href="../dictionary.html">Data Dictionary</a> / Core (VayuHealth_Program_CORE)</p>
+      <p class="crumbs"><a href="../dictionary.html">Data Dictionary</a> / Appointments and visits</p>
       <h1>CORE_Member_Appointments</h1>
       <p class="meta-line">
         <span class="type-pill">Object</span>
-        <span class="topic">CORE_Member_Appointments</span>
+        <span class="topic">Core (VayuHealth_Program_CORE) · CORE_Member_Appointments</span>
       </p>
     </section>
-    <p class="provenance">Documented business meaning. This page does not recompute the rule.</p>
-    <p class="source-line"><code>docs/data_dictionary.md</code> line 186.
-      Owner: Not documented.</p>
-    <div class="detail-row"><h2>Stable entry ID</h2><p><code>data-dictionary.core-vayuhealth-program-core.core-member-appointments</code></p></div><div class="detail-row"><h2>Business definition</h2><p>One row per appointment from <code>STG_Member_Appointments</code>. Dedupe key is the Sprite appointment id when it is present, otherwise member + start + service + specialist + status.</p>
+    
+    <div class="detail-row"><h2>Business definition</h2><p>One row per appointment from <code>STG_Member_Appointments</code>. Dedupe key is the Sprite appointment id when it is present, otherwise member + start + service + specialist + status.</p>
 <p><code>start_date_time</code> is a DATETIME. STRING sources are parsed with safe formats (<code>MM/dd/yyyy HH:mm</code> and ISO). Invalid text becomes NULL. DATE or DATETIME or TIMESTAMP sources are cast to DATETIME. If the clock is missing, <code>appointment_date</code> fills midnight. <code>appointment_date</code> is <code>DATE(start_date_time)</code>. <code>appointment_reporting_month</code> is <code>DATE_TRUNC(appointment_date, MONTH)</code>. The file-load month stays on <code>source_reporting_month</code>.</p>
 <p><code>is_completed_appointment</code> is true when the trimmed status, ignoring case and repeated spaces, is <code>completed</code>. Display status for that case is <code>Completed</code>. Other statuses stay as exported. <code>checkedIn</code>, <code>provider no-show</code>, <code>cancelled</code>, and <code>scheduled</code> are not completed.</p>
 <p><code>is_valid_vendor</code> is true only when both <code>vendor_name</code> and <code>provider</code> are blank or <code>Vayu Health</code> (case and extra spaces ignored).</p>
 <p>Visit flags are 0/1 on <code>service_name</code>. See <code>docs/metric_definitions.md</code>. Rows that fail vendor, CHW, or completed rules stay in this view.</p>
-<p>Internal Sprite fields (organization id, member id, trigger, reschedule flag, created date, reason, specialization, requester role, rating, last modified) stay here and are not on the PROD view.</p></div><div class="detail-row"><h2>Owner</h2><p class="missing">Not documented in the source.</p></div><div class="detail-row"><h2>Documented approval status</h2><p class="missing">Not documented in the source.</p></div><div class="detail-row"><h2>Effective date</h2><p class="missing">Not documented in the source.</p></div>
+<p>Internal Sprite fields (organization id, member id, trigger, reschedule flag, created date, reason, specialization, requester role, rating, last modified) stay here and are not on the PROD view.</p></div>
+    <div class="detail-row terms"><h2>Terms used on this page</h2><ul><li><strong>PROD</strong>: The BigQuery layer of approved views. Tableau and Connected Sheets connect only to PROD.</li><li><strong>Sprite</strong>: Sprite Health, Vayu&#x27;s EHR and care management system. Monthly reports are exported from it.</li></ul><p><a href="../glossary.html">Full glossary</a></p></div>
+    <details class="technical-details">
+      <summary>Technical details (for analysts)</summary>
+      <p class="provenance">Documented business meaning. This page does not recompute the rule.</p>
+      <div class="detail-row"><h2>Where this definition is written</h2><p><code>docs/data_dictionary.md</code> line 186</p></div><div class="detail-row"><h2>Stable entry ID</h2><p><code>data-dictionary.core-vayuhealth-program-core.core-member-appointments</code></p></div>
+    </details>
     
   </main>
   <footer class="site-footer">
@@ -51,7 +56,7 @@
       <p class="footer-brand">Vayu Health Git Data Hub</p>
       
     <p class="banner">
-      Website built <time datetime="2026-10-22T21:11:42Z">22 Oct 2026, 21:11 UTC</time>.
+      Website built <time datetime="2026-11-20T04:21:12Z">20 Nov 2026, 04:21 UTC</time>.
       This is when the site was generated. It is not the effective date of a definition.
       An effective date is shown on an entry only when the source document states one.
     </p>
@@ -61,6 +66,7 @@
         <a href="../index.html">Home</a>
         <a href="../dictionary.html">Data Dictionary</a>
         <a href="../dashboards.html">Dashboards</a>
+        <a href="../glossary.html">Glossary</a>
         <a href="../methods.html">Methods &amp; Updates</a>
       </nav>
     </div>

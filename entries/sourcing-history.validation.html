@@ -17,31 +17,36 @@
       <nav class="site-nav" aria-label="Site">
         <a href="../dictionary.html">Data Dictionary</a>
         <a href="../dashboards.html">Dashboards</a>
+        <a href="../glossary.html">Glossary</a>
         <a href="../methods.html">Methods &amp; Updates</a>
       </nav>
     
       
-      <p class="last-updated">Last Updated: <time datetime="2026-10-22T21:11:42Z" title="When this website was generated. This is not the effective date of a definition.">October 22, 2026</time></p>
+      <p class="last-updated">Last Updated: <time datetime="2026-11-20T04:21:12Z" title="When this website was generated. This is not the effective date of a definition.">November 20, 2026</time></p>
     
     </div>
   </header>
   <main id="content" class="wrap">
     
     <section class="intro">
-      <p class="crumbs"><a href="../dictionary.html">Data Dictionary</a> / Validation</p>
+      <p class="crumbs"><a href="../dictionary.html">Data Dictionary</a> / Data tables and reference</p>
       <h1>Validation</h1>
       <p class="meta-line">
         <span class="type-pill">Rule</span>
         <span class="topic">Validation</span>
       </p>
     </section>
-    <p class="provenance">Documented business meaning. This page does not recompute the rule.</p>
-    <p class="source-line"><code>docs/sourcing_history.md</code> line 350.
-      Owner: Not documented.</p>
-    <div class="detail-row"><h2>Stable entry ID</h2><p><code>sourcing-history.validation</code></p></div><div class="detail-row"><h2>Business definition</h2><p>History checks:</p>
+    
+    <div class="detail-row"><h2>Business definition</h2><p>History checks:</p>
 <ul><li>received rows still exist after filtering</li><li>reruns replace a month/source slice instead of appending (operational: rerun and confirm received row count matches the file, not 2×)</li><li>remaining matches <code>MART_Sourcing_Member_Month</code></li><li>ever-received ≤ sum of monthly distinct</li><li>one attributed cohort per member</li><li>enrolled conversion never invents outreach</li></ul>
 <p>Member-view checks:</p>
-<ul><li>one row per county + sourcing month + CIN</li><li>Stanislaus HbA1c-only CINs are not received rows</li><li>verification status flags are exclusive</li><li>name / DOB / phone / address / PCP / notes columns are absent</li></ul></div><div class="detail-row"><h2>Owner</h2><p class="missing">Not documented in the source.</p></div><div class="detail-row"><h2>Documented approval status</h2><p class="missing">Not documented in the source.</p></div><div class="detail-row"><h2>Effective date</h2><p class="missing">Not documented in the source.</p></div>
+<ul><li>one row per county + sourcing month + CIN</li><li>Stanislaus HbA1c-only CINs are not received rows</li><li>Stanislaus A1c matches the single paired HbA1c file; unpaired runs stay null</li><li>verification status flags are exclusive</li><li>declined, already-in-outreach, and out-of-area flags match the outcome booleans</li><li>name / DOB / phone / address / PCP / notes columns are absent</li></ul></div>
+    <div class="detail-row terms"><h2>Terms used on this page</h2><ul><li><strong>A1c</strong>: A blood test that shows a person&#x27;s average blood sugar over about the last three months. Also written HbA1c. Higher numbers mean less controlled diabetes.</li><li><strong>CIN</strong>: Client Index Number: the Medi-Cal member ID. It is PHI. Never type a real one into GitHub.</li><li><strong>HbA1c</strong>: Same as A1c.</li></ul><p><a href="../glossary.html">Full glossary</a></p></div>
+    <details class="technical-details">
+      <summary>Technical details (for analysts)</summary>
+      <p class="provenance">Documented business meaning. This page does not recompute the rule.</p>
+      <div class="detail-row"><h2>Where this definition is written</h2><p><code>docs/sourcing_history.md</code> line 410</p></div><div class="detail-row"><h2>Stable entry ID</h2><p><code>sourcing-history.validation</code></p></div>
+    </details>
     
   </main>
   <footer class="site-footer">
@@ -49,7 +54,7 @@
       <p class="footer-brand">Vayu Health Git Data Hub</p>
       
     <p class="banner">
-      Website built <time datetime="2026-10-22T21:11:42Z">22 Oct 2026, 21:11 UTC</time>.
+      Website built <time datetime="2026-11-20T04:21:12Z">20 Nov 2026, 04:21 UTC</time>.
       This is when the site was generated. It is not the effective date of a definition.
       An effective date is shown on an entry only when the source document states one.
     </p>
@@ -59,6 +64,7 @@
         <a href="../index.html">Home</a>
         <a href="../dictionary.html">Data Dictionary</a>
         <a href="../dashboards.html">Dashboards</a>
+        <a href="../glossary.html">Glossary</a>
         <a href="../methods.html">Methods &amp; Updates</a>
       </nav>
     </div>

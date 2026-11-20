@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Glossary · Vayu Health Git Data Hub</title>
+  <meta name="theme-color" content="#464C4F">
+  
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+  <a class="skip" href="#content">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap header-bar">
+      <a class="brand" href="index.html"><img class="brand-logo" src="assets/vayu-logo-horizontal.webp" alt="Vayu Health"></a>
+      
+      <nav class="site-nav" aria-label="Site">
+        <a href="dictionary.html">Data Dictionary</a>
+        <a href="dashboards.html">Dashboards</a>
+        <a href="glossary.html">Glossary</a>
+        <a href="methods.html">Methods &amp; Updates</a>
+      </nav>
+    
+      
+      <p class="last-updated">Last Updated: <time datetime="2026-11-20T04:21:12Z" title="When this website was generated. This is not the effective date of a definition.">November 20, 2026</time></p>
+    
+    </div>
+  </header>
+  <main id="content" class="wrap">
+    
+    <section class="intro">
+      <h1>Glossary</h1>
+      <p class="lede">Plain-English meanings of the terms and abbreviations used in the Data Dictionary and on Vayu Health dashboards.</p>
+    </section>
+    <div class="table-scroll">
+      <table class="glossary">
+        <thead><tr><th scope="col">Term</th><th scope="col">What it means</th></tr></thead>
+        <tbody><tr id="term-a1c"><th scope="row">A1c</th><td>A blood test that shows a person&#x27;s average blood sugar over about the last three months. Also written HbA1c. Higher numbers mean less controlled diabetes.</td></tr><tr id="term-active-during-month"><th scope="row">Active during month</th><td>A member whose program enrollment covered at least one day of that month.</td></tr><tr id="term-apps-script"><th scope="row">Apps Script</th><td>Google&#x27;s built-in scripting tool for Sheets, Drive, and Gmail. Our automations in the automation/ folder run there.</td></tr><tr id="term-as-of-date"><th scope="row">As-of date</th><td>The date a rule is measured on. For monthly reporting it is usually the last day of the reporting month.</td></tr><tr id="term-baa"><th scope="row">BAA</th><td>Business Associate Agreement. The contract that lets a vendor (for example Google) store or process PHI for Vayu Health.</td></tr><tr id="term-baseline"><th scope="row">Baseline</th><td>A member&#x27;s first relevant measurement for an enrollment, picked as the one closest to the enrollment start date. Used to measure change over time.</td></tr><tr id="term-bgm"><th scope="row">BGM</th><td>Blood glucose meter: a finger-stick device a member uses to check blood sugar. Sprite may call it SMBGS.</td></tr><tr id="term-bh"><th scope="row">BH</th><td>Behavioral health: mental health services such as therapy or counseling.</td></tr><tr id="term-bigquery"><th scope="row">BigQuery</th><td>Google&#x27;s cloud database where the pipeline stores its tables.</td></tr><tr id="term-billed-touch"><th scope="row">Billed touch</th><td>An ECM activity or encounter whose status is Billed, meaning it was submitted for payment.</td></tr><tr id="term-care-team"><th scope="row">Care team</th><td>The Vayu program team that serves a member: Sequoia, Redwoods, Mariposa, or Sundial. The Outreach Team is not a program care team.</td></tr><tr id="term-cdces"><th scope="row">CDCES</th><td>Certified Diabetes Care and Education Specialist.</td></tr><tr id="term-cgm"><th scope="row">CGM</th><td>Continuous glucose monitor: a sensor worn on the body that measures blood sugar all day (for example Dexcom or Libre).</td></tr><tr id="term-cin"><th scope="row">CIN</th><td>Client Index Number: the Medi-Cal member ID. It is PHI. Never type a real one into GitHub.</td></tr><tr id="term-colab"><th scope="row">Colab</th><td>Google Colaboratory: the browser notebooks in notebooks/ that run the monthly pipeline.</td></tr><tr id="term-core"><th scope="row">CORE</th><td>The BigQuery layer where SQL turns raw source data into business meaning (for example enrollment episodes). CORE objects are views.</td></tr><tr id="term-cozeva"><th scope="row">Cozeva</th><td>The health plan quality platform that Stanislaus County member lists come from.</td></tr><tr id="term-crosswalk"><th scope="row">Crosswalk</th><td>A table that links one system&#x27;s member ID to another&#x27;s. The Flourish crosswalk links Flourish IDs to CINs.</td></tr><tr id="term-cumulative-members"><th scope="row">Cumulative Members</th><td>The permanent list of every Vayu enrollment episode, kept in MART_Cumulative_Members.</td></tr><tr id="term-dds"><th scope="row">DDS</th><td>Diabetes Distress Scale: a short survey about how stressful living with diabetes feels.</td></tr><tr id="term-denominator"><th scope="row">Denominator</th><td>The bottom number of a rate: the group being measured.</td></tr><tr id="term-discontinuation"><th scope="row">Discontinuation</th><td>When a member leaves the program. The reason comes from the MIF.</td></tr><tr id="term-ecm"><th scope="row">ECM</th><td>Enhanced Care Management: the Medi-Cal (CalAIM) benefit that pays Vayu to coordinate care for members with complex needs.</td></tr><tr id="term-ecm-tracker"><th scope="row">ECM Tracker</th><td>The Sprite report that lists members in outreach and enrollment, with their status and dates.</td></tr><tr id="term-ecm"><th scope="row">ECM+</th><td>Vayu&#x27;s extra clinical services on top of ECM: billed visits with behavioral health (BH) clinicians or dietitian and diabetes educators (RDCDCES).</td></tr><tr id="term-ehr"><th scope="row">EHR</th><td>Electronic health record. Vayu&#x27;s EHR is Sprite.</td></tr><tr id="term-encounter"><th scope="row">Encounter</th><td>One documented visit or service between a staff member and a member.</td></tr><tr id="term-enrollment-episode"><th scope="row">Enrollment episode</th><td>One stretch of program enrollment, from an enrollment start date to its end. A member can have more than one episode.</td></tr><tr id="term-flourish"><th scope="row">Flourish</th><td>The vendor platform where members complete the PAM survey.</td></tr><tr id="term-gad-7"><th scope="row">GAD-7</th><td>A 7-question anxiety screening survey.</td></tr><tr id="term-gmi"><th scope="row">GMI</th><td>Glucose Management Indicator: an estimate of A1c calculated from CGM readings.</td></tr><tr id="term-graduation"><th scope="row">Graduation</th><td>A discontinuation because the member met their care plan goals.</td></tr><tr id="term-grain"><th scope="row">Grain</th><td>What one row in a table stands for, for example one member per month.</td></tr><tr id="term-hba1c"><th scope="row">HbA1c</th><td>Same as A1c.</td></tr><tr id="term-hie"><th scope="row">HIE</th><td>Health information exchange: a network that shares hospital and clinic records. MedEx is the monthly member list prepared for it.</td></tr><tr id="term-looker-studio"><th scope="row">Looker Studio</th><td>Google&#x27;s dashboard tool. The sourcing dashboards are built there.</td></tr><tr id="term-mart"><th scope="row">MART</th><td>The BigQuery layer of analysis-ready tables, such as one row per member or per member per month.</td></tr><tr id="term-mcp"><th scope="row">MCP</th><td>Managed care plan: the Medi-Cal health plan a member belongs to (for example Health Net or Partnership HealthPlan).</td></tr><tr id="term-member-month"><th scope="row">Member-month</th><td>One row for each member for each month they were in the program. Used to count members and services by month.</td></tr><tr id="term-merge"><th scope="row">MERGE</th><td>A database step that updates rows that already exist and adds rows that are new, without duplicating them.</td></tr><tr id="term-mif"><th scope="row">MIF</th><td>Member Information File: the ECM file shared with the health plan. It holds discontinuation reasons and population-of-focus flags.</td></tr><tr id="term-numerator"><th scope="row">Numerator</th><td>The top number of a rate: the members who meet the condition being measured.</td></tr><tr id="term-pam"><th scope="row">PAM</th><td>Patient Activation Measure: a 13-question survey (scored 0 to 100, levels 1 to 4) about how ready a person is to manage their own health.</td></tr><tr id="term-pathway"><th scope="row">Pathway</th><td>How a member&#x27;s diabetes is tracked: CGM, BGM, or A1c. Based on their devices and recent readings.</td></tr><tr id="term-phc"><th scope="row">PHC</th><td>Partnership HealthPlan of California, the health plan for Humboldt and Shasta counties.</td></tr><tr id="term-phi"><th scope="row">PHI</th><td>Protected health information: anything that identifies a person together with their health or care, such as a CIN, name, date of birth, or diagnosis.</td></tr><tr id="term-phq-9"><th scope="row">PHQ-9</th><td>A 9-question depression screening survey.</td></tr><tr id="term-pof"><th scope="row">POF</th><td>Population of focus: the ECM eligibility group a member qualifies under.</td></tr><tr id="term-pop-builder"><th scope="row">Pop Builder</th><td>Population Builder, the Sprite report tool used for the Enrolled Members and Discontinuations exports.</td></tr><tr id="term-prapare"><th scope="row">PRAPARE</th><td>A standard survey about social needs (housing, food, transportation, and more).</td></tr><tr id="term-prod"><th scope="row">PROD</th><td>The BigQuery layer of approved views. Tableau and Connected Sheets connect only to PROD.</td></tr><tr id="term-rdcdces"><th scope="row">RDCDCES</th><td>A staff member who is both a Registered Dietitian and a Certified Diabetes Care and Education Specialist.</td></tr><tr id="term-reporting-month"><th scope="row">Reporting month</th><td>The calendar month a report covers, written YYYY-MM (for example 2026-10).</td></tr><tr id="term-sdoh"><th scope="row">SDOH</th><td>Social drivers (or determinants) of health: living conditions such as housing, food, and transportation that affect health.</td></tr><tr id="term-sourcing-list"><th scope="row">Sourcing list</th><td>A monthly list of possibly eligible members that a county or health plan sends to Vayu for outreach.</td></tr><tr id="term-sprite"><th scope="row">Sprite</th><td>Sprite Health, Vayu&#x27;s EHR and care management system. Monthly reports are exported from it.</td></tr><tr id="term-stg"><th scope="row">STG</th><td>Staging: the BigQuery layer that holds source files as they arrived, with light cleanup only.</td></tr><tr id="term-tableau"><th scope="row">Tableau</th><td>The dashboard tool Vayu uses for program reporting.</td></tr><tr id="term-verified-eligible"><th scope="row">Verified eligible</th><td>A sourcing-list member whom the team confirmed meets the program rules and can be contacted.</td></tr><tr id="term-view"><th scope="row">View</th><td>A saved database query that always shows current data. Unlike a table, it stores no rows of its own.</td></tr><tr id="term-vw"><th scope="row">VW_</th><td>Prefix for PROD views that dashboards read, for example VW_Member_Month.</td></tr></tbody>
+      </table>
+    </div>
+    
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <p class="footer-brand">Vayu Health Git Data Hub</p>
+      
+    <p class="banner">
+      Website built <time datetime="2026-11-20T04:21:12Z">20 Nov 2026, 04:21 UTC</time>.
+      This is when the site was generated. It is not the effective date of a definition.
+      An effective date is shown on an entry only when the source document states one.
+    </p>
+    
+      <p>Definitions only. Pipeline folders and workflows stay off this site.</p>
+      <nav aria-label="Footer">
+        <a href="index.html">Home</a>
+        <a href="dictionary.html">Data Dictionary</a>
+        <a href="dashboards.html">Dashboards</a>
+        <a href="glossary.html">Glossary</a>
+        <a href="methods.html">Methods &amp; Updates</a>
+      </nav>
+    </div>
+  </footer>
+  
+</body>
+</html>

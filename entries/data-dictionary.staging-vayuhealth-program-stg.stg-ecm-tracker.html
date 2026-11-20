@@ -17,28 +17,33 @@
       <nav class="site-nav" aria-label="Site">
         <a href="../dictionary.html">Data Dictionary</a>
         <a href="../dashboards.html">Dashboards</a>
+        <a href="../glossary.html">Glossary</a>
         <a href="../methods.html">Methods &amp; Updates</a>
       </nav>
     
       
-      <p class="last-updated">Last Updated: <time datetime="2026-10-22T21:11:42Z" title="When this website was generated. This is not the effective date of a definition.">October 22, 2026</time></p>
+      <p class="last-updated">Last Updated: <time datetime="2026-11-20T04:21:12Z" title="When this website was generated. This is not the effective date of a definition.">November 20, 2026</time></p>
     
     </div>
   </header>
   <main id="content" class="wrap">
     
     <section class="intro">
-      <p class="crumbs"><a href="../dictionary.html">Data Dictionary</a> / Staging (VayuHealth_Program_STG)</p>
+      <p class="crumbs"><a href="../dictionary.html">Data Dictionary</a> / ECM and ECM+ services</p>
       <h1>STG_ECM_Tracker</h1>
       <p class="meta-line">
         <span class="type-pill">Object</span>
-        <span class="topic">STG_ECM_Tracker</span>
+        <span class="topic">Staging (VayuHealth_Program_STG) · STG_ECM_Tracker</span>
       </p>
     </section>
-    <p class="provenance">Documented business meaning. This page does not recompute the rule.</p>
-    <p class="source-line"><code>docs/data_dictionary.md</code> line 88.
-      Owner: Not documented.</p>
-    <div class="detail-row"><h2>Stable entry ID</h2><p><code>data-dictionary.staging-vayuhealth-program-stg.stg-ecm-tracker</code></p></div><div class="detail-row"><h2>Business definition</h2><p>ECM Tracker workbook/CSV. Keeps file-native snake_case headers (no program alias rename in STG). Required: <code>member_client_index_number</code>, <code>ecm_provider_name</code>. <strong>Keeps only rows where <code>ECM_Provider_Name</code> = Vayu Health</strong> (other providers such as New Life Discovery Project, Inc. are dropped). Replaces one <code>reporting_month</code> slice. <code>source_population = ecm_tracker</code>. Feeds <code>CORE_ECM_Tracker_Members</code> for member-month demographic fallback (priority 3 after cumulative and ECM+).</p></div><div class="detail-row"><h2>Owner</h2><p class="missing">Not documented in the source.</p></div><div class="detail-row"><h2>Documented approval status</h2><p class="missing">Not documented in the source.</p></div><div class="detail-row"><h2>Effective date</h2><p class="missing">Not documented in the source.</p></div>
+    
+    <div class="detail-row"><h2>Business definition</h2><p>ECM Tracker workbook/CSV. Keeps file-native snake_case headers (no program alias rename in STG). Required: <code>member_client_index_number</code>, <code>ecm_provider_name</code>. <strong>Keeps only rows where <code>ECM_Provider_Name</code> = Vayu Health</strong> (other providers such as New Life Discovery Project, Inc. are dropped). Replaces one <code>reporting_month</code> slice. <code>source_population = ecm_tracker</code>. Feeds <code>CORE_ECM_Tracker_Members</code> for member-month demographic fallback (priority 3 after cumulative and ECM+).</p></div>
+    <div class="detail-row terms"><h2>Terms used on this page</h2><ul><li><strong>ECM</strong>: Enhanced Care Management: the Medi-Cal (CalAIM) benefit that pays Vayu to coordinate care for members with complex needs.</li><li><strong>ECM Tracker</strong>: The Sprite report that lists members in outreach and enrollment, with their status and dates.</li><li><strong>ECM+</strong>: Vayu&#x27;s extra clinical services on top of ECM: billed visits with behavioral health (BH) clinicians or dietitian and diabetes educators (RDCDCES).</li><li><strong>STG</strong>: Staging: the BigQuery layer that holds source files as they arrived, with light cleanup only.</li></ul><p><a href="../glossary.html">Full glossary</a></p></div>
+    <details class="technical-details">
+      <summary>Technical details (for analysts)</summary>
+      <p class="provenance">Documented business meaning. This page does not recompute the rule.</p>
+      <div class="detail-row"><h2>Where this definition is written</h2><p><code>docs/data_dictionary.md</code> line 88</p></div><div class="detail-row"><h2>Stable entry ID</h2><p><code>data-dictionary.staging-vayuhealth-program-stg.stg-ecm-tracker</code></p></div>
+    </details>
     
   </main>
   <footer class="site-footer">
@@ -46,7 +51,7 @@
       <p class="footer-brand">Vayu Health Git Data Hub</p>
       
     <p class="banner">
-      Website built <time datetime="2026-10-22T21:11:42Z">22 Oct 2026, 21:11 UTC</time>.
+      Website built <time datetime="2026-11-20T04:21:12Z">20 Nov 2026, 04:21 UTC</time>.
       This is when the site was generated. It is not the effective date of a definition.
       An effective date is shown on an entry only when the source document states one.
     </p>
@@ -56,6 +61,7 @@
         <a href="../index.html">Home</a>
         <a href="../dictionary.html">Data Dictionary</a>
         <a href="../dashboards.html">Dashboards</a>
+        <a href="../glossary.html">Glossary</a>
         <a href="../methods.html">Methods &amp; Updates</a>
       </nav>
     </div>

@@ -17,28 +17,33 @@
       <nav class="site-nav" aria-label="Site">
         <a href="../dictionary.html">Data Dictionary</a>
         <a href="../dashboards.html">Dashboards</a>
+        <a href="../glossary.html">Glossary</a>
         <a href="../methods.html">Methods &amp; Updates</a>
       </nav>
     
       
-      <p class="last-updated">Last Updated: <time datetime="2026-10-22T21:11:42Z" title="When this website was generated. This is not the effective date of a definition.">October 22, 2026</time></p>
+      <p class="last-updated">Last Updated: <time datetime="2026-11-20T04:21:12Z" title="When this website was generated. This is not the effective date of a definition.">November 20, 2026</time></p>
     
     </div>
   </header>
   <main id="content" class="wrap">
     
     <section class="intro">
-      <p class="crumbs"><a href="../dictionary.html">Data Dictionary</a> / Staging (VayuHealth_Program_STG)</p>
+      <p class="crumbs"><a href="../dictionary.html">Data Dictionary</a> / ECM and ECM+ services</p>
       <h1>STG_ECMPlus_Encounters</h1>
       <p class="meta-line">
         <span class="type-pill">Object</span>
-        <span class="topic">STG_ECMPlus_Encounters</span>
+        <span class="topic">Staging (VayuHealth_Program_STG) · STG_ECMPlus_Encounters</span>
       </p>
     </section>
-    <p class="provenance">Documented business meaning. This page does not recompute the rule.</p>
-    <p class="source-line"><code>docs/data_dictionary.md</code> line 84.
-      Owner: Not documented.</p>
-    <div class="detail-row"><h2>Stable entry ID</h2><p><code>data-dictionary.staging-vayuhealth-program-stg.stg-ecmplus-encounters</code></p></div><div class="detail-row"><h2>Business definition</h2><p>ECM+ encounters CSV only. Required: <code>member_cin</code>, <code>encounter_date</code>. Optional but preferred: <code>encounter_id</code> (unique per encounter). Monthly extracts may include other <code>encounter_date</code> months; the loader replaces only the current <code>reporting_month</code> slice, then <strong>skips rows whose <code>encounter_id</code> already exists elsewhere in STG</strong> (composite identity fallback if <code>encounter_id</code> is blank). Precomputed BH/RD / <code>is_duplicate_row</code> columns from the extract are dropped so SQL owns BH/RD. Optional Sprite demo fields (gender, city, zip, etc.) are kept when present for PROD demo coalesce.</p></div><div class="detail-row"><h2>Owner</h2><p class="missing">Not documented in the source.</p></div><div class="detail-row"><h2>Documented approval status</h2><p class="missing">Not documented in the source.</p></div><div class="detail-row"><h2>Effective date</h2><p class="missing">Not documented in the source.</p></div>
+    
+    <div class="detail-row"><h2>Business definition</h2><p>ECM+ encounters CSV only. Required: <code>member_cin</code>, <code>encounter_date</code>. Optional but preferred: <code>encounter_id</code> (unique per encounter). Monthly extracts may include other <code>encounter_date</code> months; the loader replaces only the current <code>reporting_month</code> slice, then <strong>skips rows whose <code>encounter_id</code> already exists elsewhere in STG</strong> (composite identity fallback if <code>encounter_id</code> is blank). Precomputed BH/RD / <code>is_duplicate_row</code> columns from the extract are dropped so SQL owns BH/RD. Sprite claim-line columns (<code>claim_amount</code>, <code>claim_status</code>, <code>claim_service_code</code>) are dropped on load — those fan one encounter into many CSV rows; claim itemization stays in a separate script. The loader then <strong>collapses to one STG row per <code>encounter_id</code></strong> so CORE / MART / PROD stay at encounter grain. Optional Sprite demo fields (gender, city, zip, etc.) are kept when present for PROD demo coalesce.</p></div>
+    <div class="detail-row terms"><h2>Terms used on this page</h2><ul><li><strong>BH</strong>: Behavioral health: mental health services such as therapy or counseling.</li><li><strong>CORE</strong>: The BigQuery layer where SQL turns raw source data into business meaning (for example enrollment episodes). CORE objects are views.</li><li><strong>ECM</strong>: Enhanced Care Management: the Medi-Cal (CalAIM) benefit that pays Vayu to coordinate care for members with complex needs.</li><li><strong>ECM+</strong>: Vayu&#x27;s extra clinical services on top of ECM: billed visits with behavioral health (BH) clinicians or dietitian and diabetes educators (RDCDCES).</li><li><strong>MART</strong>: The BigQuery layer of analysis-ready tables, such as one row per member or per member per month.</li><li><strong>PROD</strong>: The BigQuery layer of approved views. Tableau and Connected Sheets connect only to PROD.</li><li><strong>Sprite</strong>: Sprite Health, Vayu&#x27;s EHR and care management system. Monthly reports are exported from it.</li><li><strong>STG</strong>: Staging: the BigQuery layer that holds source files as they arrived, with light cleanup only.</li></ul><p><a href="../glossary.html">Full glossary</a></p></div>
+    <details class="technical-details">
+      <summary>Technical details (for analysts)</summary>
+      <p class="provenance">Documented business meaning. This page does not recompute the rule.</p>
+      <div class="detail-row"><h2>Where this definition is written</h2><p><code>docs/data_dictionary.md</code> line 84</p></div><div class="detail-row"><h2>Stable entry ID</h2><p><code>data-dictionary.staging-vayuhealth-program-stg.stg-ecmplus-encounters</code></p></div>
+    </details>
     
   </main>
   <footer class="site-footer">
@@ -46,7 +51,7 @@
       <p class="footer-brand">Vayu Health Git Data Hub</p>
       
     <p class="banner">
-      Website built <time datetime="2026-10-22T21:11:42Z">22 Oct 2026, 21:11 UTC</time>.
+      Website built <time datetime="2026-11-20T04:21:12Z">20 Nov 2026, 04:21 UTC</time>.
       This is when the site was generated. It is not the effective date of a definition.
       An effective date is shown on an entry only when the source document states one.
     </p>
@@ -56,6 +61,7 @@
         <a href="../index.html">Home</a>
         <a href="../dictionary.html">Data Dictionary</a>
         <a href="../dashboards.html">Dashboards</a>
+        <a href="../glossary.html">Glossary</a>
         <a href="../methods.html">Methods &amp; Updates</a>
       </nav>
     </div>

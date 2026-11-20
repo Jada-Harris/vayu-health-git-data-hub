@@ -17,30 +17,35 @@
       <nav class="site-nav" aria-label="Site">
         <a href="../dictionary.html">Data Dictionary</a>
         <a href="../dashboards.html">Dashboards</a>
+        <a href="../glossary.html">Glossary</a>
         <a href="../methods.html">Methods &amp; Updates</a>
       </nav>
     
       
-      <p class="last-updated">Last Updated: <time datetime="2026-10-22T21:11:42Z" title="When this website was generated. This is not the effective date of a definition.">October 22, 2026</time></p>
+      <p class="last-updated">Last Updated: <time datetime="2026-11-20T04:21:12Z" title="When this website was generated. This is not the effective date of a definition.">November 20, 2026</time></p>
     
     </div>
   </header>
   <main id="content" class="wrap">
     
     <section class="intro">
-      <p class="crumbs"><a href="../dictionary.html">Data Dictionary</a> / Completed appointments</p>
+      <p class="crumbs"><a href="../dictionary.html">Data Dictionary</a> / Appointments and visits</p>
       <h1>Who is on the PROD view</h1>
       <p class="meta-line">
         <span class="type-pill">Metric</span>
-        <span class="topic">Who is on the PROD view</span>
+        <span class="topic">Completed appointments · Who is on the PROD view</span>
       </p>
     </section>
-    <p class="provenance">Documented business meaning. This page does not recompute the rule.</p>
-    <p class="source-line"><code>docs/metric_definitions.md</code> line 224.
-      Owner: Not documented.</p>
-    <div class="detail-row"><h2>Stable entry ID</h2><p><code>metric-definitions.completed-appointments.who-is-on-the-prod-view</code></p></div><div class="detail-row"><h2>Business definition</h2><p><code>VW_Completed_Appointments</code> keeps every appointment status. Two rules decide which rows are included:</p>
+    <div class="summary-box"><h2>In plain terms</h2><p>Which appointments appear in the completed-appointments view.</p></div>
+    <div class="detail-row"><h2>Business definition</h2><p><code>VW_Completed_Appointments</code> keeps every appointment status. Two rules decide which rows are included:</p>
 <p>Completed visits are a Tableau filter, not a row drop. <code>is_completed_appointment</code> is true when the trimmed status, with collapsed spaces, equals <code>completed</code> in any capitalization. <code>checkedIn</code>, <code>provider no-show</code>, <code>cancelled</code>, <code>member no-show</code>, and <code>scheduled</code> stay on the view so missed-appointment charts can count them. Filter <code>is_completed_appointment</code> for the completed-visit charts.</p>
-<p>The roster has no active flag and no start or end date. A CHW who leaves and is removed from the roster will no longer validate appointments from the months they worked. Historical appointments are not dropped only because of an inactive flag, because no such flag exists.</p></div><div class="detail-row"><h2>Owner</h2><p class="missing">Not documented in the source.</p></div><div class="detail-row"><h2>Documented approval status</h2><p class="missing">Not documented in the source.</p></div><div class="detail-row"><h2>Effective date</h2><p class="missing">Not documented in the source.</p></div><div class="detail-row"><h2>Same heading</h2><ul><li><a href="metric-definitions.completed-appointments.who-is-on-the-prod-view.specialist.html">Specialist</a> <span class="type-pill">Metric</span></li><li><a href="metric-definitions.completed-appointments.who-is-on-the-prod-view.vendor.html">Vendor</a> <span class="type-pill">Metric</span></li></ul></div>
+<p>The roster has no active flag and no start or end date. A CHW who leaves and is removed from the roster will no longer validate appointments from the months they worked. Historical appointments are not dropped only because of an inactive flag, because no such flag exists.</p></div>
+    <div class="detail-row terms"><h2>Terms used on this page</h2><ul><li><strong>PROD</strong>: The BigQuery layer of approved views. Tableau and Connected Sheets connect only to PROD.</li><li><strong>Tableau</strong>: The dashboard tool Vayu uses for program reporting.</li></ul><p><a href="../glossary.html">Full glossary</a></p></div><div class="detail-row"><h2>Same heading</h2><ul><li><a href="metric-definitions.completed-appointments.who-is-on-the-prod-view.specialist.html">Specialist</a> <span class="type-pill">Metric</span></li><li><a href="metric-definitions.completed-appointments.who-is-on-the-prod-view.vendor.html">Vendor</a> <span class="type-pill">Metric</span></li></ul></div>
+    <details class="technical-details">
+      <summary>Technical details (for analysts)</summary>
+      <p class="provenance">Documented business meaning. This page does not recompute the rule.</p>
+      <div class="detail-row"><h2>Where this definition is written</h2><p><code>docs/metric_definitions.md</code> line 304</p></div><div class="detail-row"><h2>Stable entry ID</h2><p><code>metric-definitions.completed-appointments.who-is-on-the-prod-view</code></p></div>
+    </details>
     
   </main>
   <footer class="site-footer">
@@ -48,7 +53,7 @@
       <p class="footer-brand">Vayu Health Git Data Hub</p>
       
     <p class="banner">
-      Website built <time datetime="2026-10-22T21:11:42Z">22 Oct 2026, 21:11 UTC</time>.
+      Website built <time datetime="2026-11-20T04:21:12Z">20 Nov 2026, 04:21 UTC</time>.
       This is when the site was generated. It is not the effective date of a definition.
       An effective date is shown on an entry only when the source document states one.
     </p>
@@ -58,6 +63,7 @@
         <a href="../index.html">Home</a>
         <a href="../dictionary.html">Data Dictionary</a>
         <a href="../dashboards.html">Dashboards</a>
+        <a href="../glossary.html">Glossary</a>
         <a href="../methods.html">Methods &amp; Updates</a>
       </nav>
     </div>

@@ -17,32 +17,37 @@
       <nav class="site-nav" aria-label="Site">
         <a href="../dictionary.html">Data Dictionary</a>
         <a href="../dashboards.html">Dashboards</a>
+        <a href="../glossary.html">Glossary</a>
         <a href="../methods.html">Methods &amp; Updates</a>
       </nav>
     
       
-      <p class="last-updated">Last Updated: <time datetime="2026-10-22T21:11:42Z" title="When this website was generated. This is not the effective date of a definition.">October 22, 2026</time></p>
+      <p class="last-updated">Last Updated: <time datetime="2026-11-20T04:21:12Z" title="When this website was generated. This is not the effective date of a definition.">November 20, 2026</time></p>
     
     </div>
   </header>
   <main id="content" class="wrap">
     
     <section class="intro">
-      <p class="crumbs"><a href="../dictionary.html">Data Dictionary</a> / Calculations added from the snapshot</p>
+      <p class="crumbs"><a href="../dictionary.html">Data Dictionary</a> / Outreach and enrollment conversion</p>
       <h1>007. Overall Conversion Rate (Calc)</h1>
       <p class="meta-line">
         <span class="type-pill">Metric</span>
-        <span class="topic">007. Overall Conversion Rate (Calc)</span>
+        <span class="topic">Calculations added from the snapshot · 007. Overall Conversion Rate (Calc)</span>
       </p>
     </section>
-    <p class="provenance">Documented business meaning. This page does not recompute the rule.</p>
-    <p class="source-line"><code>docs/tableau/cloud_snapshot/phase1_enrollment_db.md</code> line 110.
-      Owner: Not documented.</p>
-    <div class="detail-row"><h2>Stable entry ID</h2><p><code>phase1-enrollment-db.calculations-added-from-the-snapshot.007-overall-conversion-rate-calc</code></p></div><div class="detail-row"><h2>Business definition</h2><p>Tableau name: <code>Overall Conversion Rate (Calc)</code>.</p>
+    <div class="summary-box"><h2>In plain terms</h2><p>Members who enrolled in the month divided by members who had outreach in the month. Some enrollees were reached in an earlier month, so this compares two different groups and can be above 100%.</p></div>
+    <div class="detail-row"><h2>Business definition</h2><p>Tableau name: <code>Overall Conversion Rate (Calc)</code>.</p>
 <p>Snapshot position 285 of 600 on this page. Workbook association: <code>Vayu Health Phase 1 (Enrollment) DB</code>.</p>
-<p>No business definition is documented for this field. pending review.</p>
+<p><strong>Approval status:</strong> Draft written from the Tableau formula on 2026-11-20, pending review by the data lead.</p>
 <pre><code>COUNTD(IF [enrolled_in_month] THEN [Member Cin] END)
-/ COUNTD(IF [outreached_in_reporting_month] THEN [Member Cin] END)</code></pre></div><div class="detail-row"><h2>Owner</h2><p class="missing">Not documented in the source.</p></div><div class="detail-row"><h2>Documented approval status</h2><p class="missing">Not documented in the source.</p></div><div class="detail-row"><h2>Effective date</h2><p class="missing">Not documented in the source.</p></div><div class="detail-row review"><h2>Review</h2><ul><li>A formula in this section has no name, so it stays on the section.</li><li>The source text asks for a review.</li><li>Source text includes “pending review”.</li></ul></div>
+/ COUNTD(IF [outreached_in_reporting_month] THEN [Member Cin] END)</code></pre></div><div class="detail-row"><h2>Documented approval status</h2><p>Draft written from the Tableau formula on 2026-11-20, pending review by the data lead.</p></div>
+    <div class="detail-row review"><h2>Review</h2><ul><li>A formula in this section has no name, so it stays on the section.</li><li>The source text asks for a review.</li><li>Source text includes “pending review”.</li></ul></div><div class="detail-row terms"><h2>Terms used on this page</h2><ul><li><strong>Tableau</strong>: The dashboard tool Vayu uses for program reporting.</li></ul><p><a href="../glossary.html">Full glossary</a></p></div>
+    <details class="technical-details">
+      <summary>Technical details (for analysts)</summary>
+      <p class="provenance">Documented business meaning. This page does not recompute the rule.</p>
+      <div class="detail-row"><h2>Where this definition is written</h2><p><code>docs/tableau/cloud_snapshot/phase1_enrollment_db.md</code> line 132</p></div><div class="detail-row"><h2>Stable entry ID</h2><p><code>phase1-enrollment-db.calculations-added-from-the-snapshot.007-overall-conversion-rate-calc</code></p></div>
+    </details>
     
   </main>
   <footer class="site-footer">
@@ -50,7 +55,7 @@
       <p class="footer-brand">Vayu Health Git Data Hub</p>
       
     <p class="banner">
-      Website built <time datetime="2026-10-22T21:11:42Z">22 Oct 2026, 21:11 UTC</time>.
+      Website built <time datetime="2026-11-20T04:21:12Z">20 Nov 2026, 04:21 UTC</time>.
       This is when the site was generated. It is not the effective date of a definition.
       An effective date is shown on an entry only when the source document states one.
     </p>
@@ -60,6 +65,7 @@
         <a href="../index.html">Home</a>
         <a href="../dictionary.html">Data Dictionary</a>
         <a href="../dashboards.html">Dashboards</a>
+        <a href="../glossary.html">Glossary</a>
         <a href="../methods.html">Methods &amp; Updates</a>
       </nav>
     </div>

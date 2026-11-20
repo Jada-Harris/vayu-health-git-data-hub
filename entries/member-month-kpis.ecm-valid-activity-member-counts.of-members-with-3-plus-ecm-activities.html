@@ -17,29 +17,33 @@
       <nav class="site-nav" aria-label="Site">
         <a href="../dictionary.html">Data Dictionary</a>
         <a href="../dashboards.html">Dashboards</a>
+        <a href="../glossary.html">Glossary</a>
         <a href="../methods.html">Methods &amp; Updates</a>
       </nav>
     
       
-      <p class="last-updated">Last Updated: <time datetime="2026-10-22T21:11:42Z" title="When this website was generated. This is not the effective date of a definition.">October 22, 2026</time></p>
+      <p class="last-updated">Last Updated: <time datetime="2026-11-20T04:21:12Z" title="When this website was generated. This is not the effective date of a definition.">November 20, 2026</time></p>
     
     </div>
   </header>
   <main id="content" class="wrap">
     
     <section class="intro">
-      <p class="crumbs"><a href="../dictionary.html">Data Dictionary</a> / ECM valid activity — member counts</p>
+      <p class="crumbs"><a href="../dictionary.html">Data Dictionary</a> / ECM and ECM+ services</p>
       <h1># of Members with 3+ ECM Activities</h1>
       <p class="meta-line">
         <span class="type-pill">Tableau calculation</span>
         <span class="topic">ECM valid activity — member counts</span>
       </p>
     </section>
-    <p class="provenance">Documented business meaning. This page does not recompute the rule.</p>
-    <p class="source-line"><code>docs/tableau/member_month_kpis.md</code> line 59.
-      Owner: Not documented.</p>
-    <div class="detail-row"><h2>Stable entry ID</h2><p><code>member-month-kpis.ecm-valid-activity-member-counts.of-members-with-3-plus-ecm-activities</code></p></div><div class="detail-row"><h2>Business definition</h2><p>// # of Members with 3+ ECM Activities
-COUNTD(IF [ecm_valid_activity_count] &gt;= 3 THEN [member_cin] END)</p></div><div class="detail-row"><h2>Calculation/formula</h2><p>Same text as the business definition. The source records that wording as the calculation.</p></div><div class="detail-row"><h2>Source table/view/column</h2><p>ecm_valid_activity_count</p></div><div class="detail-row"><h2>Related Tableau calculation or dashboard</h2><p>VayuHealth_Program_PROD.VW_Member_Month</p></div><div class="detail-row"><h2>Owner</h2><p class="missing">Not documented in the source.</p></div><div class="detail-row"><h2>Documented approval status</h2><p class="missing">Not documented in the source.</p></div><div class="detail-row"><h2>Effective date</h2><p class="missing">Not documented in the source.</p></div><div class="detail-row"><h2>Same heading</h2><ul><li><a href="member-month-kpis.ecm-valid-activity-member-counts.of-members-with-1-plus-ecm-activity.html"># of Members with 1+ ECM Activity</a> <span class="type-pill">Tableau calculation</span></li><li><a href="member-month-kpis.ecm-valid-activity-member-counts.of-members-with-2-plus-ecm-activities.html"># of Members with 2+ ECM Activities</a> <span class="type-pill">Tableau calculation</span></li><li><a href="member-month-kpis.ecm-valid-activity-member-counts.of-members-with-4-plus-ecm-activities.html"># of Members with 4+ ECM Activities</a> <span class="type-pill">Tableau calculation</span></li><li><a href="member-month-kpis.ecm-valid-activity-member-counts.html">ECM valid activity — member counts</a> <span class="type-pill">Metric</span></li><li><a href="member-month-kpis.ecm-valid-activity-member-counts.members-with-ecm-valid-activities.html">Members with ECM Valid Activities</a> <span class="type-pill">Tableau calculation</span></li></ul></div>
+    
+    <div class="detail-row"><h2>Business definition</h2><p>// # of Members with 3+ ECM Activities COUNTD(IF [ecm_valid_activity_count] &gt;= 3 THEN [member_cin] END)</p></div>
+    <div class="detail-row terms"><h2>Terms used on this page</h2><ul><li><strong>ECM</strong>: Enhanced Care Management: the Medi-Cal (CalAIM) benefit that pays Vayu to coordinate care for members with complex needs.</li></ul><p><a href="../glossary.html">Full glossary</a></p></div><div class="detail-row"><h2>Same heading</h2><ul><li><a href="member-month-kpis.ecm-valid-activity-member-counts.of-members-with-1-plus-ecm-activity.html"># of Members with 1+ ECM Activity</a> <span class="type-pill">Tableau calculation</span></li><li><a href="member-month-kpis.ecm-valid-activity-member-counts.of-members-with-2-plus-ecm-activities.html"># of Members with 2+ ECM Activities</a> <span class="type-pill">Tableau calculation</span></li><li><a href="member-month-kpis.ecm-valid-activity-member-counts.of-members-with-4-plus-ecm-activities.html"># of Members with 4+ ECM Activities</a> <span class="type-pill">Tableau calculation</span></li><li><a href="member-month-kpis.ecm-valid-activity-member-counts.html">ECM valid activity — member counts</a> <span class="type-pill">Metric</span></li><li><a href="member-month-kpis.ecm-valid-activity-member-counts.members-with-ecm-valid-activities.html">Members with ECM Valid Activities</a> <span class="type-pill">Tableau calculation</span></li></ul></div>
+    <details class="technical-details">
+      <summary>Technical details (for analysts)</summary>
+      <p class="provenance">Documented business meaning. This page does not recompute the rule.</p>
+      <div class="detail-row"><h2>Calculation/formula</h2><p>Same text as the business definition. The source records that wording as the calculation.</p></div><div class="detail-row"><h2>Source table/view/column</h2><p>ecm_valid_activity_count</p></div><div class="detail-row"><h2>Related Tableau calculation or dashboard</h2><p>VayuHealth_Program_PROD.VW_Member_Month</p></div><div class="detail-row"><h2>Where this definition is written</h2><p><code>docs/tableau/member_month_kpis.md</code> line 61</p></div><div class="detail-row"><h2>Stable entry ID</h2><p><code>member-month-kpis.ecm-valid-activity-member-counts.of-members-with-3-plus-ecm-activities</code></p></div>
+    </details>
     
   </main>
   <footer class="site-footer">
@@ -47,7 +51,7 @@ COUNTD(IF [ecm_valid_activity_count] &gt;= 3 THEN [member_cin] END)</p></div><di
       <p class="footer-brand">Vayu Health Git Data Hub</p>
       
     <p class="banner">
-      Website built <time datetime="2026-10-22T21:11:42Z">22 Oct 2026, 21:11 UTC</time>.
+      Website built <time datetime="2026-11-20T04:21:12Z">20 Nov 2026, 04:21 UTC</time>.
       This is when the site was generated. It is not the effective date of a definition.
       An effective date is shown on an entry only when the source document states one.
     </p>
@@ -57,6 +61,7 @@ COUNTD(IF [ecm_valid_activity_count] &gt;= 3 THEN [member_cin] END)</p></div><di
         <a href="../index.html">Home</a>
         <a href="../dictionary.html">Data Dictionary</a>
         <a href="../dashboards.html">Dashboards</a>
+        <a href="../glossary.html">Glossary</a>
         <a href="../methods.html">Methods &amp; Updates</a>
       </nav>
     </div>

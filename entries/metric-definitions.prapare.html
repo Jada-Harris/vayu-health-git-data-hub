@@ -17,28 +17,33 @@
       <nav class="site-nav" aria-label="Site">
         <a href="../dictionary.html">Data Dictionary</a>
         <a href="../dashboards.html">Dashboards</a>
+        <a href="../glossary.html">Glossary</a>
         <a href="../methods.html">Methods &amp; Updates</a>
       </nav>
     
       
-      <p class="last-updated">Last Updated: <time datetime="2026-10-22T21:11:42Z" title="When this website was generated. This is not the effective date of a definition.">October 22, 2026</time></p>
+      <p class="last-updated">Last Updated: <time datetime="2026-11-20T04:21:12Z" title="When this website was generated. This is not the effective date of a definition.">November 20, 2026</time></p>
     
     </div>
   </header>
   <main id="content" class="wrap">
     
     <section class="intro">
-      <p class="crumbs"><a href="../dictionary.html">Data Dictionary</a> / PRAPARE</p>
+      <p class="crumbs"><a href="../dictionary.html">Data Dictionary</a> / Social needs (PRAPARE)</p>
       <h1>PRAPARE</h1>
       <p class="meta-line">
         <span class="type-pill">Metric</span>
         <span class="topic">PRAPARE</span>
       </p>
     </section>
-    <p class="provenance">Documented business meaning. This page does not recompute the rule.</p>
-    <p class="source-line"><code>docs/metric_definitions.md</code> line 418.
-      Owner: Not documented.</p>
-    <div class="detail-row"><h2>Stable entry ID</h2><p><code>metric-definitions.prapare</code></p></div><div class="detail-row"><h2>Business definition</h2><p>Tableau: <code>VW_PRAPARE_Assessments</code> (one row per current assessment) and <code>VW_PRAPARE_Responses</code> (one row per answered question, including split unmet needs). <code>reporting_month</code> on those views is <code>YYYY-MM</code> from <code>Created_Date</code> when Sprite leaves completion date blank. Tableau views keep classic SDOH plus <code>is_homeless</code> and <code>are_you_currently_pregnant</code>. Additive grouped reporting fields (<code>Unmet_Need_Group</code>, employment/housing/transportation groups and flags) are derived in CORE helpers and exposed on <code>VW_PRAPARE_Assessments</code>; raw survey columns are unchanged. Pregnancy/postpartum, EPDS, and infant-care fields stay in STG only.</p></div><div class="detail-row"><h2>Owner</h2><p class="missing">Not documented in the source.</p></div><div class="detail-row"><h2>Documented approval status</h2><p class="missing">Not documented in the source.</p></div><div class="detail-row"><h2>Effective date</h2><p class="missing">Not documented in the source.</p></div>
+    <div class="summary-box"><h2>In plain terms</h2><p>Results of the PRAPARE social-needs survey: one row per current assessment, plus one row per answered question or unmet need.</p></div>
+    <div class="detail-row"><h2>Business definition</h2><p>Tableau: <code>VW_PRAPARE_Assessments</code> (one row per current assessment) and <code>VW_PRAPARE_Responses</code> (one row per answered question, including split unmet needs). <code>reporting_month</code> on those views is <code>YYYY-MM</code> from <code>Created_Date</code> when Sprite leaves completion date blank. Tableau views keep classic SDOH plus <code>is_homeless</code> and <code>are_you_currently_pregnant</code>. Additive grouped reporting fields (<code>Unmet_Need_Group</code>, employment/housing/transportation groups and flags) are derived in CORE helpers and exposed on <code>VW_PRAPARE_Assessments</code>; raw survey columns are unchanged. Pregnancy/postpartum, EPDS, and infant-care fields stay in STG only.</p></div>
+    <div class="detail-row terms"><h2>Terms used on this page</h2><ul><li><strong>CORE</strong>: The BigQuery layer where SQL turns raw source data into business meaning (for example enrollment episodes). CORE objects are views.</li><li><strong>PRAPARE</strong>: A standard survey about social needs (housing, food, transportation, and more).</li><li><strong>SDOH</strong>: Social drivers (or determinants) of health: living conditions such as housing, food, and transportation that affect health.</li><li><strong>Sprite</strong>: Sprite Health, Vayu&#x27;s EHR and care management system. Monthly reports are exported from it.</li><li><strong>STG</strong>: Staging: the BigQuery layer that holds source files as they arrived, with light cleanup only.</li><li><strong>Tableau</strong>: The dashboard tool Vayu uses for program reporting.</li></ul><p><a href="../glossary.html">Full glossary</a></p></div>
+    <details class="technical-details">
+      <summary>Technical details (for analysts)</summary>
+      <p class="provenance">Documented business meaning. This page does not recompute the rule.</p>
+      <div class="detail-row"><h2>Where this definition is written</h2><p><code>docs/metric_definitions.md</code> line 512</p></div><div class="detail-row"><h2>Stable entry ID</h2><p><code>metric-definitions.prapare</code></p></div>
+    </details>
     
   </main>
   <footer class="site-footer">
@@ -46,7 +51,7 @@
       <p class="footer-brand">Vayu Health Git Data Hub</p>
       
     <p class="banner">
-      Website built <time datetime="2026-10-22T21:11:42Z">22 Oct 2026, 21:11 UTC</time>.
+      Website built <time datetime="2026-11-20T04:21:12Z">20 Nov 2026, 04:21 UTC</time>.
       This is when the site was generated. It is not the effective date of a definition.
       An effective date is shown on an entry only when the source document states one.
     </p>
@@ -56,6 +61,7 @@
         <a href="../index.html">Home</a>
         <a href="../dictionary.html">Data Dictionary</a>
         <a href="../dashboards.html">Dashboards</a>
+        <a href="../glossary.html">Glossary</a>
         <a href="../methods.html">Methods &amp; Updates</a>
       </nav>
     </div>

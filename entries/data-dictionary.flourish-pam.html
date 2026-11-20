@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Flourish PAM · Vayu Health Git Data Hub</title>
+  <meta name="theme-color" content="#464C4F">
+  
+  <link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+  <a class="skip" href="#content">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap header-bar">
+      <a class="brand" href="../index.html"><img class="brand-logo" src="../assets/vayu-logo-horizontal.webp" alt="Vayu Health"></a>
+      
+      <nav class="site-nav" aria-label="Site">
+        <a href="../dictionary.html">Data Dictionary</a>
+        <a href="../dashboards.html">Dashboards</a>
+        <a href="../glossary.html">Glossary</a>
+        <a href="../methods.html">Methods &amp; Updates</a>
+      </nav>
+    
+      
+      <p class="last-updated">Last Updated: <time datetime="2026-11-20T04:21:12Z" title="When this website was generated. This is not the effective date of a definition.">November 20, 2026</time></p>
+    
+    </div>
+  </header>
+  <main id="content" class="wrap">
+    
+    <section class="intro">
+      <p class="crumbs"><a href="../dictionary.html">Data Dictionary</a> / Clinical outcomes</p>
+      <h1>Flourish PAM</h1>
+      <p class="meta-line">
+        <span class="type-pill">Object</span>
+        <span class="topic">Flourish PAM</span>
+      </p>
+    </section>
+    
+    <div class="detail-row"><h2>Business definition</h2><p><code>Flourish_Member_Crosswalk</code> is one active verified mapping per Flourish identifier. It is not rebuilt by the monthly Sprite truncate/replace loads. <code>Flourish_PAM_Assessments</code> is the current full-history Flourish snapshot. Names, date of birth, postal code, and Q1–Q13 stay on that table.</p>
+<p><code>CORE_Flourish_PAM_Assessments</code> is one source row. Unmatched assessments keep a null CIN. <code>VW_PAM_Assessments</code> adds at most one <code>MART_Cumulative_Members</code> episode open on the completion date. <code>reporting_month</code> is the UTC completion month.</p>
+<p><code>VW_PAM_Member_Month</code> is one CIN, survey series, and completion month. <code>VW_PAM_Member_Summary</code> is one CIN and survey series. <code>VW_PAM_Member_CIN_Filter</code> is one row per CIN only when one series is configured. Definitions: <code>flourish_pam.md</code>.</p>
+<p>Demographics on the PAM PROD views come from <code>MART_Cumulative_Members</code> whenever the mapped CIN appears on the cumulative book (verified crosswalk identity; Flourish name is not re-matched). Prefer the episode open on the Flourish completion date; otherwise the current/latest episode for that CIN. <code>health_plan</code> is the same as <code>organization</code>. <code>partner</code> and <code>dm_type</code> are separate cumulative-book fields (same meanings as on <code>VW_Member_Month</code>). Demographics stay null only for unmatched Flourish IDs, CINs absent from the cumulative book, or blank source fields on the picked episode.</p></div>
+    <div class="detail-row"><h2>Same name is also defined in</h2><p>These entries share this name. Check which one matches the dashboard you are reading.</p><ul><li><a href="metric-definitions.flourish-pam.html">Flourish PAM</a> <span class="topic">docs/metric_definitions.md</span></li></ul></div><div class="detail-row terms"><h2>Terms used on this page</h2><ul><li><strong>CIN</strong>: Client Index Number: the Medi-Cal member ID. It is PHI. Never type a real one into GitHub.</li><li><strong>Flourish</strong>: The vendor platform where members complete the PAM survey.</li><li><strong>PAM</strong>: Patient Activation Measure: a 13-question survey (scored 0 to 100, levels 1 to 4) about how ready a person is to manage their own health.</li><li><strong>PROD</strong>: The BigQuery layer of approved views. Tableau and Connected Sheets connect only to PROD.</li><li><strong>Sprite</strong>: Sprite Health, Vayu&#x27;s EHR and care management system. Monthly reports are exported from it.</li></ul><p><a href="../glossary.html">Full glossary</a></p></div><div class="detail-row"><h2>Same heading</h2><ul><li><a href="metric-definitions.flourish-pam.html">Flourish PAM</a> <span class="type-pill">Metric</span></li></ul></div>
+    <details class="technical-details">
+      <summary>Technical details (for analysts)</summary>
+      <p class="provenance">Documented business meaning. This page does not recompute the rule.</p>
+      <div class="detail-row"><h2>Where this definition is written</h2><p><code>docs/data_dictionary.md</code> line 338</p></div><div class="detail-row"><h2>Stable entry ID</h2><p><code>data-dictionary.flourish-pam</code></p></div>
+    </details>
+    
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <p class="footer-brand">Vayu Health Git Data Hub</p>
+      
+    <p class="banner">
+      Website built <time datetime="2026-11-20T04:21:12Z">20 Nov 2026, 04:21 UTC</time>.
+      This is when the site was generated. It is not the effective date of a definition.
+      An effective date is shown on an entry only when the source document states one.
+    </p>
+    
+      <p>Definitions only. Pipeline folders and workflows stay off this site.</p>
+      <nav aria-label="Footer">
+        <a href="../index.html">Home</a>
+        <a href="../dictionary.html">Data Dictionary</a>
+        <a href="../dashboards.html">Dashboards</a>
+        <a href="../glossary.html">Glossary</a>
+        <a href="../methods.html">Methods &amp; Updates</a>
+      </nav>
+    </div>
+  </footer>
+  
+</body>
+</html>

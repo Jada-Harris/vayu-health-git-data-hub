@@ -17,31 +17,36 @@
       <nav class="site-nav" aria-label="Site">
         <a href="../dictionary.html">Data Dictionary</a>
         <a href="../dashboards.html">Dashboards</a>
+        <a href="../glossary.html">Glossary</a>
         <a href="../methods.html">Methods &amp; Updates</a>
       </nav>
     
       
-      <p class="last-updated">Last Updated: <time datetime="2026-10-22T21:11:42Z" title="When this website was generated. This is not the effective date of a definition.">October 22, 2026</time></p>
+      <p class="last-updated">Last Updated: <time datetime="2026-11-20T04:21:12Z" title="When this website was generated. This is not the effective date of a definition.">November 20, 2026</time></p>
     
     </div>
   </header>
   <main id="content" class="wrap">
     
     <section class="intro">
-      <p class="crumbs"><a href="../dictionary.html">Data Dictionary</a> / HbA1c / GMI 6-month and most-recent (legacy, labeled)</p>
+      <p class="crumbs"><a href="../dictionary.html">Data Dictionary</a> / Clinical outcomes</p>
       <h1>HbA1c / GMI 6-month and most-recent (legacy, labeled)</h1>
       <p class="meta-line">
         <span class="type-pill">Metric</span>
         <span class="topic">HbA1c / GMI 6-month and most-recent (legacy, labeled)</span>
       </p>
     </section>
-    <p class="provenance">Documented business meaning. This page does not recompute the rule.</p>
-    <p class="source-line"><code>docs/metric_definitions.md</code> line 71.
-      Owner: Not documented.</p>
-    <div class="detail-row"><h2>Stable entry ID</h2><p><code>metric-definitions.hba1c-gmi-6-month-and-most-recent-legacy-labeled</code></p></div><div class="detail-row"><h2>Business definition</h2><p>Kept for migration parity on the lower-of-markers pick. Both are limited to the enrollment episode window.</p>
+    <div class="summary-box"><h2>In plain terms</h2><p>Older 6-month and most-recent A1c/GMI rules, kept so results match earlier reports. Each takes the lower of the A1c and GMI values.</p></div>
+    <div class="detail-row"><h2>Business definition</h2><p>Kept for migration parity on the lower-of-markers pick. Both are limited to the enrollment episode window.</p>
 <p><strong>6-month:</strong> earliest HbA1c after day 180 and earliest GMI after day 180 (and on/before episode end), then the <strong>lower</strong> value.</p>
 <p><strong>Most recent:</strong> latest HbA1c and latest GMI with measurement date in <code>[enrollment_start, episode_end]</code>, then the <strong>lower</strong> value.</p>
-<p>On MERGE into <code>MART_Cumulative_Members</code>, 6-month and most-recent metabolic fields (and assessment most-recent fields) <strong>overwrite only when Incoming has a non-blank value</strong>. Blank Incoming does not clear a prior MART score.</p></div><div class="detail-row"><h2>Owner</h2><p class="missing">Not documented in the source.</p></div><div class="detail-row"><h2>Documented approval status</h2><p class="missing">Not documented in the source.</p></div><div class="detail-row"><h2>Effective date</h2><p class="missing">Not documented in the source.</p></div>
+<p>On MERGE into <code>MART_Cumulative_Members</code>, 6-month and most-recent metabolic fields (and assessment most-recent fields) <strong>overwrite only when Incoming has a non-blank value</strong>. Blank Incoming does not clear a prior MART score.</p></div>
+    <div class="detail-row terms"><h2>Terms used on this page</h2><ul><li><strong>A1c</strong>: A blood test that shows a person&#x27;s average blood sugar over about the last three months. Also written HbA1c. Higher numbers mean less controlled diabetes.</li><li><strong>GMI</strong>: Glucose Management Indicator: an estimate of A1c calculated from CGM readings.</li><li><strong>HbA1c</strong>: Same as A1c.</li><li><strong>MART</strong>: The BigQuery layer of analysis-ready tables, such as one row per member or per member per month.</li><li><strong>MERGE</strong>: A database step that updates rows that already exist and adds rows that are new, without duplicating them.</li></ul><p><a href="../glossary.html">Full glossary</a></p></div>
+    <details class="technical-details">
+      <summary>Technical details (for analysts)</summary>
+      <p class="provenance">Documented business meaning. This page does not recompute the rule.</p>
+      <div class="detail-row"><h2>Where this definition is written</h2><p><code>docs/metric_definitions.md</code> line 123</p></div><div class="detail-row"><h2>Stable entry ID</h2><p><code>metric-definitions.hba1c-gmi-6-month-and-most-recent-legacy-labeled</code></p></div>
+    </details>
     
   </main>
   <footer class="site-footer">
@@ -49,7 +54,7 @@
       <p class="footer-brand">Vayu Health Git Data Hub</p>
       
     <p class="banner">
-      Website built <time datetime="2026-10-22T21:11:42Z">22 Oct 2026, 21:11 UTC</time>.
+      Website built <time datetime="2026-11-20T04:21:12Z">20 Nov 2026, 04:21 UTC</time>.
       This is when the site was generated. It is not the effective date of a definition.
       An effective date is shown on an entry only when the source document states one.
     </p>
@@ -59,6 +64,7 @@
         <a href="../index.html">Home</a>
         <a href="../dictionary.html">Data Dictionary</a>
         <a href="../dashboards.html">Dashboards</a>
+        <a href="../glossary.html">Glossary</a>
         <a href="../methods.html">Methods &amp; Updates</a>
       </nav>
     </div>

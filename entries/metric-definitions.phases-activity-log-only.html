@@ -17,31 +17,36 @@
       <nav class="site-nav" aria-label="Site">
         <a href="../dictionary.html">Data Dictionary</a>
         <a href="../dashboards.html">Dashboards</a>
+        <a href="../glossary.html">Glossary</a>
         <a href="../methods.html">Methods &amp; Updates</a>
       </nav>
     
       
-      <p class="last-updated">Last Updated: <time datetime="2026-10-22T21:11:42Z" title="When this website was generated. This is not the effective date of a definition.">October 22, 2026</time></p>
+      <p class="last-updated">Last Updated: <time datetime="2026-11-20T04:21:12Z" title="When this website was generated. This is not the effective date of a definition.">November 20, 2026</time></p>
     
     </div>
   </header>
   <main id="content" class="wrap">
     
     <section class="intro">
-      <p class="crumbs"><a href="../dictionary.html">Data Dictionary</a> / Phases (Activity Log only)</p>
+      <p class="crumbs"><a href="../dictionary.html">Data Dictionary</a> / Enrollment and membership</p>
       <h1>Phases (Activity Log only)</h1>
       <p class="meta-line">
         <span class="type-pill">Metric</span>
         <span class="topic">Phases (Activity Log only)</span>
       </p>
     </section>
-    <p class="provenance">Documented business meaning. This page does not recompute the rule.</p>
-    <p class="source-line"><code>docs/metric_definitions.md</code> line 108.
-      Owner: Not documented.</p>
-    <div class="detail-row"><h2>Stable entry ID</h2><p><code>metric-definitions.phases-activity-log-only</code></p></div><div class="detail-row"><h2>Business definition</h2><p>Requires <code>member_cin</code>, <code>activity_date</code>, and <code>description</code>. Filter: <code>accountable_provider = Vayu Health</code>.</p>
+    <div class="summary-box"><h2>In plain terms</h2><p>The start date and length of each program phase (1 to 4), based on specific activities logged in Sprite.</p></div>
+    <div class="detail-row"><h2>Business definition</h2><p>Requires <code>member_cin</code>, <code>activity_date</code>, and <code>description</code>. Filter: <code>accountable_provider = Vayu Health</code>.</p>
 <p><code>as_of</code> = reporting-month end (BigQuery) / script run date (Colab).</p>
 <p>Once Phase 1–4 dates/days are filled on MART / master, monthly runs <strong>do not overwrite</strong> them (fill blank only).</p>
-<p>Negative phase days are flagged in QA, not rewritten.</p></div><div class="detail-row"><h2>Owner</h2><p class="missing">Not documented in the source.</p></div><div class="detail-row"><h2>Documented approval status</h2><p class="missing">Not documented in the source.</p></div><div class="detail-row"><h2>Effective date</h2><p class="missing">Not documented in the source.</p></div><div class="detail-row"><h2>Same heading</h2><ul><li><a href="metric-definitions.phases-activity-log-only.phase-1.html">Phase 1</a> <span class="type-pill">Metric</span></li><li><a href="metric-definitions.phases-activity-log-only.phase-2.html">Phase 2</a> <span class="type-pill">Metric</span></li><li><a href="metric-definitions.phases-activity-log-only.phase-3.html">Phase 3</a> <span class="type-pill">Metric</span></li><li><a href="metric-definitions.phases-activity-log-only.phase-4.html">Phase 4</a> <span class="type-pill">Metric</span></li></ul></div>
+<p>Negative phase days are flagged in QA, not rewritten.</p></div>
+    <div class="detail-row terms"><h2>Terms used on this page</h2><ul><li><strong>BigQuery</strong>: Google&#x27;s cloud database where the pipeline stores its tables.</li><li><strong>Colab</strong>: Google Colaboratory: the browser notebooks in notebooks/ that run the monthly pipeline.</li><li><strong>MART</strong>: The BigQuery layer of analysis-ready tables, such as one row per member or per member per month.</li><li><strong>Sprite</strong>: Sprite Health, Vayu&#x27;s EHR and care management system. Monthly reports are exported from it.</li></ul><p><a href="../glossary.html">Full glossary</a></p></div><div class="detail-row"><h2>Same heading</h2><ul><li><a href="metric-definitions.phases-activity-log-only.phase-1.html">Phase 1</a> <span class="type-pill">Metric</span></li><li><a href="metric-definitions.phases-activity-log-only.phase-2.html">Phase 2</a> <span class="type-pill">Metric</span></li><li><a href="metric-definitions.phases-activity-log-only.phase-3.html">Phase 3</a> <span class="type-pill">Metric</span></li><li><a href="metric-definitions.phases-activity-log-only.phase-4.html">Phase 4</a> <span class="type-pill">Metric</span></li></ul></div>
+    <details class="technical-details">
+      <summary>Technical details (for analysts)</summary>
+      <p class="provenance">Documented business meaning. This page does not recompute the rule.</p>
+      <div class="detail-row"><h2>Where this definition is written</h2><p><code>docs/metric_definitions.md</code> line 168</p></div><div class="detail-row"><h2>Stable entry ID</h2><p><code>metric-definitions.phases-activity-log-only</code></p></div>
+    </details>
     
   </main>
   <footer class="site-footer">
@@ -49,7 +54,7 @@
       <p class="footer-brand">Vayu Health Git Data Hub</p>
       
     <p class="banner">
-      Website built <time datetime="2026-10-22T21:11:42Z">22 Oct 2026, 21:11 UTC</time>.
+      Website built <time datetime="2026-11-20T04:21:12Z">20 Nov 2026, 04:21 UTC</time>.
       This is when the site was generated. It is not the effective date of a definition.
       An effective date is shown on an entry only when the source document states one.
     </p>
@@ -59,6 +64,7 @@
         <a href="../index.html">Home</a>
         <a href="../dictionary.html">Data Dictionary</a>
         <a href="../dashboards.html">Dashboards</a>
+        <a href="../glossary.html">Glossary</a>
         <a href="../methods.html">Methods &amp; Updates</a>
       </nav>
     </div>

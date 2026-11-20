@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Confirmed glycemic pathway (member-month) · Vayu Health Git Data Hub</title>
+  <meta name="theme-color" content="#464C4F">
+  
+  <link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+  <a class="skip" href="#content">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap header-bar">
+      <a class="brand" href="../index.html"><img class="brand-logo" src="../assets/vayu-logo-horizontal.webp" alt="Vayu Health"></a>
+      
+      <nav class="site-nav" aria-label="Site">
+        <a href="../dictionary.html">Data Dictionary</a>
+        <a href="../dashboards.html">Dashboards</a>
+        <a href="../glossary.html">Glossary</a>
+        <a href="../methods.html">Methods &amp; Updates</a>
+      </nav>
+    
+      
+      <p class="last-updated">Last Updated: <time datetime="2026-11-20T04:21:12Z" title="When this website was generated. This is not the effective date of a definition.">November 20, 2026</time></p>
+    
+    </div>
+  </header>
+  <main id="content" class="wrap">
+    
+    <section class="intro">
+      <p class="crumbs"><a href="../dictionary.html">Data Dictionary</a> / Clinical outcomes</p>
+      <h1>Confirmed glycemic pathway (member-month)</h1>
+      <p class="meta-line">
+        <span class="type-pill">Metric</span>
+        <span class="topic">Confirmed glycemic pathway (member-month)</span>
+      </p>
+    </section>
+    <div class="summary-box"><h2>In plain terms</h2><p>A month-by-month history of which pathway (A1c, BGM, or CGM) each member was on. It feeds the pathway trend chart.</p></div>
+    <div class="detail-row"><h2>Business definition</h2><p>Grain: <code>(member_cin, reporting_month)</code> and <code>ecm_enrollment_start_date</code> when present.</p>
+<p><strong>Historical wide sheet</strong> (Google Sheet export): one row per member; month columns like <code>26-Feb</code> / <code>Jan 26</code> / <code>YYYY-MM</code> with cell values blank / <code>A1C</code> / <code>BGM</code> / <code>CGM</code>. The loader unpivots to long grain and <strong>loads only non-blank pathway months</strong> (pre-enrollment blanks, e.g. Jan–Jul for an August enrollee, stay in the sheet but are not written to MART). Identity columns: CIN, Member Name, Start Date, Care Team, LCM, CDCES.</p>
+<p><strong>Ongoing monthly:</strong> when you apply cumulative members for a <code>reporting_month</code>, that apply also snapshots enrolled episodes from <code>MART_Cumulative_Members</code> into the pathway STG/MART/VW for that month. Re-running the same month replaces that pathway month slice. Do not keep re-exporting the Google Sheet for new months unless correcting history.</p>
+<p><code>pathway_group</code> is the MoM chart bucket: <code>A1c</code> / <code>BGM</code> / <code>CGM</code> / <code>Other</code>. Sheet <code>A1C</code>/<code>BGM</code>/<code>CGM</code> map to those groups. Cumulative labels such as <code>CGM Active</code> or <code>Possible CGM Malfunction</code> map to group <code>CGM</code> (detail stays on <code>pathway</code>).</p>
+<p>Tableau: <code>reporting_month_date</code> on Columns, <code>pathway_group</code> on Color, <code>COUNTD(member_cin)</code> on Rows. Filter out blank/<code>Other</code> when the chart should show only confirmed A1c/BGM/CGM. Demographics on the view (region, organization/<code>health_plan</code>, care team, POF, etc.) come from the cumulative book join, so filters on this view match other member graphs.</p></div>
+    <div class="detail-row terms"><h2>Terms used on this page</h2><ul><li><strong>A1c</strong>: A blood test that shows a person&#x27;s average blood sugar over about the last three months. Also written HbA1c. Higher numbers mean less controlled diabetes.</li><li><strong>BGM</strong>: Blood glucose meter: a finger-stick device a member uses to check blood sugar. Sprite may call it SMBGS.</li><li><strong>CDCES</strong>: Certified Diabetes Care and Education Specialist.</li><li><strong>CGM</strong>: Continuous glucose monitor: a sensor worn on the body that measures blood sugar all day (for example Dexcom or Libre).</li><li><strong>CIN</strong>: Client Index Number: the Medi-Cal member ID. It is PHI. Never type a real one into GitHub.</li><li><strong>Grain</strong>: What one row in a table stands for, for example one member per month.</li><li><strong>MART</strong>: The BigQuery layer of analysis-ready tables, such as one row per member or per member per month.</li><li><strong>POF</strong>: Population of focus: the ECM eligibility group a member qualifies under.</li><li><strong>STG</strong>: Staging: the BigQuery layer that holds source files as they arrived, with light cleanup only.</li><li><strong>Tableau</strong>: The dashboard tool Vayu uses for program reporting.</li></ul><p><a href="../glossary.html">Full glossary</a></p></div><div class="detail-row"><h2>Same heading</h2><ul><li><a href="metric-definitions.confirmed-glycemic-pathway-member-month.core-member-pathway-monthly.html">CORE_Member_Pathway_Monthly</a> <span class="type-pill">Object</span></li><li><a href="metric-definitions.confirmed-glycemic-pathway-member-month.mart-member-pathway-monthly.html">MART_Member_Pathway_Monthly</a> <span class="type-pill">Object</span></li><li><a href="metric-definitions.confirmed-glycemic-pathway-member-month.stg-member-pathway-monthly.html">STG_Member_Pathway_Monthly</a> <span class="type-pill">Object</span></li><li><a href="metric-definitions.confirmed-glycemic-pathway-member-month.vw-member-pathway-month.html">VW_Member_Pathway_Month</a> <span class="type-pill">Object</span></li></ul></div>
+    <details class="technical-details">
+      <summary>Technical details (for analysts)</summary>
+      <p class="provenance">Documented business meaning. This page does not recompute the rule.</p>
+      <div class="detail-row"><h2>Where this definition is written</h2><p><code>docs/metric_definitions.md</code> line 42</p></div><div class="detail-row"><h2>Stable entry ID</h2><p><code>metric-definitions.confirmed-glycemic-pathway-member-month</code></p></div>
+    </details>
+    
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <p class="footer-brand">Vayu Health Git Data Hub</p>
+      
+    <p class="banner">
+      Website built <time datetime="2026-11-20T04:21:12Z">20 Nov 2026, 04:21 UTC</time>.
+      This is when the site was generated. It is not the effective date of a definition.
+      An effective date is shown on an entry only when the source document states one.
+    </p>
+    
+      <p>Definitions only. Pipeline folders and workflows stay off this site.</p>
+      <nav aria-label="Footer">
+        <a href="../index.html">Home</a>
+        <a href="../dictionary.html">Data Dictionary</a>
+        <a href="../dashboards.html">Dashboards</a>
+        <a href="../glossary.html">Glossary</a>
+        <a href="../methods.html">Methods &amp; Updates</a>
+      </nav>
+    </div>
+  </footer>
+  
+</body>
+</html>

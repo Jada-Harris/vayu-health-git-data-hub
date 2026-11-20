@@ -17,31 +17,36 @@
       <nav class="site-nav" aria-label="Site">
         <a href="../dictionary.html">Data Dictionary</a>
         <a href="../dashboards.html">Dashboards</a>
+        <a href="../glossary.html">Glossary</a>
         <a href="../methods.html">Methods &amp; Updates</a>
       </nav>
     
       
-      <p class="last-updated">Last Updated: <time datetime="2026-10-22T21:11:42Z" title="When this website was generated. This is not the effective date of a definition.">October 22, 2026</time></p>
+      <p class="last-updated">Last Updated: <time datetime="2026-11-20T04:21:12Z" title="When this website was generated. This is not the effective date of a definition.">November 20, 2026</time></p>
     
     </div>
   </header>
   <main id="content" class="wrap">
     
     <section class="intro">
-      <p class="crumbs"><a href="../dictionary.html">Data Dictionary</a> / Calculations added from the snapshot</p>
+      <p class="crumbs"><a href="../dictionary.html">Data Dictionary</a> / ECM and ECM+ services</p>
       <h1>004. ECM+ Encounter Group</h1>
       <p class="meta-line">
         <span class="type-pill">Metric</span>
-        <span class="topic">004. ECM+ Encounter Group</span>
+        <span class="topic">Calculations added from the snapshot · 004. ECM+ Encounter Group</span>
       </p>
     </section>
-    <p class="provenance">Documented business meaning. This page does not recompute the rule.</p>
-    <p class="source-line"><code>docs/tableau/cloud_snapshot/engagement_member_touches_db.md</code> line 54.
-      Owner: Not documented.</p>
-    <div class="detail-row"><h2>Stable entry ID</h2><p><code>engagement-member-touches-db.calculations-added-from-the-snapshot.004-ecm-plus-encounter-group</code></p></div><div class="detail-row"><h2>Business definition</h2><p>Tableau name: <code>ECM+ Encounter Group</code>.</p>
+    <div class="summary-box"><h2>In plain terms</h2><p>A member-month&#x27;s number of billed ECM+ encounters (BH or RD), left blank when there were none. Used to group members by how many ECM+ encounters they had.</p></div>
+    <div class="detail-row"><h2>Business definition</h2><p>Tableau name: <code>ECM+ Encounter Group</code>.</p>
 <p>Snapshot position 125 of 600 on this page. Workbook association: <code>Vayu Health Engagement (Member Touches) DB</code>.</p>
-<p>No business definition is documented for this field. pending review.</p>
-<pre><code>IF [Bh Or Rd Count] &gt;= 1 THEN [Bh Or Rd Count] ELSE NULL END</code></pre></div><div class="detail-row"><h2>Owner</h2><p class="missing">Not documented in the source.</p></div><div class="detail-row"><h2>Documented approval status</h2><p class="missing">Not documented in the source.</p></div><div class="detail-row"><h2>Effective date</h2><p class="missing">Not documented in the source.</p></div><div class="detail-row review"><h2>Review</h2><ul><li>A formula in this section has no name, so it stays on the section.</li><li>The source text asks for a review.</li><li>Source text includes “pending review”.</li></ul></div>
+<p><strong>Approval status:</strong> Draft written from the Tableau formula on 2026-11-20, pending review by the data lead.</p>
+<pre><code>IF [Bh Or Rd Count] &gt;= 1 THEN [Bh Or Rd Count] ELSE NULL END</code></pre></div><div class="detail-row"><h2>Documented approval status</h2><p>Draft written from the Tableau formula on 2026-11-20, pending review by the data lead.</p></div>
+    <div class="detail-row review"><h2>Review</h2><ul><li>A formula in this section has no name, so it stays on the section.</li><li>The source text asks for a review.</li><li>Source text includes “pending review”.</li></ul></div><div class="detail-row terms"><h2>Terms used on this page</h2><ul><li><strong>BH</strong>: Behavioral health: mental health services such as therapy or counseling.</li><li><strong>ECM</strong>: Enhanced Care Management: the Medi-Cal (CalAIM) benefit that pays Vayu to coordinate care for members with complex needs.</li><li><strong>ECM+</strong>: Vayu&#x27;s extra clinical services on top of ECM: billed visits with behavioral health (BH) clinicians or dietitian and diabetes educators (RDCDCES).</li><li><strong>Encounter</strong>: One documented visit or service between a staff member and a member.</li><li><strong>Tableau</strong>: The dashboard tool Vayu uses for program reporting.</li></ul><p><a href="../glossary.html">Full glossary</a></p></div>
+    <details class="technical-details">
+      <summary>Technical details (for analysts)</summary>
+      <p class="provenance">Documented business meaning. This page does not recompute the rule.</p>
+      <div class="detail-row"><h2>Where this definition is written</h2><p><code>docs/tableau/cloud_snapshot/engagement_member_touches_db.md</code> line 64</p></div><div class="detail-row"><h2>Stable entry ID</h2><p><code>engagement-member-touches-db.calculations-added-from-the-snapshot.004-ecm-plus-encounter-group</code></p></div>
+    </details>
     
   </main>
   <footer class="site-footer">
@@ -49,7 +54,7 @@
       <p class="footer-brand">Vayu Health Git Data Hub</p>
       
     <p class="banner">
-      Website built <time datetime="2026-10-22T21:11:42Z">22 Oct 2026, 21:11 UTC</time>.
+      Website built <time datetime="2026-11-20T04:21:12Z">20 Nov 2026, 04:21 UTC</time>.
       This is when the site was generated. It is not the effective date of a definition.
       An effective date is shown on an entry only when the source document states one.
     </p>
@@ -59,6 +64,7 @@
         <a href="../index.html">Home</a>
         <a href="../dictionary.html">Data Dictionary</a>
         <a href="../dashboards.html">Dashboards</a>
+        <a href="../glossary.html">Glossary</a>
         <a href="../methods.html">Methods &amp; Updates</a>
       </nav>
     </div>

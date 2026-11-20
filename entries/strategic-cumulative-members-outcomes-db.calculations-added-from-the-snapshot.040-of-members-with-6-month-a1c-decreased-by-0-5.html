@@ -17,36 +17,42 @@
       <nav class="site-nav" aria-label="Site">
         <a href="../dictionary.html">Data Dictionary</a>
         <a href="../dashboards.html">Dashboards</a>
+        <a href="../glossary.html">Glossary</a>
         <a href="../methods.html">Methods &amp; Updates</a>
       </nav>
     
       
-      <p class="last-updated">Last Updated: <time datetime="2026-10-22T21:11:42Z" title="When this website was generated. This is not the effective date of a definition.">October 22, 2026</time></p>
+      <p class="last-updated">Last Updated: <time datetime="2026-11-20T04:21:12Z" title="When this website was generated. This is not the effective date of a definition.">November 20, 2026</time></p>
     
     </div>
   </header>
   <main id="content" class="wrap">
     
     <section class="intro">
-      <p class="crumbs"><a href="../dictionary.html">Data Dictionary</a> / Calculations added from the snapshot</p>
+      <p class="crumbs"><a href="../dictionary.html">Data Dictionary</a> / Clinical outcomes</p>
       <h1>040. # of Members with 6-Month A1C decreased by &gt;= 0.5</h1>
       <p class="meta-line">
         <span class="type-pill">Metric</span>
-        <span class="topic">040. # of Members with 6-Month A1C decreased by &gt;= 0.5</span>
+        <span class="topic">Calculations added from the snapshot · 040. # of Members with 6-Month A1C decreased by &gt;= 0.5</span>
       </p>
     </section>
-    <p class="provenance">Documented business meaning. This page does not recompute the rule.</p>
-    <p class="source-line"><code>docs/tableau/cloud_snapshot/strategic_cumulative_members_outcomes_db.md</code> line 652.
-      Owner: Not documented.</p>
-    <div class="detail-row"><h2>Stable entry ID</h2><p><code>strategic-cumulative-members-outcomes-db.calculations-added-from-the-snapshot.040-of-members-with-6-month-a1c-decreased-by-0-5</code></p></div><div class="detail-row"><h2>Business definition</h2><p>Tableau name: <code># of Members with 6-Month A1C decreased by &gt;= 0.5</code>.</p>
+    <div class="summary-box"><h2>In plain terms</h2><p>A 1/0 flag: 1 when an enrollment&#x27;s 6-month A1c is at least 0.5 points lower than its baseline.</p></div>
+    <div class="detail-row"><h2>Business definition</h2><p>Tableau name: <code># of Members with 6-Month A1C decreased by &gt;= 0.5</code>.</p>
 <p>Snapshot position 347 of 600 on this page. Workbook association: <code>(Strategic View) Vayu Health Cumulative Members &amp; Outcomes DB</code>.</p>
-<p>No business definition is documented for this field. pending review.</p>
+<p><strong>Approval status:</strong> Draft written from the Tableau formula on 2026-11-20, pending review by the data lead.</p>
+<p><strong>Check before approving:</strong> Counts enrollments, not unique members: a member with two enrollments can count twice.</p>
 <pre><code>IF NOT ISNULL([HbA1c_GMI_Baseline])
 AND NOT ISNULL([HbA1c 6-Month Mark])
 AND [HbA1c_GMI_Baseline] - [HbA1c 6-Month Mark] &gt;= 0.5
 THEN 1
 ELSE 0
-END</code></pre></div><div class="detail-row"><h2>Owner</h2><p class="missing">Not documented in the source.</p></div><div class="detail-row"><h2>Documented approval status</h2><p class="missing">Not documented in the source.</p></div><div class="detail-row"><h2>Effective date</h2><p class="missing">Not documented in the source.</p></div><div class="detail-row review"><h2>Review</h2><ul><li>A formula in this section has no name, so it stays on the section.</li><li>The source text asks for a review.</li><li>Source text includes “pending review”.</li></ul></div>
+END</code></pre></div><div class="detail-row"><h2>Documented approval status</h2><p>Draft written from the Tableau formula on 2026-11-20, pending review by the data lead.</p></div>
+    <div class="detail-row review"><h2>Review</h2><ul><li>A formula in this section has no name, so it stays on the section.</li><li>The source text asks for a review.</li><li>Source text includes “pending review”.</li></ul></div><div class="detail-row terms"><h2>Terms used on this page</h2><ul><li><strong>A1c</strong>: A blood test that shows a person&#x27;s average blood sugar over about the last three months. Also written HbA1c. Higher numbers mean less controlled diabetes.</li><li><strong>Cumulative Members</strong>: The permanent list of every Vayu enrollment episode, kept in MART_Cumulative_Members.</li><li><strong>HbA1c</strong>: Same as A1c.</li><li><strong>Tableau</strong>: The dashboard tool Vayu uses for program reporting.</li><li><strong>View</strong>: A saved database query that always shows current data. Unlike a table, it stores no rows of its own.</li></ul><p><a href="../glossary.html">Full glossary</a></p></div>
+    <details class="technical-details">
+      <summary>Technical details (for analysts)</summary>
+      <p class="provenance">Documented business meaning. This page does not recompute the rule.</p>
+      <div class="detail-row"><h2>Where this definition is written</h2><p><code>docs/tableau/cloud_snapshot/strategic_cumulative_members_outcomes_db.md</code> line 778</p></div><div class="detail-row"><h2>Stable entry ID</h2><p><code>strategic-cumulative-members-outcomes-db.calculations-added-from-the-snapshot.040-of-members-with-6-month-a1c-decreased-by-0-5</code></p></div>
+    </details>
     
   </main>
   <footer class="site-footer">
@@ -54,7 +60,7 @@ END</code></pre></div><div class="detail-row"><h2>Owner</h2><p class="missing">N
       <p class="footer-brand">Vayu Health Git Data Hub</p>
       
     <p class="banner">
-      Website built <time datetime="2026-10-22T21:11:42Z">22 Oct 2026, 21:11 UTC</time>.
+      Website built <time datetime="2026-11-20T04:21:12Z">20 Nov 2026, 04:21 UTC</time>.
       This is when the site was generated. It is not the effective date of a definition.
       An effective date is shown on an entry only when the source document states one.
     </p>
@@ -64,6 +70,7 @@ END</code></pre></div><div class="detail-row"><h2>Owner</h2><p class="missing">N
         <a href="../index.html">Home</a>
         <a href="../dictionary.html">Data Dictionary</a>
         <a href="../dashboards.html">Dashboards</a>
+        <a href="../glossary.html">Glossary</a>
         <a href="../methods.html">Methods &amp; Updates</a>
       </nav>
     </div>

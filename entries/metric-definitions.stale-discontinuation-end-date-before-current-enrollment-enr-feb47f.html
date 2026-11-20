@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Stale discontinuation / end date before current enrollment (Enrolled) · Vayu Health Git Data Hub</title>
+  <meta name="theme-color" content="#464C4F">
+  
+  <link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+  <a class="skip" href="#content">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap header-bar">
+      <a class="brand" href="../index.html"><img class="brand-logo" src="../assets/vayu-logo-horizontal.webp" alt="Vayu Health"></a>
+      
+      <nav class="site-nav" aria-label="Site">
+        <a href="../dictionary.html">Data Dictionary</a>
+        <a href="../dashboards.html">Dashboards</a>
+        <a href="../glossary.html">Glossary</a>
+        <a href="../methods.html">Methods &amp; Updates</a>
+      </nav>
+    
+      
+      <p class="last-updated">Last Updated: <time datetime="2026-11-20T04:21:12Z" title="When this website was generated. This is not the effective date of a definition.">November 20, 2026</time></p>
+    
+    </div>
+  </header>
+  <main id="content" class="wrap">
+    
+    <section class="intro">
+      <p class="crumbs"><a href="../dictionary.html">Data Dictionary</a> / Enrollment and membership</p>
+      <h1>Stale discontinuation / end date before current enrollment (Enrolled)</h1>
+      <p class="meta-line">
+        <span class="type-pill">Metric</span>
+        <span class="topic">Stale discontinuation / end date before current enrollment (Enrolled)</span>
+      </p>
+    </section>
+    <div class="summary-box"><h2>In plain terms</h2><p>If a currently enrolled member still shows an exit date from an earlier program that falls before their current start date, that old exit date is ignored.</p></div>
+    <div class="detail-row"><h2>Business definition</h2><p>Sprite Demographics sometimes carries another program&#x27;s prior exit onto a member who is <strong>Enrolled</strong> in our program with a later <code>ecm_enrollment_start_date</code>.</p>
+<p>Rule (pandas workbook and BigQuery CORE → Incoming → MART MERGE):</p>
+<ol><li>Member is on the <strong>Enrolled Members</strong> file (<code>source_population = enrolled</code> / enrolled roster)</li><li><code>workflow_status</code> = <code>Enrolled</code></li><li><code>ecm_enrollment_start_date</code> is populated</li><li><code>discontinuation_date</code> <strong>or</strong> <code>ecm_enrollment_end_date</code> is populated and is <strong>strictly before</strong> that start date</li></ol>
+<p>→ Null that stale date. When <code>discontinuation_date</code> is cleared, also clear <code>discontinuation_reason</code> / <code>discontinuation_reason_code</code>.</p>
+<p>Example: Enrolled in October 2026 with start in 2026, but Demographics still shows a April 2026 discontinuation from another program → null the April date.</p>
+<p>For Enrolled rows, monthly MERGE <strong>accepts Incoming NULL</strong> on <code>discontinuation_date</code> / <code>ecm_enrollment_end_date</code> so a cleaned Incoming value can clear a locked historical MART date. Non-enrolled rows keep fill-blank behavior for those exit dates.</p></div>
+    <div class="detail-row terms"><h2>Terms used on this page</h2><ul><li><strong>BigQuery</strong>: Google&#x27;s cloud database where the pipeline stores its tables.</li><li><strong>CORE</strong>: The BigQuery layer where SQL turns raw source data into business meaning (for example enrollment episodes). CORE objects are views.</li><li><strong>MART</strong>: The BigQuery layer of analysis-ready tables, such as one row per member or per member per month.</li><li><strong>MERGE</strong>: A database step that updates rows that already exist and adds rows that are new, without duplicating them.</li><li><strong>Sprite</strong>: Sprite Health, Vayu&#x27;s EHR and care management system. Monthly reports are exported from it.</li></ul><p><a href="../glossary.html">Full glossary</a></p></div>
+    <details class="technical-details">
+      <summary>Technical details (for analysts)</summary>
+      <p class="provenance">Documented business meaning. This page does not recompute the rule.</p>
+      <div class="detail-row"><h2>Where this definition is written</h2><p><code>docs/metric_definitions.md</code> line 88</p></div><div class="detail-row"><h2>Stable entry ID</h2><p><code>metric-definitions.stale-discontinuation-end-date-before-current-enrollment-enr-feb47f</code></p></div>
+    </details>
+    
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <p class="footer-brand">Vayu Health Git Data Hub</p>
+      
+    <p class="banner">
+      Website built <time datetime="2026-11-20T04:21:12Z">20 Nov 2026, 04:21 UTC</time>.
+      This is when the site was generated. It is not the effective date of a definition.
+      An effective date is shown on an entry only when the source document states one.
+    </p>
+    
+      <p>Definitions only. Pipeline folders and workflows stay off this site.</p>
+      <nav aria-label="Footer">
+        <a href="../index.html">Home</a>
+        <a href="../dictionary.html">Data Dictionary</a>
+        <a href="../dashboards.html">Dashboards</a>
+        <a href="../glossary.html">Glossary</a>
+        <a href="../methods.html">Methods &amp; Updates</a>
+      </nav>
+    </div>
+  </footer>
+  
+</body>
+</html>

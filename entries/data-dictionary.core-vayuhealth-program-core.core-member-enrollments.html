@@ -17,28 +17,33 @@
       <nav class="site-nav" aria-label="Site">
         <a href="../dictionary.html">Data Dictionary</a>
         <a href="../dashboards.html">Dashboards</a>
+        <a href="../glossary.html">Glossary</a>
         <a href="../methods.html">Methods &amp; Updates</a>
       </nav>
     
       
-      <p class="last-updated">Last Updated: <time datetime="2026-10-22T21:11:42Z" title="When this website was generated. This is not the effective date of a definition.">October 22, 2026</time></p>
+      <p class="last-updated">Last Updated: <time datetime="2026-11-20T04:21:12Z" title="When this website was generated. This is not the effective date of a definition.">November 20, 2026</time></p>
     
     </div>
   </header>
   <main id="content" class="wrap">
     
     <section class="intro">
-      <p class="crumbs"><a href="../dictionary.html">Data Dictionary</a> / Core (VayuHealth_Program_CORE)</p>
+      <p class="crumbs"><a href="../dictionary.html">Data Dictionary</a> / Enrollment and membership</p>
       <h1>CORE_Member_Enrollments</h1>
       <p class="meta-line">
         <span class="type-pill">Object</span>
-        <span class="topic">CORE_Member_Enrollments</span>
+        <span class="topic">Core (VayuHealth_Program_CORE) · CORE_Member_Enrollments</span>
       </p>
     </section>
-    <p class="provenance">Documented business meaning. This page does not recompute the rule.</p>
-    <p class="source-line"><code>docs/data_dictionary.md</code> line 174.
-      Owner: Not documented.</p>
-    <div class="detail-row"><h2>Stable entry ID</h2><p><code>data-dictionary.core-vayuhealth-program-core.core-member-enrollments</code></p></div><div class="detail-row"><h2>Business definition</h2><p>One row per <code>(member_cin, ecm_enrollment_start_date)</code> from shared <code>STG_Member_Demographics</code>. A row is kept only when the start date is present and <code>care_coordinator_team</code> is Sequoia Team, Redwoods Team, Mariposa Team, or Sundial Team. The stored MART team is used for that test when the episode is already on the book. Enrolled rows are the demographic base; discontinued rows overlay <code>workflow_status</code> and end/discontinuation date fields. Disc-only episodes are retained when they pass the team test. No pathway / A1c / phase / touch flags. Does not publish <code>discontinuation_reason</code> / <code>discontinuation_reason_code</code> (those come from MIF). Does not compute <code>dm_type</code> / <code>direct_referral</code> / <code>enrollment_number</code>. <code>pof</code> remains the Demographics column.</p></div><div class="detail-row"><h2>Owner</h2><p class="missing">Not documented in the source.</p></div><div class="detail-row"><h2>Documented approval status</h2><p class="missing">Not documented in the source.</p></div><div class="detail-row"><h2>Effective date</h2><p class="missing">Not documented in the source.</p></div>
+    
+    <div class="detail-row"><h2>Business definition</h2><p>One row per <code>(member_cin, ecm_enrollment_start_date)</code> from shared <code>STG_Member_Demographics</code>. A row is kept only when the start date is present and <code>care_coordinator_team</code> is Sequoia Team, Redwoods Team, Mariposa Team, or Sundial Team. The stored MART team is used for that test when the episode is already on the book. Enrolled rows are the demographic base; discontinued rows overlay <code>workflow_status</code> and end/discontinuation date fields. Disc-only episodes are retained when they pass the team test. No pathway / A1c / phase / touch flags. Does not publish <code>discontinuation_reason</code> / <code>discontinuation_reason_code</code> (those come from MIF). Does not compute <code>dm_type</code> / <code>direct_referral</code> / <code>enrollment_number</code>. <code>pof</code> remains the Demographics column.</p></div>
+    <div class="detail-row terms"><h2>Terms used on this page</h2><ul><li><strong>A1c</strong>: A blood test that shows a person&#x27;s average blood sugar over about the last three months. Also written HbA1c. Higher numbers mean less controlled diabetes.</li><li><strong>MART</strong>: The BigQuery layer of analysis-ready tables, such as one row per member or per member per month.</li><li><strong>MIF</strong>: Member Information File: the ECM file shared with the health plan. It holds discontinuation reasons and population-of-focus flags.</li></ul><p><a href="../glossary.html">Full glossary</a></p></div>
+    <details class="technical-details">
+      <summary>Technical details (for analysts)</summary>
+      <p class="provenance">Documented business meaning. This page does not recompute the rule.</p>
+      <div class="detail-row"><h2>Where this definition is written</h2><p><code>docs/data_dictionary.md</code> line 174</p></div><div class="detail-row"><h2>Stable entry ID</h2><p><code>data-dictionary.core-vayuhealth-program-core.core-member-enrollments</code></p></div>
+    </details>
     
   </main>
   <footer class="site-footer">
@@ -46,7 +51,7 @@
       <p class="footer-brand">Vayu Health Git Data Hub</p>
       
     <p class="banner">
-      Website built <time datetime="2026-10-22T21:11:42Z">22 Oct 2026, 21:11 UTC</time>.
+      Website built <time datetime="2026-11-20T04:21:12Z">20 Nov 2026, 04:21 UTC</time>.
       This is when the site was generated. It is not the effective date of a definition.
       An effective date is shown on an entry only when the source document states one.
     </p>
@@ -56,6 +61,7 @@
         <a href="../index.html">Home</a>
         <a href="../dictionary.html">Data Dictionary</a>
         <a href="../dashboards.html">Dashboards</a>
+        <a href="../glossary.html">Glossary</a>
         <a href="../methods.html">Methods &amp; Updates</a>
       </nav>
     </div>

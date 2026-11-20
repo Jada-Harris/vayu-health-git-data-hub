@@ -17,28 +17,35 @@
       <nav class="site-nav" aria-label="Site">
         <a href="../dictionary.html">Data Dictionary</a>
         <a href="../dashboards.html">Dashboards</a>
+        <a href="../glossary.html">Glossary</a>
         <a href="../methods.html">Methods &amp; Updates</a>
       </nav>
     
       
-      <p class="last-updated">Last Updated: <time datetime="2026-10-22T21:11:42Z" title="When this website was generated. This is not the effective date of a definition.">October 22, 2026</time></p>
+      <p class="last-updated">Last Updated: <time datetime="2026-11-20T04:21:12Z" title="When this website was generated. This is not the effective date of a definition.">November 20, 2026</time></p>
     
     </div>
   </header>
   <main id="content" class="wrap">
     
     <section class="intro">
-      <p class="crumbs"><a href="../dictionary.html">Data Dictionary</a> / H. Sourcing-list file dashboard (canonical)</p>
+      <p class="crumbs"><a href="../dictionary.html">Data Dictionary</a> / Sourcing and eligibility</p>
       <h1>excluded_a1c_below_9</h1>
       <p class="meta-line">
         <span class="type-pill">Rule</span>
-        <span class="topic">First exclusion reason</span>
+        <span class="topic">H. Sourcing-list file dashboard (canonical) · First exclusion reason</span>
       </p>
     </section>
-    <p class="provenance">Documented business meaning. This page does not recompute the rule.</p>
-    <p class="source-line"><code>docs/sourcing_history.md</code> line 224.
-      Owner: Not documented.</p>
-    <div class="detail-row"><h2>Stable entry ID</h2><p><code>sourcing-history.h-sourcing-list-file-dashboard-canonical.first-exclusion-reason.excluded-a1c-below-9</code></p></div><div class="detail-row"><h2>Business definition</h2><p><code>excluded_a1c_below_9</code> — always NULL. The loader does not exclude A1c under 9. Stanislaus keeps those rows when the date window or the admission path passes. Shasta keeps any numeric result (<code>A1C_GT8</code> is the file name, not a <code>&gt;= 9</code> check). <code>a1c_below_9_conflicts_with_loader</code> is true for Stanislaus and Shasta.</p></div><div class="detail-row"><h2>Owner</h2><p class="missing">Not documented in the source.</p></div><div class="detail-row"><h2>Documented approval status</h2><p class="missing">Not documented in the source.</p></div><div class="detail-row"><h2>Effective date</h2><p class="missing">Not documented in the source.</p></div><div class="detail-row"><h2>Same heading</h2><ul><li><a href="sourcing-history.h-sourcing-list-file-dashboard-canonical.first-exclusion-reason.excluded-a1c-outside-12-months.html">excluded_a1c_outside_12_months</a> <span class="type-pill">Rule</span></li><li><a href="sourcing-history.h-sourcing-list-file-dashboard-canonical.first-exclusion-reason.excluded-age-under-18.html">excluded_age_under_18</a> <span class="type-pill">Rule</span></li><li><a href="sourcing-history.h-sourcing-list-file-dashboard-canonical.first-exclusion-reason.excluded-already-enrolled-ecm.html">excluded_already_enrolled_ecm</a> <span class="type-pill">Rule</span></li><li><a href="sourcing-history.h-sourcing-list-file-dashboard-canonical.first-exclusion-reason.excluded-missing-dob.html">excluded_missing_dob</a> <span class="type-pill">Rule</span></li><li><a href="sourcing-history.h-sourcing-list-file-dashboard-canonical.first-exclusion-reason.excluded-missing-or-non-numeric-a1c.html">excluded_missing_or_non_numeric_a1c</a> <span class="type-pill">Rule</span></li><li><a href="sourcing-history.h-sourcing-list-file-dashboard-canonical.first-exclusion-reason.html">First exclusion reason</a> <span class="type-pill">Rule</span></li></ul></div>
+    <div class="summary-box"><h2>In plain terms</h2><p>Not used: members are not excluded for an A1c under 9.</p></div>
+    <div class="detail-row"><h2>Business definition</h2><p>always NULL. The loader does not exclude A1c under 9. Stanislaus keeps those rows when the date window or the admission path passes. Shasta keeps any numeric result (<code>A1C_GT8</code> is the file name, not a <code>&gt;= 9</code> check). <code>a1c_below_9_conflicts_with_loader</code> is true for Stanislaus and Shasta.
+
+Order: 5</p></div>
+    <div class="detail-row terms"><h2>Terms used on this page</h2><ul><li><strong>A1c</strong>: A blood test that shows a person&#x27;s average blood sugar over about the last three months. Also written HbA1c. Higher numbers mean less controlled diabetes.</li></ul><p><a href="../glossary.html">Full glossary</a></p></div><div class="detail-row"><h2>Same heading</h2><ul><li><a href="sourcing-history.h-sourcing-list-file-dashboard-canonical.first-exclusion-reason.excluded-a1c-outside-12-months.html">excluded_a1c_outside_12_months</a> <span class="type-pill">Rule</span></li><li><a href="sourcing-history.h-sourcing-list-file-dashboard-canonical.first-exclusion-reason.excluded-age-under-18.html">excluded_age_under_18</a> <span class="type-pill">Rule</span></li><li><a href="sourcing-history.h-sourcing-list-file-dashboard-canonical.first-exclusion-reason.excluded-already-enrolled-ecm.html">excluded_already_enrolled_ecm</a> <span class="type-pill">Rule</span></li><li><a href="sourcing-history.h-sourcing-list-file-dashboard-canonical.first-exclusion-reason.excluded-missing-dob.html">excluded_missing_dob</a> <span class="type-pill">Rule</span></li><li><a href="sourcing-history.h-sourcing-list-file-dashboard-canonical.first-exclusion-reason.excluded-missing-or-non-numeric-a1c.html">excluded_missing_or_non_numeric_a1c</a> <span class="type-pill">Rule</span></li><li><a href="sourcing-history.h-sourcing-list-file-dashboard-canonical.first-exclusion-reason.excluded-previously-received.html">excluded_previously_received</a> <span class="type-pill">Rule</span></li><li><a href="sourcing-history.h-sourcing-list-file-dashboard-canonical.first-exclusion-reason.html">First exclusion reason</a> <span class="type-pill">Rule</span></li></ul></div>
+    <details class="technical-details">
+      <summary>Technical details (for analysts)</summary>
+      <p class="provenance">Documented business meaning. This page does not recompute the rule.</p>
+      <div class="detail-row"><h2>Where this definition is written</h2><p><code>docs/sourcing_history.md</code> line 250</p></div><div class="detail-row"><h2>Stable entry ID</h2><p><code>sourcing-history.h-sourcing-list-file-dashboard-canonical.first-exclusion-reason.excluded-a1c-below-9</code></p></div>
+    </details>
     
   </main>
   <footer class="site-footer">
@@ -46,7 +53,7 @@
       <p class="footer-brand">Vayu Health Git Data Hub</p>
       
     <p class="banner">
-      Website built <time datetime="2026-10-22T21:11:42Z">22 Oct 2026, 21:11 UTC</time>.
+      Website built <time datetime="2026-11-20T04:21:12Z">20 Nov 2026, 04:21 UTC</time>.
       This is when the site was generated. It is not the effective date of a definition.
       An effective date is shown on an entry only when the source document states one.
     </p>
@@ -56,6 +63,7 @@
         <a href="../index.html">Home</a>
         <a href="../dictionary.html">Data Dictionary</a>
         <a href="../dashboards.html">Dashboards</a>
+        <a href="../glossary.html">Glossary</a>
         <a href="../methods.html">Methods &amp; Updates</a>
       </nav>
     </div>

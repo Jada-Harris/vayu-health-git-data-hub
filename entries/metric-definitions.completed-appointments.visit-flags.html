@@ -17,28 +17,27 @@
       <nav class="site-nav" aria-label="Site">
         <a href="../dictionary.html">Data Dictionary</a>
         <a href="../dashboards.html">Dashboards</a>
+        <a href="../glossary.html">Glossary</a>
         <a href="../methods.html">Methods &amp; Updates</a>
       </nav>
     
       
-      <p class="last-updated">Last Updated: <time datetime="2026-10-22T21:11:42Z" title="When this website was generated. This is not the effective date of a definition.">October 22, 2026</time></p>
+      <p class="last-updated">Last Updated: <time datetime="2026-11-20T04:21:12Z" title="When this website was generated. This is not the effective date of a definition.">November 20, 2026</time></p>
     
     </div>
   </header>
   <main id="content" class="wrap">
     
     <section class="intro">
-      <p class="crumbs"><a href="../dictionary.html">Data Dictionary</a> / Completed appointments</p>
+      <p class="crumbs"><a href="../dictionary.html">Data Dictionary</a> / Appointments and visits</p>
       <h1>Visit flags</h1>
       <p class="meta-line">
         <span class="type-pill">Metric</span>
-        <span class="topic">Visit flags</span>
+        <span class="topic">Completed appointments · Visit flags</span>
       </p>
     </section>
-    <p class="provenance">Documented business meaning. This page does not recompute the rule.</p>
-    <p class="source-line"><code>docs/metric_definitions.md</code> line 247.
-      Owner: Not documented.</p>
-    <div class="detail-row"><h2>Stable entry ID</h2><p><code>metric-definitions.completed-appointments.visit-flags</code></p></div><div class="detail-row"><h2>Business definition</h2><p>Match uses <code>service_name</code> after trimming, collapsing spaces, folding unicode dashes to <code>-</code>, and ignoring capitalization. <code>(In-person)</code> and <code>(In-Person)</code> are the same visit. If the parenthetical is stored in <code>service_setting</code> instead, <code>service_name</code> plus that setting is matched too. Lists are not mutually exclusive. A PCP in-person service sets both <code>chw_in_person_visits</code> and <code>pcp_visits</code> to 1. <code>Recruiting at PCP Visit</code> is Phase 1 only, not a PCP visit.</p>
+    <div class="summary-box"><h2>In plain terms</h2><p>How each appointment is counted as a Phase 1 visit or another visit type, based on its service name.</p></div>
+    <div class="detail-row"><h2>Business definition</h2><p>Match uses <code>service_name</code> after trimming, collapsing spaces, folding unicode dashes to <code>-</code>, and ignoring capitalization. <code>(In-person)</code> and <code>(In-Person)</code> are the same visit. If the parenthetical is stored in <code>service_setting</code> instead, <code>service_name</code> plus that setting is matched too. Lists are not mutually exclusive. A PCP in-person service sets both <code>chw_in_person_visits</code> and <code>pcp_visits</code> to 1. <code>Recruiting at PCP Visit</code> is Phase 1 only, not a PCP visit.</p>
 <p><strong>Phase 1 visits</strong> (<code>phase_1_visits</code>, Tableau <code># of Phase 1 Visits</code>)</p>
 <ul><li>Recruiting at PCP Visit - 90 min (In-person)</li><li>Recruiting at PCP Visit -120 min (In-person)</li><li>Recruiting in Home or Community - 90 min (In-person)</li><li>Recruiting in Home or Community - 120 min (In-person)</li></ul>
 <p><strong>CHW in-person visits</strong> (<code>chw_in_person_visits</code>, Tableau <code># of CHW In-Person Visits</code>)</p>
@@ -47,7 +46,13 @@
 <ul><li>CHW Visit (Self-ID Goals)-30 min (Telehealth)</li><li>CHW Visit (Self-ID Goals)-60 min (Telehealth)</li><li>CHW Visit (ECM Assessment)-60 min (Telehealth)</li><li>CHW Visit-30 min (Telehealth)</li><li>CHW Visit-60 min (Telehealth)</li><li>CHW - PCP Visit - 60 min (Telehealth)</li><li>CHW - PCP Visit - 90 min (Telehealth)</li><li>Celebration Visit - 60 min (Telehealth)</li><li>Graduation Visit - 60 min (Telehealth)</li></ul>
 <p><strong>PCP visits</strong> (<code>pcp_visits</code>, Tableau <code># of PCP Visits</code>)</p>
 <ul><li>CHW - PCP Visit - 90 min (In-Person)</li><li>CHW - PCP Visit - 120 min (In-Person)</li><li>CHW - PCP Visit - 60 min (Telehealth)</li><li>CHW - PCP Visit - 90 min (Telehealth)</li></ul>
-<p>If Sprite renames a service, add the new string to the appointment visit-flag rules and to this list. Otherwise the flag stays 0 and the service name still appears on the appointment row.</p></div><div class="detail-row"><h2>Owner</h2><p class="missing">Not documented in the source.</p></div><div class="detail-row"><h2>Documented approval status</h2><p class="missing">Not documented in the source.</p></div><div class="detail-row"><h2>Effective date</h2><p class="missing">Not documented in the source.</p></div>
+<p>If Sprite renames a service, add the new string to the appointment visit-flag rules and to this list. Otherwise the flag stays 0 and the service name still appears on the appointment row.</p></div>
+    <div class="detail-row terms"><h2>Terms used on this page</h2><ul><li><strong>ECM</strong>: Enhanced Care Management: the Medi-Cal (CalAIM) benefit that pays Vayu to coordinate care for members with complex needs.</li><li><strong>Graduation</strong>: A discontinuation because the member met their care plan goals.</li><li><strong>Sprite</strong>: Sprite Health, Vayu&#x27;s EHR and care management system. Monthly reports are exported from it.</li><li><strong>Tableau</strong>: The dashboard tool Vayu uses for program reporting.</li></ul><p><a href="../glossary.html">Full glossary</a></p></div>
+    <details class="technical-details">
+      <summary>Technical details (for analysts)</summary>
+      <p class="provenance">Documented business meaning. This page does not recompute the rule.</p>
+      <div class="detail-row"><h2>Where this definition is written</h2><p><code>docs/metric_definitions.md</code> line 329</p></div><div class="detail-row"><h2>Stable entry ID</h2><p><code>metric-definitions.completed-appointments.visit-flags</code></p></div>
+    </details>
     
   </main>
   <footer class="site-footer">
@@ -55,7 +60,7 @@
       <p class="footer-brand">Vayu Health Git Data Hub</p>
       
     <p class="banner">
-      Website built <time datetime="2026-10-22T21:11:42Z">22 Oct 2026, 21:11 UTC</time>.
+      Website built <time datetime="2026-11-20T04:21:12Z">20 Nov 2026, 04:21 UTC</time>.
       This is when the site was generated. It is not the effective date of a definition.
       An effective date is shown on an entry only when the source document states one.
     </p>
@@ -65,6 +70,7 @@
         <a href="../index.html">Home</a>
         <a href="../dictionary.html">Data Dictionary</a>
         <a href="../dashboards.html">Dashboards</a>
+        <a href="../glossary.html">Glossary</a>
         <a href="../methods.html">Methods &amp; Updates</a>
       </nav>
     </div>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>excluded_previously_received · Vayu Health Git Data Hub</title>
+  <meta name="theme-color" content="#464C4F">
+  
+  <link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+  <a class="skip" href="#content">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap header-bar">
+      <a class="brand" href="../index.html"><img class="brand-logo" src="../assets/vayu-logo-horizontal.webp" alt="Vayu Health"></a>
+      
+      <nav class="site-nav" aria-label="Site">
+        <a href="../dictionary.html">Data Dictionary</a>
+        <a href="../dashboards.html">Dashboards</a>
+        <a href="../glossary.html">Glossary</a>
+        <a href="../methods.html">Methods &amp; Updates</a>
+      </nav>
+    
+      
+      <p class="last-updated">Last Updated: <time datetime="2026-11-20T04:21:12Z" title="When this website was generated. This is not the effective date of a definition.">November 20, 2026</time></p>
+    
+    </div>
+  </header>
+  <main id="content" class="wrap">
+    
+    <section class="intro">
+      <p class="crumbs"><a href="../dictionary.html">Data Dictionary</a> / Sourcing and eligibility</p>
+      <h1>excluded_previously_received</h1>
+      <p class="meta-line">
+        <span class="type-pill">Rule</span>
+        <span class="topic">H. Sourcing-list file dashboard (canonical) · First exclusion reason</span>
+      </p>
+    </section>
+    <div class="summary-box"><h2>In plain terms</h2><p>Already on an earlier list for the same county (lists from November 2026 on).</p></div>
+    <div class="detail-row"><h2>Business definition</h2><p>last, and only when <code>receipt_month</code> is 2026-11-01 or later. Same county and same CIN on an earlier membership file (<code>stanislaus_cozeva_demographics</code>, <code>shasta_a1c_gt8</code>, or <code>humboldt_phc_dm_a1c</code>). HbA1c-only rows do not count. An earlier reason still wins, so a member who is also already in outreach stays in that bucket. The member can still have <code>previously_received_flag = 1</code>. Months before November 2026 do not use this reason, including when those months are rebuilt. The CIN stays in <code>MART_Sourcing_Received</code>.
+
+Order: 7</p></div>
+    <div class="detail-row terms"><h2>Terms used on this page</h2><ul><li><strong>CIN</strong>: Client Index Number: the Medi-Cal member ID. It is PHI. Never type a real one into GitHub.</li><li><strong>HbA1c</strong>: Same as A1c.</li></ul><p><a href="../glossary.html">Full glossary</a></p></div><div class="detail-row"><h2>Same heading</h2><ul><li><a href="sourcing-history.h-sourcing-list-file-dashboard-canonical.first-exclusion-reason.excluded-a1c-below-9.html">excluded_a1c_below_9</a> <span class="type-pill">Rule</span></li><li><a href="sourcing-history.h-sourcing-list-file-dashboard-canonical.first-exclusion-reason.excluded-a1c-outside-12-months.html">excluded_a1c_outside_12_months</a> <span class="type-pill">Rule</span></li><li><a href="sourcing-history.h-sourcing-list-file-dashboard-canonical.first-exclusion-reason.excluded-age-under-18.html">excluded_age_under_18</a> <span class="type-pill">Rule</span></li><li><a href="sourcing-history.h-sourcing-list-file-dashboard-canonical.first-exclusion-reason.excluded-already-enrolled-ecm.html">excluded_already_enrolled_ecm</a> <span class="type-pill">Rule</span></li><li><a href="sourcing-history.h-sourcing-list-file-dashboard-canonical.first-exclusion-reason.excluded-missing-dob.html">excluded_missing_dob</a> <span class="type-pill">Rule</span></li><li><a href="sourcing-history.h-sourcing-list-file-dashboard-canonical.first-exclusion-reason.excluded-missing-or-non-numeric-a1c.html">excluded_missing_or_non_numeric_a1c</a> <span class="type-pill">Rule</span></li><li><a href="sourcing-history.h-sourcing-list-file-dashboard-canonical.first-exclusion-reason.html">First exclusion reason</a> <span class="type-pill">Rule</span></li></ul></div>
+    <details class="technical-details">
+      <summary>Technical details (for analysts)</summary>
+      <p class="provenance">Documented business meaning. This page does not recompute the rule.</p>
+      <div class="detail-row"><h2>Where this definition is written</h2><p><code>docs/sourcing_history.md</code> line 252</p></div><div class="detail-row"><h2>Stable entry ID</h2><p><code>sourcing-history.h-sourcing-list-file-dashboard-canonical.first-exclusion-reason.excluded-previously-received</code></p></div>
+    </details>
+    
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <p class="footer-brand">Vayu Health Git Data Hub</p>
+      
+    <p class="banner">
+      Website built <time datetime="2026-11-20T04:21:12Z">20 Nov 2026, 04:21 UTC</time>.
+      This is when the site was generated. It is not the effective date of a definition.
+      An effective date is shown on an entry only when the source document states one.
+    </p>
+    
+      <p>Definitions only. Pipeline folders and workflows stay off this site.</p>
+      <nav aria-label="Footer">
+        <a href="../index.html">Home</a>
+        <a href="../dictionary.html">Data Dictionary</a>
+        <a href="../dashboards.html">Dashboards</a>
+        <a href="../glossary.html">Glossary</a>
+        <a href="../methods.html">Methods &amp; Updates</a>
+      </nav>
+    </div>
+  </footer>
+  
+</body>
+</html>

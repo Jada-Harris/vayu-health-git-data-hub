@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Flourish enrollment / MoM distribution (A1c-style) · Vayu Health Git Data Hub</title>
+  <meta name="theme-color" content="#464C4F">
+  
+  <link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+  <a class="skip" href="#content">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap header-bar">
+      <a class="brand" href="../index.html"><img class="brand-logo" src="../assets/vayu-logo-horizontal.webp" alt="Vayu Health"></a>
+      
+      <nav class="site-nav" aria-label="Site">
+        <a href="../dictionary.html">Data Dictionary</a>
+        <a href="../dashboards.html">Dashboards</a>
+        <a href="../glossary.html">Glossary</a>
+        <a href="../methods.html">Methods &amp; Updates</a>
+      </nav>
+    
+      
+      <p class="last-updated">Last Updated: <time datetime="2026-11-24T05:29:27Z" title="When this website was generated. This is not the effective date of a definition.">November 24, 2026</time></p>
+    
+    </div>
+  </header>
+  <main id="content" class="wrap">
+    
+    <section class="intro">
+      <p class="crumbs"><a href="../dictionary.html">Data Dictionary</a> / Clinical outcomes</p>
+      <h1>Flourish enrollment / MoM distribution (A1c-style)</h1>
+      <p class="meta-line">
+        <span class="type-pill">Metric</span>
+        <span class="topic">Flourish PAM · Flourish enrollment / MoM distribution (A1c-style)</span>
+      </p>
+    </section>
+    
+    <div class="detail-row"><h2>Business definition</h2><p>Separate from Trend pairing. Source: Flourish assessments, all survey series pooled per CIN.</p>
+<ul><li>Baseline: closest valid completion <strong>before</strong> ECM enrollment start.</li><li>Most recent: latest valid completion <strong>on/after day 180</strong> and within the enrollment episode (MoM view also caps at month end).</li><li>Distribution charts / run charts: use <code>distribution_pam_level</code> / <code>distribution_pam_score</code> = most recent if present, else baseline carryforward.</li><li>Avg score increase on these views: only where <code>has_post_180_day_pam</code> (do not treat carryforward rows as zero change).</li></ul>
+<p>Tableau sources: <code>VW_PAM_Enrollment_Outcomes</code>, <code>VW_PAM_MoM_Run_Chart</code>.</p></div>
+    <div class="detail-row terms"><h2>Terms used on this page</h2><ul><li><strong>A1c</strong>: A blood test that shows a person&#x27;s average blood sugar over about the last three months. Also written HbA1c. Higher numbers mean less controlled diabetes.</li><li><strong>Baseline</strong>: A member&#x27;s first relevant measurement for an enrollment, picked as the one closest to the enrollment start date. Used to measure change over time.</li><li><strong>CIN</strong>: Client Index Number: the Medi-Cal member ID. It is PHI. Never type a real one into GitHub.</li><li><strong>ECM</strong>: Enhanced Care Management: the Medi-Cal (CalAIM) benefit that pays Vayu to coordinate care for members with complex needs.</li><li><strong>Flourish</strong>: The vendor platform where members complete the PAM survey.</li><li><strong>Tableau</strong>: The dashboard tool Vayu uses for program reporting.</li></ul><p><a href="../glossary.html">Full glossary</a></p></div>
+    <details class="technical-details">
+      <summary>Technical details (for analysts)</summary>
+      <p class="provenance">Documented business meaning. This page does not recompute the rule.</p>
+      <div class="detail-row"><h2>Where this definition is written</h2><p><code>docs/metric_definitions.md</code> line 538</p></div><div class="detail-row"><h2>Stable entry ID</h2><p><code>metric-definitions.flourish-pam.flourish-enrollment-mom-distribution-a1c-style</code></p></div>
+    </details>
+    
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <p class="footer-brand">Vayu Health Git Data Hub</p>
+      
+    <p class="banner">
+      Website built <time datetime="2026-11-24T05:29:27Z">24 Nov 2026, 05:29 UTC</time>.
+      This is when the site was generated. It is not the effective date of a definition.
+      An effective date is shown on an entry only when the source document states one.
+    </p>
+    
+      <p>Definitions only. Pipeline folders and workflows stay off this site.</p>
+      <nav aria-label="Footer">
+        <a href="../index.html">Home</a>
+        <a href="../dictionary.html">Data Dictionary</a>
+        <a href="../dashboards.html">Dashboards</a>
+        <a href="../glossary.html">Glossary</a>
+        <a href="../methods.html">Methods &amp; Updates</a>
+      </nav>
+    </div>
+  </footer>
+  
+</body>
+</html>

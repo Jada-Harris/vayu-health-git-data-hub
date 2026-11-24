@@ -22,7 +22,7 @@
       </nav>
     
       
-      <p class="last-updated">Last Updated: <time datetime="2026-11-24T05:29:27Z" title="When this website was generated. This is not the effective date of a definition.">November 24, 2026</time></p>
+      <p class="last-updated">Last Updated: <time datetime="2026-11-24T23:54:16Z" title="When this website was generated. This is not the effective date of a definition.">November 24, 2026</time></p>
     
     </div>
   </header>
@@ -37,8 +37,8 @@
       </p>
     </section>
     
-    <div class="detail-row"><h2>Business definition</h2><p>One row per <code>(member_cin, ecm_enrollment_start_date)</code>: <code>member_name</code> and <code>workflow_status</code> from <code>MART_Cumulative_Members</code> (legacy <code>membername</code> / <code>workflowstatus</code> when the normalized column is blank; current enrollment fills a still-blank value), device flags, 60-day measurement flags, <code>cgm_type</code>, <code>bgm_type</code>, and a single <code>pathway</code> label. The first matching rule wins: (1) Active CGM + recent GMI = <code>CGM Active</code>; (2) Active CGM + no recent GMI = <code>Possible CGM Malfunction</code>; (3) No active CGM + recent GMI = <code>Possible CGM Malfunction</code>; (4) Active BGM + recent glucose = <code>BGM Active</code>; (5) Active BGM + no recent glucose = <code>Possible BGM Malfunction</code>; (6) No active BGM + recent glucose = <code>Possible BGM Malfunction</code>; (7) everything else enrolled = <code>A1c</code>; (8) not enrolled = blank. No active device includes an inactive device and no device of that type. A recent measurement with no matching active device is a malfunction.</p></div>
-    <div class="detail-row terms"><h2>Terms used on this page</h2><ul><li><strong>A1c</strong>: A blood test that shows a person&#x27;s average blood sugar over about the last three months. Also written HbA1c. Higher numbers mean less controlled diabetes.</li><li><strong>BGM</strong>: Blood glucose meter: a finger-stick device a member uses to check blood sugar. Sprite may call it SMBGS.</li><li><strong>CGM</strong>: Continuous glucose monitor: a sensor worn on the body that measures blood sugar all day (for example Dexcom or Libre).</li><li><strong>GMI</strong>: Glucose Management Indicator: an estimate of A1c calculated from CGM readings.</li></ul><p><a href="../glossary.html">Full glossary</a></p></div>
+    <div class="detail-row"><h2>Business definition</h2><p>One row per <code>(member_cin, ecm_enrollment_start_date)</code>: <code>member_name</code> and <code>workflow_status</code> from <code>MART_Cumulative_Members</code> (legacy <code>membername</code> / <code>workflowstatus</code> when the normalized column is blank; current enrollment fills a still-blank value), device flags, 60-day measurement flags, <code>cgm_type</code>, <code>bgm_type</code>, and a single <code>pathway</code> label. The first matching rule wins: (1) Active CGM + recent GMI = <code>CGM Active</code>; (2) Active CGM + no recent GMI = <code>Possible CGM Malfunction</code>; (3) No active CGM + recent GMI = <code>Possible CGM Malfunction</code>; (4) Active BGM + recent glucose = <code>BGM Active</code>; (5) Active BGM + no recent glucose = <code>Possible BGM Malfunction</code>; (6) No active BGM + recent glucose = <code>Possible BGM Malfunction</code>; (7) everything else enrolled = <code>A1c</code>; (8) not enrolled = blank on this CORE view. Monthly MERGE into <code>MART_Cumulative_Members</code> keeps the last non-blank <code>pathway</code> when Incoming is blank (discharge stick). No active device includes an inactive device and no device of that type. A recent measurement with no matching active device is a malfunction.</p></div>
+    <div class="detail-row terms"><h2>Terms used on this page</h2><ul><li><strong>A1c</strong>: A blood test that shows a person&#x27;s average blood sugar over about the last three months. Also written HbA1c. Higher numbers mean less controlled diabetes.</li><li><strong>BGM</strong>: Blood glucose meter: a finger-stick device a member uses to check blood sugar. Sprite may call it SMBGS.</li><li><strong>CGM</strong>: Continuous glucose monitor: a sensor worn on the body that measures blood sugar all day (for example Dexcom or Libre).</li><li><strong>CORE</strong>: The BigQuery layer where SQL turns raw source data into business meaning (for example enrollment episodes). CORE objects are views.</li><li><strong>GMI</strong>: Glucose Management Indicator: an estimate of A1c calculated from CGM readings.</li><li><strong>MERGE</strong>: A database step that updates rows that already exist and adds rows that are new, without duplicating them.</li></ul><p><a href="../glossary.html">Full glossary</a></p></div>
     <details class="technical-details">
       <summary>Technical details (for analysts)</summary>
       <p class="provenance">Documented business meaning. This page does not recompute the rule.</p>
@@ -51,7 +51,7 @@
       <p class="footer-brand">Vayu Health Git Data Hub</p>
       
     <p class="banner">
-      Website built <time datetime="2026-11-24T05:29:27Z">24 Nov 2026, 05:29 UTC</time>.
+      Website built <time datetime="2026-11-24T23:54:16Z">24 Nov 2026, 23:54 UTC</time>.
       This is when the site was generated. It is not the effective date of a definition.
       An effective date is shown on an entry only when the source document states one.
     </p>

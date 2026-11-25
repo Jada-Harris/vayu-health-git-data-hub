@@ -1,7 +1,7 @@
 {
   "meta": {
-    "built_at": "2026-11-25T19:26:13Z",
-    "built_at_display": "25 Nov 2026, 19:26 UTC",
+    "built_at": "2026-11-25T19:53:19Z",
+    "built_at_display": "25 Nov 2026, 19:53 UTC",
     "built_at_date": "November 25, 2026",
     "published_entries": 676,
     "source_file_count": 10
@@ -3141,13 +3141,13 @@
           "source_file": "docs/metric_definitions.md"
         },
         {
-          "entry_id": "metric-definitions.confirmed-glycemic-pathway-member-month.mart-member-pathway-monthly",
-          "name": "MART_Member_Pathway_Monthly",
+          "entry_id": "metric-definitions.confirmed-glycemic-pathway-member-month.core-member-pathway-monthly",
+          "name": "CORE_Member_Pathway_Monthly",
           "source_file": "docs/metric_definitions.md"
         },
         {
-          "entry_id": "metric-definitions.confirmed-glycemic-pathway-member-month.core-member-pathway-monthly",
-          "name": "CORE_Member_Pathway_Monthly",
+          "entry_id": "metric-definitions.confirmed-glycemic-pathway-member-month.mart-member-pathway-monthly",
+          "name": "MART_Member_Pathway_Monthly",
           "source_file": "docs/metric_definitions.md"
         },
         {

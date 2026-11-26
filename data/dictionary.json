@@ -1,8 +1,8 @@
 {
   "meta": {
-    "built_at": "2026-11-25T19:53:19Z",
-    "built_at_display": "25 Nov 2026, 19:53 UTC",
-    "built_at_date": "November 25, 2026",
+    "built_at": "2026-11-26T02:51:06Z",
+    "built_at_display": "26 Nov 2026, 02:51 UTC",
+    "built_at_date": "November 26, 2026",
     "published_entries": 676,
     "source_file_count": 10
   },
@@ -2978,8 +2978,8 @@
       "topic": "CORE_Member_Measurements",
       "entry_type": "object",
       "entry_type_label": "Object",
-      "definition": "Long measurements with `standard_marker` in `HbA1c`, `GMI_1_Month`, `PHQ_9`, `DDS`, `GAD_7`, `PAM_Level`, `PAM_Score`, `Glucose`, `Mean Plasma Glucose`, `Blood Sugar Fasting Marker`, `Blood Sugar Before Meal`. Incomplete PAM Level/Score pairs on the same CIN + date are dropped. Glucose markers are pathway-only.",
-      "definition_html": "<p>Long measurements with <code>standard_marker</code> in <code>HbA1c</code>, <code>GMI_1_Month</code>, <code>PHQ_9</code>, <code>DDS</code>, <code>GAD_7</code>, <code>PAM_Level</code>, <code>PAM_Score</code>, <code>Glucose</code>, <code>Mean Plasma Glucose</code>, <code>Blood Sugar Fasting Marker</code>, <code>Blood Sugar Before Meal</code>. Incomplete PAM Level/Score pairs on the same CIN + date are dropped. Glucose markers are pathway-only.</p>",
+      "definition": "Long measurements with `standard_marker` in `HbA1c`, `GMI_1_Month`, `GMI_Other` (any other Sprite GMI label), `PHQ_9`, `DDS`, `GAD_7`, `PAM_Level`, `PAM_Score`, `Glucose`, `Mean Plasma Glucose`, `Blood Sugar Fasting Marker`, `Blood Sugar Before Meal`. Incomplete PAM Level/Score pairs on the same CIN + date are dropped. Glucose markers are pathway-only. A1c/GMI outcomes use HbA1c or any `GMI%` (GMI alone counts); pathway “recent GMI” still requires `GMI_1_Month`.",
+      "definition_html": "<p>Long measurements with <code>standard_marker</code> in <code>HbA1c</code>, <code>GMI_1_Month</code>, <code>GMI_Other</code> (any other Sprite GMI label), <code>PHQ_9</code>, <code>DDS</code>, <code>GAD_7</code>, <code>PAM_Level</code>, <code>PAM_Score</code>, <code>Glucose</code>, <code>Mean Plasma Glucose</code>, <code>Blood Sugar Fasting Marker</code>, <code>Blood Sugar Before Meal</code>. Incomplete PAM Level/Score pairs on the same CIN + date are dropped. Glucose markers are pathway-only. A1c/GMI outcomes use HbA1c or any <code>GMI%</code> (GMI alone counts); pathway “recent GMI” still requires <code>GMI_1_Month</code>.</p>",
       "formula": "",
       "numerator": "",
       "denominator": "",
@@ -2990,7 +2990,7 @@
       "source_object": "",
       "tableau": "",
       "summary": "",
-      "plain_definition": "Long measurements with standard_marker in HbA1c, GMI_1_Month, PHQ_9, DDS, GAD_7, PAM_Level, PAM_Score, Glucose, Mean Plasma Glucose, Blood Sugar Fasting Marker, Blood Sugar Before Meal. Incomplete PAM Level/Score pairs on the same CIN + date are dropped. Glucose markers are pathway-only.",
+      "plain_definition": "Long measurements with standard_marker in HbA1c, GMI_1_Month, GMI_Other (any other Sprite GMI label), PHQ_9, DDS, GAD_7, PAM_Level, PAM_Score, Glucose, Mean Plasma Glucose, Blood Sugar Fasting Marker, Blood Sugar Before Meal. Incomplete PAM Level/Score pairs on the same CIN + date are dropped. Glucose markers are pathway-only. A1c/GMI outcomes use HbA1c or any GMI% (GMI alone counts); pathway “recent GMI” still requires GMI_1_Month.",
       "subject_area": "Clinical outcomes",
       "audience": "technical",
       "technical_notes": "",
@@ -3013,7 +3013,7 @@
         "effective_date"
       ],
       "provenance": "documented",
-      "search_text": "CORE_Member_Measurements\nCore (VayuHealth_Program_CORE)\nCORE_Member_Measurements\nObject\nLong measurements with `standard_marker` in `HbA1c`, `GMI_1_Month`, `PHQ_9`, `DDS`, `GAD_7`, `PAM_Level`, `PAM_Score`, `Glucose`, `Mean Plasma Glucose`, `Blood Sugar Fasting Marker`, `Blood Sugar Before Meal`. Incomplete PAM Level/Score pairs on the same CIN + date are dropped. Glucose markers are pathway-only.\ndocs/data_dictionary.md\nCORE_Member_Measurements"
+      "search_text": "CORE_Member_Measurements\nCore (VayuHealth_Program_CORE)\nCORE_Member_Measurements\nObject\nLong measurements with `standard_marker` in `HbA1c`, `GMI_1_Month`, `GMI_Other` (any other Sprite GMI label), `PHQ_9`, `DDS`, `GAD_7`, `PAM_Level`, `PAM_Score`, `Glucose`, `Mean Plasma Glucose`, `Blood Sugar Fasting Marker`, `Blood Sugar Before Meal`. Incomplete PAM Level/Score pairs on the same CIN + date are dropped. Glucose markers are pathway-only. A1c/GMI outcomes use HbA1c or any `GMI%` (GMI alone counts); pathway “recent GMI” still requires `GMI_1_Month`.\ndocs/data_dictionary.md\nCORE_Member_Measurements"
     },
     {
       "entry_id": "data-dictionary.core-vayuhealth-program-core.core-member-mif",
@@ -3136,6 +3136,11 @@
       "review_notes": [],
       "also_documented_in": [
         {
+          "entry_id": "metric-definitions.confirmed-glycemic-pathway-member-month.mart-member-pathway-monthly",
+          "name": "MART_Member_Pathway_Monthly",
+          "source_file": "docs/metric_definitions.md"
+        },
+        {
           "entry_id": "metric-definitions.confirmed-glycemic-pathway-member-month.vw-member-pathway-month",
           "name": "VW_Member_Pathway_Month",
           "source_file": "docs/metric_definitions.md"
@@ -3143,11 +3148,6 @@
         {
           "entry_id": "metric-definitions.confirmed-glycemic-pathway-member-month.core-member-pathway-monthly",
           "name": "CORE_Member_Pathway_Monthly",
-          "source_file": "docs/metric_definitions.md"
-        },
-        {
-          "entry_id": "metric-definitions.confirmed-glycemic-pathway-member-month.mart-member-pathway-monthly",
-          "name": "MART_Member_Pathway_Monthly",
           "source_file": "docs/metric_definitions.md"
         },
         {
@@ -3219,8 +3219,8 @@
       "topic": "VW_Clinical_Outcome_MoM",
       "entry_type": "object",
       "entry_type_label": "Object",
-      "definition": "Additive Tableau PROD view. One row per `member_cin` + `reporting_month` from `VW_Member_Month`, with A1c / PHQ-9 / GAD-7 / DDS recomputed as-of that month’s end from `CORE_Member_Measurements` (same score rules as `CORE_Member_Clinical_Outcomes`, time-capped). Includes member-month demographics for filters, `*_as_of` carryforward scores for run charts, deltas, missing/has flags, and existing improvement thresholds. Does not write MART or change the cumulative book. Apply: `python/apply_clinical_outcome_mom_sql_models.py`.",
-      "definition_html": "<p>Additive Tableau PROD view. One row per <code>member_cin</code> + <code>reporting_month</code> from <code>VW_Member_Month</code>, with A1c / PHQ-9 / GAD-7 / DDS recomputed as-of that month’s end from <code>CORE_Member_Measurements</code> (same score rules as <code>CORE_Member_Clinical_Outcomes</code>, time-capped). Includes member-month demographics for filters, <code>*_as_of</code> carryforward scores for run charts, deltas, missing/has flags, and existing improvement thresholds. Does not write MART or change the cumulative book. Apply: <code>python/apply_clinical_outcome_mom_sql_models.py</code>.</p>",
+      "definition": "Additive Tableau PROD view. One row per `member_cin` + `reporting_month` from `VW_Member_Month`. Score picks match the cumulative book / `CORE_Member_Clinical_Outcomes` (closest A1c/GMI baseline — **GMI alone counts**, earliest-after-day-180 then lower for 6-month, episode most-recent; behavioral closest on/after else before), recomputed as-of month end from `CORE_Member_Measurements`, with fallback to locked `MART_Cumulative_Members` A1c/GMI fields when measurements yield null. MoM layer: baselines lock once and backfill earlier months; 6-month progresses with earlier-month backfill; `hba1c_gmi_as_of` = COALESCE(most_recent, 6-month, baseline). Includes member-month demographics, deltas, missing/has flags, and improvement thresholds. Does not write MART or change the cumulative book. Apply: `python/apply_clinical_outcome_mom_sql_models.py`.",
+      "definition_html": "<p>Additive Tableau PROD view. One row per <code>member_cin</code> + <code>reporting_month</code> from <code>VW_Member_Month</code>. Score picks match the cumulative book / <code>CORE_Member_Clinical_Outcomes</code> (closest A1c/GMI baseline — <strong>GMI alone counts</strong>, earliest-after-day-180 then lower for 6-month, episode most-recent; behavioral closest on/after else before), recomputed as-of month end from <code>CORE_Member_Measurements</code>, with fallback to locked <code>MART_Cumulative_Members</code> A1c/GMI fields when measurements yield null. MoM layer: baselines lock once and backfill earlier months; 6-month progresses with earlier-month backfill; <code>hba1c_gmi_as_of</code> = COALESCE(most_recent, 6-month, baseline). Includes member-month demographics, deltas, missing/has flags, and improvement thresholds. Does not write MART or change the cumulative book. Apply: <code>python/apply_clinical_outcome_mom_sql_models.py</code>.</p>",
       "formula": "",
       "numerator": "",
       "denominator": "",
@@ -3231,7 +3231,7 @@
       "source_object": "",
       "tableau": "",
       "summary": "",
-      "plain_definition": "Additive Tableau PROD view. One row per member_cin + reporting_month from VW_Member_Month, with A1c / PHQ-9 / GAD-7 / DDS recomputed as-of that month’s end from CORE_Member_Measurements (same score rules as CORE_Member_Clinical_Outcomes, time-capped). Includes member-month demographics for filters, *_as_of carryforward scores for run charts, deltas, missing/has flags, and existing improvement thresholds. Does not write MART or change the cumulative book. Apply: python/apply_clinical_outcome_mom_sql_models.py.",
+      "plain_definition": "Additive Tableau PROD view. One row per member_cin + reporting_month from VW_Member_Month. Score picks match the cumulative book / CORE_Member_Clinical_Outcomes (closest A1c/GMI baseline — GMI alone counts, earliest-after-day-180 then lower for 6-month, episode most-recent; behavioral closest on/after else before), recomputed as-of month end from CORE_Member_Measurements, with fallback to locked MART_Cumulative_Members A1c/GMI fields when measurements yield null. MoM layer: baselines lock once and backfill earlier months; 6-month progresses with earlier-month backfill; hba1c_gmi_as_of = COALESCE(most_recent, 6-month, baseline). Includes member-month demographics, deltas, missing/has flags, and improvement thresholds. Does not write MART or change the cumulative book. Apply: python/apply_clinical_outcome_mom_sql_models.py.",
       "subject_area": "Clinical outcomes",
       "audience": "technical",
       "technical_notes": "",
@@ -3254,7 +3254,7 @@
         "effective_date"
       ],
       "provenance": "documented",
-      "search_text": "VW_Clinical_Outcome_MoM\nCore (VayuHealth_Program_CORE)\nVW_Clinical_Outcome_MoM\nObject\nAdditive Tableau PROD view. One row per `member_cin` + `reporting_month` from `VW_Member_Month`, with A1c / PHQ-9 / GAD-7 / DDS recomputed as-of that month’s end from `CORE_Member_Measurements` (same score rules as `CORE_Member_Clinical_Outcomes`, time-capped). Includes member-month demographics for filters, `*_as_of` carryforward scores for run charts, deltas, missing/has flags, and existing improvement thresholds. Does not write MART or change the cumulative book. Apply: `python/apply_clinical_outcome_mom_sql_models.py`.\ndocs/data_dictionary.md\nVW_Clinical_Outcome_MoM"
+      "search_text": "VW_Clinical_Outcome_MoM\nCore (VayuHealth_Program_CORE)\nVW_Clinical_Outcome_MoM\nObject\nAdditive Tableau PROD view. One row per `member_cin` + `reporting_month` from `VW_Member_Month`. Score picks match the cumulative book / `CORE_Member_Clinical_Outcomes` (closest A1c/GMI baseline — **GMI alone counts**, earliest-after-day-180 then lower for 6-month, episode most-recent; behavioral closest on/after else before), recomputed as-of month end from `CORE_Member_Measurements`, with fallback to locked `MART_Cumulative_Members` A1c/GMI fields when measurements yield null. MoM layer: baselines lock once and backfill earlier months; 6-month progresses with earlier-month backfill; `hba1c_gmi_as_of` = COALESCE(most_recent, 6-month, baseline). Includes member-month demographics, deltas, missing/has flags, and improvement thresholds. Does not write MART or change the cumulative book. Apply: `python/apply_clinical_outcome_mom_sql_models.py`.\ndocs/data_dictionary.md\nVW_Clinical_Outcome_MoM"
     },
     {
       "entry_id": "data-dictionary.core-vayuhealth-program-core.core-member-phase-metrics",
@@ -8506,8 +8506,8 @@
       "topic": "HbA1c / GMI baseline",
       "entry_type": "metric",
       "entry_type_label": "Metric",
-      "definition": "Among valued HbA1c or 1-month GMI **strictly before** ECM enrollment start, pick the **closest** to enrollment (smallest absolute day gap). Do not compare measurement values.\nIf none before enrollment, among valued HbA1c / GMI **on or after** enrollment, pick the closest to enrollment.\nSame-distance ties prefer HbA1c over GMI.\nOnce a baseline (value, date, marker) is filled on the MART / master row, monthly runs **do not overwrite** it (fill blank only). Same lock applies to PHQ-9 / DDS / GAD-7 / PAM Level / PAM Score baselines.",
-      "definition_html": "<ol><li>Among valued HbA1c or 1-month GMI <strong>strictly before</strong> ECM enrollment start, pick the <strong>closest</strong> to enrollment (smallest absolute day gap). Do not compare measurement values.</li><li>If none before enrollment, among valued HbA1c / GMI <strong>on or after</strong> enrollment, pick the closest to enrollment.</li><li>Same-distance ties prefer HbA1c over GMI.</li></ol>\n<p>Once a baseline (value, date, marker) is filled on the MART / master row, monthly runs <strong>do not overwrite</strong> it (fill blank only). Same lock applies to PHQ-9 / DDS / GAD-7 / PAM Level / PAM Score baselines.</p>",
+      "definition": "Among valued HbA1c or any GMI (**GMI alone is enough** — HbA1c is not required) **strictly before** ECM enrollment start, pick the **closest** to enrollment (smallest absolute day gap). Do not compare measurement values. 1-month GMI is preferred for pathway “recent GMI”; outcomes accept other GMI labels mapped as `GMI_Other` as well.\nIf none before enrollment, among valued HbA1c / GMI **on or after** enrollment, pick the closest to enrollment.\nSame-distance ties prefer HbA1c over GMI.\nOnce a baseline (value, date, marker) is filled on the MART / master row, monthly runs **do not overwrite** it (fill blank only). Same lock applies to PHQ-9 / DDS / GAD-7 / PAM Level / PAM Score baselines.",
+      "definition_html": "<ol><li>Among valued HbA1c or any GMI (<strong>GMI alone is enough</strong> — HbA1c is not required) <strong>strictly before</strong> ECM enrollment start, pick the <strong>closest</strong> to enrollment (smallest absolute day gap). Do not compare measurement values. 1-month GMI is preferred for pathway “recent GMI”; outcomes accept other GMI labels mapped as <code>GMI_Other</code> as well.</li><li>If none before enrollment, among valued HbA1c / GMI <strong>on or after</strong> enrollment, pick the closest to enrollment.</li><li>Same-distance ties prefer HbA1c over GMI.</li></ol>\n<p>Once a baseline (value, date, marker) is filled on the MART / master row, monthly runs <strong>do not overwrite</strong> it (fill blank only). Same lock applies to PHQ-9 / DDS / GAD-7 / PAM Level / PAM Score baselines.</p>",
       "formula": "",
       "numerator": "",
       "denominator": "",
@@ -8518,7 +8518,7 @@
       "source_object": "",
       "tableau": "",
       "summary": "A member's starting A1c (or GMI) is the reading closest to their enrollment start date, preferring readings taken before enrollment.",
-      "plain_definition": "Among valued HbA1c or 1-month GMI strictly before ECM enrollment start, pick the closest to enrollment (smallest absolute day gap). Do not compare measurement values. If none before enrollment, among valued HbA1c / GMI on or after enrollment, pick the closest to enrollment. Same-distance ties prefer HbA1c over GMI. Once a baseline (value, date, marker) is filled on the MART / master row, monthly runs do not overwrite it (fill blank only). Same lock applies to PHQ-9 / DDS / GAD-7 / PAM Level / PAM Score baselines.",
+      "plain_definition": "Among valued HbA1c or any GMI (GMI alone is enough — HbA1c is not required) strictly before ECM enrollment start, pick the closest to enrollment (smallest absolute day gap). Do not compare measurement values. 1-month GMI is preferred for pathway “recent GMI”; outcomes accept other GMI labels mapped as GMI_Other as well. If none before enrollment, among valued HbA1c / GMI on or after enrollment, pick the closest to enrollment. Same-distance ties prefer HbA1c over GMI. Once a baseline (value, date, marker) is filled on the MART / master row, monthly runs do not overwrite it (fill blank only). Same lock applies to PHQ-9 / DDS / GAD-7 / PAM Level / PAM Score baselines.",
       "subject_area": "Clinical outcomes",
       "audience": "business",
       "technical_notes": "",
@@ -8547,7 +8547,7 @@
         "effective_date"
       ],
       "provenance": "documented",
-      "search_text": "HbA1c / GMI baseline\nA member's starting A1c (or GMI) is the reading closest to their enrollment start date, preferring readings taken before enrollment.\nHbA1c / GMI baseline\nHbA1c / GMI baseline\nMetric\nAmong valued HbA1c or 1-month GMI **strictly before** ECM enrollment start, pick the **closest** to enrollment (smallest absolute day gap). Do not compare measurement values.\nIf none before enrollment, among valued HbA1c / GMI **on or after** enrollment, pick the closest to enrollment.\nSame-distance ties prefer HbA1c over GMI.\nOnce a baseline (value, date, marker) is filled on the MART / master row, monthly runs **do not overwrite** it (fill blank only). Same lock applies to PHQ-9 / DDS / GAD-7 / PAM Level / PAM Score baselines.\ndocs/metric_definitions.md\nHbA1c / GMI baseline"
+      "search_text": "HbA1c / GMI baseline\nA member's starting A1c (or GMI) is the reading closest to their enrollment start date, preferring readings taken before enrollment.\nHbA1c / GMI baseline\nHbA1c / GMI baseline\nMetric\nAmong valued HbA1c or any GMI (**GMI alone is enough** — HbA1c is not required) **strictly before** ECM enrollment start, pick the **closest** to enrollment (smallest absolute day gap). Do not compare measurement values. 1-month GMI is preferred for pathway “recent GMI”; outcomes accept other GMI labels mapped as `GMI_Other` as well.\nIf none before enrollment, among valued HbA1c / GMI **on or after** enrollment, pick the closest to enrollment.\nSame-distance ties prefer HbA1c over GMI.\nOnce a baseline (value, date, marker) is filled on the MART / master row, monthly runs **do not overwrite** it (fill blank only). Same lock applies to PHQ-9 / DDS / GAD-7 / PAM Level / PAM Score baselines.\ndocs/metric_definitions.md\nHbA1c / GMI baseline"
     },
     {
       "entry_id": "metric-definitions.enrollment-episode-window",

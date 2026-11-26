@@ -22,7 +22,7 @@
       </nav>
     
       
-      <p class="last-updated">Last Updated: <time datetime="2026-11-25T19:53:19Z" title="When this website was generated. This is not the effective date of a definition.">November 25, 2026</time></p>
+      <p class="last-updated">Last Updated: <time datetime="2026-11-26T02:51:06Z" title="When this website was generated. This is not the effective date of a definition.">November 26, 2026</time></p>
     
     </div>
   </header>
@@ -37,8 +37,8 @@
       </p>
     </section>
     
-    <div class="detail-row"><h2>Business definition</h2><p>Long measurements with <code>standard_marker</code> in <code>HbA1c</code>, <code>GMI_1_Month</code>, <code>PHQ_9</code>, <code>DDS</code>, <code>GAD_7</code>, <code>PAM_Level</code>, <code>PAM_Score</code>, <code>Glucose</code>, <code>Mean Plasma Glucose</code>, <code>Blood Sugar Fasting Marker</code>, <code>Blood Sugar Before Meal</code>. Incomplete PAM Level/Score pairs on the same CIN + date are dropped. Glucose markers are pathway-only.</p></div>
-    <div class="detail-row terms"><h2>Terms used on this page</h2><ul><li><strong>CIN</strong>: Client Index Number: the Medi-Cal member ID. It is PHI. Never type a real one into GitHub.</li><li><strong>DDS</strong>: Diabetes Distress Scale: a short survey about how stressful living with diabetes feels.</li><li><strong>HbA1c</strong>: Same as A1c.</li><li><strong>PAM</strong>: Patient Activation Measure: a 13-question survey (scored 0 to 100, levels 1 to 4) about how ready a person is to manage their own health.</li></ul><p><a href="../glossary.html">Full glossary</a></p></div>
+    <div class="detail-row"><h2>Business definition</h2><p>Long measurements with <code>standard_marker</code> in <code>HbA1c</code>, <code>GMI_1_Month</code>, <code>GMI_Other</code> (any other Sprite GMI label), <code>PHQ_9</code>, <code>DDS</code>, <code>GAD_7</code>, <code>PAM_Level</code>, <code>PAM_Score</code>, <code>Glucose</code>, <code>Mean Plasma Glucose</code>, <code>Blood Sugar Fasting Marker</code>, <code>Blood Sugar Before Meal</code>. Incomplete PAM Level/Score pairs on the same CIN + date are dropped. Glucose markers are pathway-only. A1c/GMI outcomes use HbA1c or any <code>GMI%</code> (GMI alone counts); pathway “recent GMI” still requires <code>GMI_1_Month</code>.</p></div>
+    <div class="detail-row terms"><h2>Terms used on this page</h2><ul><li><strong>A1c</strong>: A blood test that shows a person&#x27;s average blood sugar over about the last three months. Also written HbA1c. Higher numbers mean less controlled diabetes.</li><li><strong>CIN</strong>: Client Index Number: the Medi-Cal member ID. It is PHI. Never type a real one into GitHub.</li><li><strong>DDS</strong>: Diabetes Distress Scale: a short survey about how stressful living with diabetes feels.</li><li><strong>GMI</strong>: Glucose Management Indicator: an estimate of A1c calculated from CGM readings.</li><li><strong>HbA1c</strong>: Same as A1c.</li><li><strong>PAM</strong>: Patient Activation Measure: a 13-question survey (scored 0 to 100, levels 1 to 4) about how ready a person is to manage their own health.</li><li><strong>Sprite</strong>: Sprite Health, Vayu&#x27;s EHR and care management system. Monthly reports are exported from it.</li></ul><p><a href="../glossary.html">Full glossary</a></p></div>
     <details class="technical-details">
       <summary>Technical details (for analysts)</summary>
       <p class="provenance">Documented business meaning. This page does not recompute the rule.</p>
@@ -51,7 +51,7 @@
       <p class="footer-brand">Vayu Health Git Data Hub</p>
       
     <p class="banner">
-      Website built <time datetime="2026-11-25T19:53:19Z">25 Nov 2026, 19:53 UTC</time>.
+      Website built <time datetime="2026-11-26T02:51:06Z">26 Nov 2026, 02:51 UTC</time>.
       This is when the site was generated. It is not the effective date of a definition.
       An effective date is shown on an entry only when the source document states one.
     </p>

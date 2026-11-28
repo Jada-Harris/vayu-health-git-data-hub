@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VW_Clinical_Outcome_Month_Results · Vayu Health Git Data Hub</title>
+  <meta name="theme-color" content="#464C4F">
+  
+  <link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+  <a class="skip" href="#content">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap header-bar">
+      <a class="brand" href="../index.html"><img class="brand-logo" src="../assets/vayu-logo-horizontal.webp" alt="Vayu Health"></a>
+      
+      <nav class="site-nav" aria-label="Site">
+        <a href="../dictionary.html">Data Dictionary</a>
+        <a href="../dashboards.html">Dashboards</a>
+        <a href="../glossary.html">Glossary</a>
+        <a href="../methods.html">Methods &amp; Updates</a>
+      </nav>
+    
+      
+      <p class="last-updated">Last Updated: <time datetime="2026-11-28T05:47:00Z" title="When this website was generated. This is not the effective date of a definition.">November 28, 2026</time></p>
+    
+    </div>
+  </header>
+  <main id="content" class="wrap">
+    
+    <section class="intro">
+      <p class="crumbs"><a href="../dictionary.html">Data Dictionary</a> / Clinical outcomes</p>
+      <h1>VW_Clinical_Outcome_Month_Results</h1>
+      <p class="meta-line">
+        <span class="type-pill">Object</span>
+        <span class="topic">Core (VayuHealth_Program_CORE) · VW_Clinical_Outcome_Month_Results</span>
+      </p>
+    </section>
+    
+    <div class="detail-row"><h2>Business definition</h2><p>Tableau MoM <strong>freeze</strong> view. One published row per <code>reporting_month</code> × <code>outcome_family</code> (<code>A1C</code>, <code>PHQ9</code>, <code>DDS</code>, <code>GAD7</code>, <code>PAM</code>) with stored avg / median / STD, improvement rates, A1c control bands, and PAM level / score-increase metrics from the cumulative book at freeze time (eligible = <code>VW_Member_Month</code> <code>active_during_month = Yes</code>). Prior months are not recomputed. Member-grain audit: <code>MART_Clinical_Outcome_Month_Member</code> (PHI — not for Tableau). Apply after ECM: <code>python/apply_clinical_outcome_month_freeze_sql_models.py --reporting-month YYYY-MM</code>. Spec: <code>docs/clinical_outcomes_reporting_month_snapshot_spec.md</code>.</p></div>
+    <div class="detail-row terms"><h2>Terms used on this page</h2><ul><li><strong>A1c</strong>: A blood test that shows a person&#x27;s average blood sugar over about the last three months. Also written HbA1c. Higher numbers mean less controlled diabetes.</li><li><strong>DDS</strong>: Diabetes Distress Scale: a short survey about how stressful living with diabetes feels.</li><li><strong>ECM</strong>: Enhanced Care Management: the Medi-Cal (CalAIM) benefit that pays Vayu to coordinate care for members with complex needs.</li><li><strong>PAM</strong>: Patient Activation Measure: a 13-question survey (scored 0 to 100, levels 1 to 4) about how ready a person is to manage their own health.</li><li><strong>PHI</strong>: Protected health information: anything that identifies a person together with their health or care, such as a CIN, name, date of birth, or diagnosis.</li><li><strong>Tableau</strong>: The dashboard tool Vayu uses for program reporting.</li></ul><p><a href="../glossary.html">Full glossary</a></p></div>
+    <details class="technical-details">
+      <summary>Technical details (for analysts)</summary>
+      <p class="provenance">Documented business meaning. This page does not recompute the rule.</p>
+      <div class="detail-row"><h2>Where this definition is written</h2><p><code>docs/data_dictionary.md</code> line 230</p></div><div class="detail-row"><h2>Stable entry ID</h2><p><code>data-dictionary.core-vayuhealth-program-core.vw-clinical-outcome-month-results</code></p></div>
+    </details>
+    
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <p class="footer-brand">Vayu Health Git Data Hub</p>
+      
+    <p class="banner">
+      Website built <time datetime="2026-11-28T05:47:00Z">28 Nov 2026, 05:47 UTC</time>.
+      This is when the site was generated. It is not the effective date of a definition.
+      An effective date is shown on an entry only when the source document states one.
+    </p>
+    
+      <p>Definitions only. Pipeline folders and workflows stay off this site.</p>
+      <nav aria-label="Footer">
+        <a href="../index.html">Home</a>
+        <a href="../dictionary.html">Data Dictionary</a>
+        <a href="../dashboards.html">Dashboards</a>
+        <a href="../glossary.html">Glossary</a>
+        <a href="../methods.html">Methods &amp; Updates</a>
+      </nav>
+    </div>
+  </footer>
+  
+</body>
+</html>
